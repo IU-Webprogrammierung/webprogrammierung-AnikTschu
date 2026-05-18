@@ -11,20 +11,32 @@
             <img src="images/Flag_of_Japan.svg.webp" alt="Zurück zur Startseite" 
             title="Zurück zur Startseite" width="40" style="border: 2px solid black;">
         </a>
-        <a href="ueber-mich.html">
-            <button>Über mich</button>
-        </a>
-        <a href="kultur.html">
-            <button>Kultur</button>
-        </a>
-        <a href="schrift.html">
-            <button>Schrift</button>
-        </a>
+        
+        <nav aria-label="Hauptnavigation">
+            <a href="ueber-mich.html">
+                <button>Über mich</button>
+            </a>
+            <a href="kultur.html">
+                <button>Kultur</button>
+            </a>
+            <a href="schrift.html">
+                <button>Schrift</button>
+            </a>
+        </nav>
+
     </header>    
     <main>
-
-        <h1>Die japanische Schrift</h1>
-        
+       
+            <h1>Die japanische Schrift</h1>
+        <!-- Verschiedene navs sollten gelabelt werden mit 
+            aria-label="Schrift Navigation"-->
+        <nav aria-label="Schirftnavigation">
+            <ul>
+                <li><a href="hiragana.html">Hiragana</a></li>
+                <li><a href="katakana.html">Katakana</a></li>
+                <li><a href="kanji.html">Kanji</a></li>
+            </ul>
+        </nav>            
     </main>
 </body>
 </html>
