@@ -62,7 +62,7 @@ nav {
     left: 0;
 
     background: white;
-    min-width: 180px;
+    min-width: 110px;
 
     padding: 8px;
     border-radius: 6px;
@@ -77,5 +77,57 @@ nav {
 .dropdown-content .nav-button {
     display: block;
     margin: 4px 0;
-    text-align: left;
+    text-align: center;
+}
+
+/* Sidebar bei "Schrift" */
+.content-layout{
+
+    display:flex;
+    gap:40px;
+    padding:30px;
+
+}
+
+.sidebar{
+
+    width:220px;
+    flex-shrink:0;
+
+}
+.sidebar h3{
+
+    margin-top:0;
+    color:rgb(188,0,45);
+
+}
+.sidebar a{
+
+    display:block;
+    padding:10px;
+    margin-bottom:8px;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+
+}
+
+.sidebar a:hover{
+
+    background-color:rgb(188,0,45);
+    color:white;
+
+}
+.sidebar a.active{
+
+    color:rgb(188,0,45);
+    font-weight:bold;
+    border-left:4px solid rgb(188,0,45);
+    background:#f8f8f8;
+
+}
+.content{
+
+    flex:1;
+
 }

@@ -12,20 +12,23 @@
 
     <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
 
-    <main>
-       
-        <!-- Verschiedene navs sollten gelabelt werden mit 
-            aria-label="Schrift Navigation"
-        <nav aria-label="Schriftnavigation">
-            <ul>
-                <li><a href="hiragana.html">Hiragana</a></li>
-                <li><a href="katakana.html">Katakana</a></li>
-                <li><a href="kanji.html">Kanji</a></li>
-            </ul>
-        </nav>-->
-        
+<main class="content-layout">
+
+    <aside class="sidebar">
+        <h3>Schrift</h3>
+
+        <a href="schrift.html">Übersicht</a>
+        <a href="hiragana.html">Hiragana</a>
+        <a href="katakana.html">Katakana</a>
+        <a href="kanji.html">Kanji</a>
+    </aside>
+
+    <section class="content">
         <h1>Die japanische Schrift</h1>
 
-    </main>
+        <p>Hier steht dein Inhalt.</p>
+    </section>
+
+</main>
 </body>
 </html>
