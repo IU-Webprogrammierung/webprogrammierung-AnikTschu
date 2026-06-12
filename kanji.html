@@ -11,27 +11,21 @@
 </head>
 
 <body data-page="kanji">
-    
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
 
-    <main>
-               <!-- Verschiedene navs sollten gelabelt werden mit 
-            aria-label="Schrift Navigation"-->
-        <nav aria-label="Schriftnavigation">
-            <ul>
-                <li><a href="hiragana.html">Hiragana</a></li>
-                <li><a href="katakana.html">Katakana</a></li>
-                <li>            
-                    <span style="background-color:rgb(188, 0, 45); color:white;">
-                        Kanji
-                    </span>
-                </li>
-            </ul>
-        </nav>
-        
-        <h1>Die japanische Schrift: Kanji</h1>
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML">
+
+    </header>
+    <main class="content-layout">
+
+        <div hx-get="components/sidebar-schrift.html" hx-trigger="load" hx-swap="outerHTML">
+        </div>
+
+        <section class="content">
+            <h1>Kanji</h1>
+
+            <p>Hier steht dein Inhalt.</p>
+        </section>
 
     </main>
-        
 </body>
 </html>

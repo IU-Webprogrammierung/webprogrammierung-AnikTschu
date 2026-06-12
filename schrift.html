@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schrift</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+        integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+        crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
+
 <body data-page="schrift">
 
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>
 
-<main class="content-layout">
+    <main class="content-layout">
 
-    <aside class="sidebar">
-        <h3>Schrift</h3>
+        <div hx-get="components/sidebar-schrift.html" hx-trigger="load" hx-swap="outerHTML">
+        </div>
 
-        <a href="schrift.html">Übersicht</a>
-        <a href="hiragana.html">Hiragana</a>
-        <a href="katakana.html">Katakana</a>
-        <a href="kanji.html">Kanji</a>
-    </aside>
+        <section class="content">
+            <h1>Die japanische Schrift</h1>
 
-    <section class="content">
-        <h1>Die japanische Schrift</h1>
+            <p>Hier steht dein Inhalt.</p>
+        </section>
 
-        <p>Hier steht dein Inhalt.</p>
-    </section>
-
-</main>
+    </main>
 </body>
+
 </html>

@@ -7,31 +7,28 @@
     <title>Katakana</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+        integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+        crossorigin="anonymous"></script>
 </head>
 
 <body data-page="katakana">
 
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML">
 
-    <main>
-       
-        <!-- Verschiedene navs sollten gelabelt werden mit 
-            aria-label="Schrift Navigation"-->
-        <nav aria-label="Schriftnavigation">
-            <ul>
-                <li><a href="hiragana.html">Hiragana</a></li>
-                <li>
-                    <span style="background-color:rgb(188, 0, 45); color:white;">
-                        Katakana
-                    </span>
-                </li>
-                <li><a href="kanji.html">Kanji</a></li>
-            </ul>
-        </nav>
-        
-        
-        <h1>Die japanische Schrift: Katakana</h1>
-    </main>    
+    </header>
+    <main class="content-layout">
+
+        <div hx-get="components/sidebar-schrift.html" hx-trigger="load" hx-swap="outerHTML">
+        </div>
+
+        <section class="content">
+            <h1>Katakana</h1>
+
+            <p>Hier steht dein Inhalt.</p>
+        </section>
+
+    </main>
 </body>
+
 </html>
