@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anikas Webseite</title>
+    <title>Kultur</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images/Japanflagge.svg.webp" alt="Zurück zur Startseite" 
-            title="Zurück zur Startseite" width="40" style="border: 2px solid black;">
-        </a>
 
-        <nav aria-label="Hauptnavigation">
-            <a href="ueber-mich.html">Über mich</a>
-            <span style="background-color:rgb(188, 0, 45); color:white;">
-                &nbsp;Kultur&nbsp;
-            </span>
-            <details>
-                <summary>Schrift</summary>
-                <a href="schrift.html">Übersicht</a><br>
-                <a href="Hiragana.html">Hiragana</a><br>
-                <a href="katakana.html">Katakana</a><br>
-                <a href="kanji.html">Kanji</a>
-            </details>
-        </nav>
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
 
-    </header>
-    
     <main>
 
         <h1>Die japanische Kultur</h1>
