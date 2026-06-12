@@ -26,17 +26,18 @@ nav {
     color: white
 }
 
-/* Beim Klicken */
-.nav-button:active {
-    background-color: #2e7031;
-}
 
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
 .nav-button.active {
-    color: red;
+    color: rgb(188, 0, 45);
     font-weight: bold;
     border-bottom: 2px solid black;
     padding-bottom: 3px;
+}
+
+/* Hovern bei aktiver Seite anders */
+.nav-button.active:hover {
+    color: white;
 }
 
 /* Dropdown-Menü bei "Schrift" */
