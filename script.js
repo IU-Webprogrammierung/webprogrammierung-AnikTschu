@@ -43,9 +43,24 @@ function setActiveNav() {
     }
 }
 
+function setActiveSidebar() {
+
+    const page = document.body.dataset.page;
+    if (!page) return;
+
+    const link = document.querySelector(
+        `.sidebar-link[data-page="${page}"]`
+    );
+
+    if (link) {
+        link.classList.add("active");
+    }
+}
+
 function initPage() {
     initDropdown();
     setActiveNav();
+    setActiveSidebar();
 }
 
 /* normale Seite */
