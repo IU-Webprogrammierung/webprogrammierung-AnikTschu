@@ -31,6 +31,15 @@ nav {
     background-color: #2e7031;
 }
 
+/* Aktive Seite wird in der Navigation optisch hervorgehoben */
+.nav-button.active {
+    color: red;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+
+/* Dropdown-Menü bei "Schrift" */
 .dropdown {
     position: relative;
 }

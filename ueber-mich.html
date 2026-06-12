@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über mich</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="ueber-mich">
 
     <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
 
@@ -17,6 +17,6 @@
         <h1>Über mich</h1>
         
     </main> 
-       
+
 </body>
 </html>

@@ -3,29 +3,41 @@ function initDropdown() {
 
     const dropdown = document.getElementById("schriftDropdown");
 
-    if (!dropdown) {
-        return;
+    if (dropdown && !dropdown.dataset.initialized) {
+
+        dropdown.dataset.initialized = "true";
+
+        document.addEventListener("click", function (event) {
+
+            if (!dropdown.contains(event.target)) {
+                dropdown.removeAttribute("open");
+            }
+
+        });
     }
-
-    // Nur einmal registrieren
-    if (dropdown.dataset.initialized) {
-        return;
-    }
-
-    dropdown.dataset.initialized = "true";
-
-    document.addEventListener("click", function (event) {
-
-        if (!dropdown.contains(event.target)) {
-            dropdown.removeAttribute("open");
-        }
-
-    });
-
 }
 
-// normale HTML-Seite
-document.addEventListener("DOMContentLoaded", initDropdown);
+function setActiveNav() {
 
-// falls HTMX Inhalte nachlädt
-document.body.addEventListener("htmx:afterSwap", initDropdown);
+    const page = document.body.dataset.page;
+    if (!page) return;
+
+    const link = document.querySelector(
+        `.nav-button[href="${page}.html"]`
+    );
+
+    if (link) {
+        link.classList.add("active");
+    }
+}
+
+function initPage() {
+    initDropdown();
+    setActiveNav();
+}
+
+/* normale Seite */
+document.addEventListener("DOMContentLoaded", initPage);
+
+/* HTMX Nachladen */
+document.body.addEventListener("htmx:afterSwap", initPage);
