@@ -18,9 +18,10 @@ h2 {
 
     text-decoration: underline;
     text-decoration-color: rgb(188, 0, 45);
-    text-underline-offset: 1rem;
+    /*text-underline-offset: 1rem;*/
 }
 
+/* FLEXBOXEN TEXT NEBEN BILD _____________________________________________________________
 /* Text neben Bild*/
 .text-mit-bild {
     display: flex;
@@ -47,6 +48,68 @@ h2 {
     max-width: 100%;
     width: 50%;
     height: auto;
+}
+
+/* Gesamter Bereich */
+.schriftarten {
+
+    background-color: rgb(188, 0, 45);
+    padding: 50px;
+    margin-top: 50px;
+
+}
+
+/* FLEXBOXEN 3 SPALTEN _____________________________________________________________
+/* Drei Spalten */
+.schriftarten-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+}
+
+/* Weiße Karten */
+.schriftkarte {
+
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.japanisch {
+    font-size: 10rem;
+    color: black;
+    line-height: 1;
+}
+
+/* Überschrift der Karte */
+.schriftkarte h3 {
+
+    color: rgb(188, 0, 45);
+
+}
+
+/* Link */
+.button-link {
+
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: rgb(188, 0, 45);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+
+}
+
+.button-link:hover {
+
+    background-color: black;
+
 }
 
 /* NAVIGATION______________________________________________________________________ */

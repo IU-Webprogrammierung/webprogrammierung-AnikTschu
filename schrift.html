@@ -16,34 +16,85 @@
 
     <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>
 
-    <main class="content-layout">
+    <main>
 
-        <div hx-get="components/sidebar-schrift.html" hx-trigger="load" hx-swap="outerHTML">
+        <div class="content-layout">
+
+            <div hx-get="components/sidebar-schrift.html" hx-trigger="load" hx-swap="outerHTML">
+            </div>
+
+            <section class="text-mit-bild">
+
+                <div class="text">
+
+                    <h1>Die japanische Schrift</h1>
+                    <h2>Vielfalt der Schriftzeichen</h2>
+
+                    <p>
+                        Die japanische Schrift setzt sich aus drei verschiedenen
+                        Schriftarten zusammen. Das hört sich erstmal ziemlich unnötig
+                        kompliziert an...
+                        <br><br>
+
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                    </p>
+
+                </div>
+
+                <img src="images/Schrift.png" alt="Das Wort Japanisch in japanischen Schriftzeichen"
+                    class="schriftbild">
+
+            </section>
         </div>
-        <section class="text-mit-bild">
 
-            <div class="text">
+        <section class="schriftarten">
 
-                <h1>Die japanische Schrift</h1>
-                <h2>Vielfalt der Schriftzeichen</h2>
+              <div class="schriftarten-grid">
 
-                <p>
-                    Die japanische Schrift setzt sich aus drei verschiedenen
-                    Schriftarten zusammen. Das hört sich erstmal ziemlich unnötig
-                    kompliziert an...
-                    <br><br>
+                <article class="schriftkarte">
+                    <p class="japanisch">あ</p>
+                    <h3>Hiragana</h3>
+                    <p>
+                        Hiragana ist die erste Silbenschrift, die beim Erlernen der
+                        japanischen Sprache verwendet wird.
+                    </p>
 
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                </p>
+                    <a href="hiragana.html" class="button-link">
+                        Mehr über Hiragana
+                    </a>
+                </article>
+
+                <article class="schriftkarte">
+                    <h3>Katakana</h3>
+                    <p>
+                        Katakana wird hauptsächlich für Fremdwörter,
+                        Lautmalereien und Hervorhebungen verwendet.
+                    </p>
+
+                    <a href="katakana.html" class="button-link">
+                        Mehr über Katakana
+                    </a>
+                </article>
+
+                <article class="schriftkarte">
+                    <h3>Kanji</h3>
+                    <p>
+                        Kanji sind chinesische Schriftzeichen und bilden einen
+                        wichtigen Bestandteil der japanischen Schriftsprache.
+                    </p>
+
+                    <a href="kanji.html" class="button-link">
+                        Mehr über Kanji
+                    </a>
+                </article>
 
             </div>
 
-            <img src="images/Schrift.png" alt="Das Wort Japanisch in japanischen Schriftzeichen" class="schriftbild">
-
         </section>
+
 
     </main>
 </body>
