@@ -21,32 +21,44 @@ h2 {
     /*text-underline-offset: 1rem;*/
 }
 
-/* FLEXBOXEN TEXT NEBEN BILD _____________________________________________________________
+/* KULTUR_____________________________________________________________________________
+/* Text neben Bild */
+.kultur-text-mit-bild {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.kultur-text {
+    padding-left: 80px;
+    padding-right: 40px;
+    flex: 1;
+}
+
+.kultur-bild {
+    width: 40%;
+    height: auto;
+    display: block;
+    flex: 0 0 40%;
+}
+
+/* SCHRIFT: FLEXBOXEN TEXT NEBEN BILD _____________________________________________________________
 /* Text neben Bild*/
-.text-mit-bild {
+.schrift-text-mit-bild {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
 /* Linke Hälfte */
-.text {
+.schrift-text {
     flex: 1;
-}
-
-/* Rechte Hälfte */
-.bild {
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Bild passt sich der verfügbaren Breite an */
-.schriftbild {
+.schrift-bild {
     max-width: 100%;
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 
@@ -59,7 +71,7 @@ h2 {
 
 }
 
-/* FLEXBOXEN 3 SPALTEN _____________________________________________________________
+/* SCHRIFT: FLEXBOXEN 3 SPALTEN _____________________________________________________________
 /* Drei Spalten */
 .schriftarten-grid {
 
@@ -81,7 +93,7 @@ h2 {
 
 .japanisch {
     font-family: "Yu Gothic";
-    font-size: 10rem;
+    font-size: 8rem;
     color: black;
     line-height: 1;
 }
@@ -142,13 +154,12 @@ nav {
     color: white
 }
 
-
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
 .nav-button.active {
     color: rgb(188, 0, 45);
     font-weight: bold;
-    border-bottom: 2px solid black;
-    padding-bottom: 3px;
+    border-bottom: 3px solid black;
+    padding-bottom: 9px;
 }
 
 /* Hovern bei aktiver Seite anders */
@@ -196,7 +207,7 @@ nav {
     text-align: center;
 }
 
-/* Sidebar bei "Schrift" */
+/* Sidebar bei "Schrift" _________________________________________________________________*/
 .content-layout{
 
     display:flex;
