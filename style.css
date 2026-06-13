@@ -21,7 +21,7 @@ h2 {
     /*text-underline-offset: 1rem;*/
 }
 
-/* KULTUR_____________________________________________________________________________
+/* KULTUR_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
 /* Text neben Bild */
 .kultur-text-mit-bild {
     display: flex;
@@ -42,7 +42,44 @@ h2 {
     flex: 0 0 40%;
 }
 
-/* SCHRIFT: FLEXBOXEN TEXT NEBEN BILD _____________________________________________________________
+/* Kategorien (5 Boxen) */
+
+/* Gesamter Bereich */
+.kultur-kategorien {
+    background-color: rgb(188, 0, 45);
+    padding: 40px 0;
+}
+
+.kultur-kategorien-grid {
+    max-width: 1200px;   /* maximale Breite */
+    width: 90%;          /* auf kleineren Bildschirmen */
+    margin: 0 auto;      /* zentriert */
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.kultur-kategorie-karte {
+    background: white;
+    padding: 10px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.kultur-kategorie-karte img {
+    width: 70%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.kultur-kategorie-karte h3 {
+    margin-top: 15px;
+    color: rgb(188, 0, 45);
+}
+
+/* SCHRIFT_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
+/*FLEXBOXEN TEXT NEBEN BILD _____________________________________________________________
 /* Text neben Bild*/
 .schrift-text-mit-bild {
     display: flex;

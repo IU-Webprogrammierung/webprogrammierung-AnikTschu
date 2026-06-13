@@ -6,49 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kultur</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+        integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+        crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body data-page="kultur">
 
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>
 
     <main>
 
- <section class="kultur-text-mit-bild">
+        <section class="kultur-text-mit-bild">
 
-                <div class="kultur-text">
+            <div class="kultur-text">
 
-                    <h1>Die japanische Kultur</h1>
-                    <h2>Jahrhunderte alte Tradition</h2>
+                <h1>Die japanische Kultur</h1>
+                <h2>Jahrhunderte alte Tradition</h2>
 
-                    <p>
-                        Die japanische Kultur blickt auf eine Geschichte von mehreren 
-                        Jahrtausenden zurück und zählt zu den ältesten kontinuierlich 
-                        entwickelten Kulturen der Welt. Im Laufe der Zeit wurde sie von 
-                        historischen Ereignissen, gesellschaftlichen Veränderungen und dem 
-                        Austausch mit anderen Ländern geprägt, ohne dabei ihre eigene 
-                        Identität zu verlieren. Viele Traditionen und Bräuche haben ihren 
-                        Ursprung vor Jahrhunderten und werden bis heute gepflegt und 
-                        weitergegeben. 
-                        <br> <br>
-                        Gleichzeitig ist Japan ein modernes Land, das 
-                        offen für neue Einflüsse ist und diese häufig mit bestehenden 
-                        kulturellen Werten verbindet. Dadurch entsteht eine besondere 
-                        Verbindung aus Vergangenheit und Gegenwart, in der alte Traditionen 
-                        neben modernen Entwicklungen bestehen und sich gegenseitig 
-                        ergänzen. Diese Mischung macht die japanische Kultur einzigartig 
-                        und weltweit faszinierend.
-                    </p>
+                <p>
+                    Die japanische Kultur blickt auf eine Geschichte von mehreren
+                    Jahrtausenden zurück und zählt zu den ältesten kontinuierlich
+                    entwickelten Kulturen der Welt. Im Laufe der Zeit wurde sie von
+                    historischen Ereignissen, gesellschaftlichen Veränderungen und dem
+                    Austausch mit anderen Ländern geprägt, ohne dabei ihre eigene
+                    Identität zu verlieren. Viele Traditionen und Bräuche haben ihren
+                    Ursprung vor Jahrhunderten und werden bis heute gepflegt und
+                    weitergegeben.
+                    <br> <br>
+                    Gleichzeitig ist Japan ein modernes Land, das
+                    offen für neue Einflüsse ist und diese häufig mit bestehenden
+                    kulturellen Werten verbindet. Dadurch entsteht eine besondere
+                    Verbindung aus Vergangenheit und Gegenwart, in der alte Traditionen
+                    neben modernen Entwicklungen bestehen und sich gegenseitig
+                    ergänzen. Diese Mischung macht die japanische Kultur einzigartig
+                    und weltweit faszinierend.
+                </p>
 
-                </div>
+            </div>
 
-                <img src="images/Kultur.png" alt="Ein Bild eines japanischen Tempels" 
-                    class="kultur-bild">
+            <img src="images/Kultur.png" alt="Ein Bild eines japanischen Tempels" class="kultur-bild">
 
-            </section>
-        
-    </main>    
+        </section>
+
+        <section class="kultur-kategorien">
+
+            <div class="kultur-kategorien-grid">
+
+                <article class="kultur-kategorie-karte">
+                    <img src="images/Kultur_Kimono.png" alt="Kimono">
+                    <h3>Kimono</h3>
+                </article>
+
+                <article class="kultur-kategorie-karte">
+                    <img src="images/Kultur_Sushi.png" alt="Sushi">
+                    <h3>Sushi</h3>
+                </article>
+
+                <article class="kultur-kategorie-karte">
+                    <img src="images/Kultur_Schreine.png" alt="Schreine">
+                    <h3>Schreine</h3>
+                </article>
+
+                <article class="kultur-kategorie-karte">
+                    <img src="images/Kultur_Sakura.png" alt="Sakura">
+                    <h3>Sakura</h3>
+                </article>
+
+                <article class="kultur-kategorie-karte">
+                    <img src="images/Kultur_Samurai.png" alt="Samurai">
+                    <h3>Samurai</h3>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
 </body>
+
 </html>
