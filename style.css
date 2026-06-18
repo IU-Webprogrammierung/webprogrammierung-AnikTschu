@@ -251,6 +251,18 @@ nav {
     padding-bottom: 9px;
 }
 
+/* DESKTOP-NAVIGATION ______________________________________________ */
+
+/* Desktop sichtbar */
+.desktop-nav {
+    display: flex;
+}
+
+/* Mobile Navigation ausblenden */
+.mobile-nav {
+    display: none;
+}
+
 /* Hovern bei aktiver Seite anders */
 .nav-button.active:hover {
     color: white;
@@ -267,6 +279,13 @@ nav {
 
 .dropdown summary::-webkit-details-marker {
     display: none;
+}
+
+.dropdown summary.nav-button {
+    display: block;
+    font: inherit;
+    font-weight: normal;
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -419,6 +438,73 @@ nav {
         max-width: 340px;
         height: auto;
         min-height: 280px;
+    }
+
+      /* Desktop-Menü ausblenden */
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Mobile-Menü anzeigen */
+    .mobile-nav {
+        display: block;
+        background: #f5f5f5;
+        padding: 10px 15px;
+    }
+
+    /* Flagge links, Hamburger rechts */
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hamburger-Symbol */
+    .hamburger summary {
+        list-style: none;
+        cursor: pointer;
+        font-size: 2.2rem;
+        user-select: none;
+        line-height: 1;
+        padding: 5px;
+    }
+
+    .hamburger summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Menü */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    /* geschlossen */
+    .hamburger:not([open]) .mobile-menu {
+        display: none;
+    }
+
+    /* Buttons */
+    .mobile-menu .nav-button {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Dropdown Schrift */
+    .mobile-menu .dropdown {
+        position: static;
+    }
+
+    .mobile-menu .dropdown-content {
+        position: static;
+        display: flex;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 20px;
+        margin-top: 5px;
     }
 
 }

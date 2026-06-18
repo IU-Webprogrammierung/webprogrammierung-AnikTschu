@@ -1,10 +1,12 @@
-<nav aria-label="Hauptnavigation">
-    
+<!-- NAVIGATION DESKTOP (Breite > 767 px) -->
+
+<nav class="desktop-nav" aria-label="Hauptnavigation desktop">
+
     <a href="index.html">
-    <img src="images/Japanflagge.svg.webp" alt="Zurück zur Startseite" title="Zurück zur Startseite" width="40"
-        style="border: 2px solid black;">
+        <img src="images/Japanflagge.svg.webp" alt="Zurück zur Startseite" title="Zurück zur Startseite" width="40"
+            style="border: 2px solid black;">
     </a>
-    
+
     <a href="ueber-mich.html" class="nav-button">Über mich</a>
 
     <details class="dropdown" id="schriftDropdown">
@@ -16,8 +18,67 @@
             <a href="katakana.html" class="nav-button">Katakana</a>
             <a href="kanji.html" class="nav-button">Kanji</a>
         </div>
-        
+
     </details>
 
-        <a href="kultur.html" class="nav-button">Kultur</a>
+    <a href="kultur.html" class="nav-button">Kultur</a>
+</nav>
+
+<!-- NAVIGATION MOBILE (Breite < 768 px) -->
+<nav class="mobile-nav" aria-label="Hauptnavigation mobile">
+
+    <div class="mobile-nav-header">
+
+        <a href="index.html">
+            <img src="images/Japanflagge.svg.webp" alt="Startseite" width="40">
+        </a>
+
+        <details class="hamburger">
+
+            <summary>☰</summary>
+
+            <div class="mobile-menu">
+
+                <a href="ueber-mich.html" class="nav-button">
+                    Über mich
+                </a>
+
+                <details class="dropdown">
+
+                    <summary class="nav-button">
+                        Schrift
+                    </summary>
+
+                    <div class="dropdown-content">
+
+                        <a href="schrift.html" class="nav-button">
+                            Übersicht
+                        </a>
+
+                        <a href="hiragana.html" class="nav-button">
+                            Hiragana
+                        </a>
+
+                        <a href="katakana.html" class="nav-button">
+                            Katakana
+                        </a>
+
+                        <a href="kanji.html" class="nav-button">
+                            Kanji
+                        </a>
+
+                    </div>
+
+                </details>
+
+                <a href="kultur.html" class="nav-button">
+                    Kultur
+                </a>
+
+            </div>
+
+        </details>
+
+    </div>
+
 </nav>
