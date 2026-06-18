@@ -57,8 +57,39 @@ function setActiveSidebar() {
     }
 }
 
+function initHamburgerMenu() {
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (!menuButton || !mobileMenu) return;
+
+    if (menuButton.dataset.initialized) return;
+    menuButton.dataset.initialized = "true";
+
+    // 1. Toggle beim Klick auf Button
+    menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        mobileMenu.classList.toggle("open");
+    });
+
+    // 2. Klick außerhalb schließt Menü
+    document.addEventListener("click", function (event) {
+
+        if (
+            !mobileMenu.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+            mobileMenu.classList.remove("open");
+        }
+
+    });
+
+}
+
 function initPage() {
     initDropdown();
+    initHamburgerMenu();
     setActiveNav();
     setActiveSidebar();
 }

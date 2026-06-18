@@ -13,6 +13,11 @@
         <summary class="nav-button" id="schriftButton">Schrift</summary>
 
         <div class="dropdown-content">
+
+            <div class="dropdown-title">
+                Übersicht
+            </div>
+
             <a href="schrift.html" class="nav-button">Übersicht</a>
             <a href="hiragana.html" class="nav-button">Hiragana</a>
             <a href="katakana.html" class="nav-button">Katakana</a>
@@ -24,60 +29,94 @@
     <a href="kultur.html" class="nav-button">Kultur</a>
 </nav>
 
-<!-- NAVIGATION MOBILE (Breite < 768 px) -->
+<!-- NAVIGATION MOBILE (Breite < 768 px) ________________________________________________--->
 <nav class="mobile-nav" aria-label="Hauptnavigation mobile">
 
     <div class="mobile-nav-header">
 
+        <!-- Logo -->
         <a href="index.html">
-            <img src="images/Japanflagge.svg.webp" alt="Startseite" width="40">
+            <img src="images/Japanflagge.svg.webp"
+                 alt="Startseite"
+                 width="40">
         </a>
 
-        <details class="hamburger">
+        <!-- Hamburger-Menü -->
+        <div class="hamburger">
 
-            <summary>☰</summary>
+            <!-- Button zum Öffnen -->
+            <button id="menuButton"
+                    class="hamburger-button"
+                    aria-label="Menü öffnen">
 
-            <div class="mobile-menu">
+                ☰
 
-                <a href="ueber-mich.html" class="nav-button">
+            </button>
+
+            <!-- Das eigentliche Menü -->
+            <div id="mobileMenu"
+                 class="mobile-menu">
+
+                <a href="ueber-mich.html"
+                   class="nav-button">
+
                     Über mich
+
                 </a>
 
+                <!-- Untermenü -->
                 <details class="dropdown">
 
                     <summary class="nav-button">
+
                         Schrift
+
                     </summary>
 
                     <div class="dropdown-content">
 
-                        <a href="schrift.html" class="nav-button">
+                        <a href="schrift.html"
+                           class="nav-button">
+
                             Übersicht
+
                         </a>
 
-                        <a href="hiragana.html" class="nav-button">
+                        <a href="hiragana.html"
+                           class="nav-button">
+
                             Hiragana
+
                         </a>
 
-                        <a href="katakana.html" class="nav-button">
+                        <a href="katakana.html"
+                           class="nav-button">
+
                             Katakana
+
                         </a>
 
-                        <a href="kanji.html" class="nav-button">
+                        <a href="kanji.html"
+                           class="nav-button">
+
                             Kanji
+
                         </a>
 
                     </div>
 
                 </details>
 
-                <a href="kultur.html" class="nav-button">
+                <a href="kultur.html"
+                   class="nav-button">
+
                     Kultur
+
                 </a>
 
             </div>
 
-        </details>
+        </div>
 
     </div>
 
