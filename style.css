@@ -30,6 +30,46 @@ body {
     padding: 0;
 }
 
+/* STARTSEITE_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
+/* Text neben Bild */
+
+.split-section {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: stretch;
+    background-color: rgb(188, 0, 45);
+    color: white;
+}
+
+.split-image {
+
+    flex: 0 0 50%;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+
+}
+
+.split-text {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    min-width: 0;
+}
+
+.split-section.reverse {
+    flex-direction: row-reverse;
+    background-color: transparent;
+    color: black;
+}
+
 /* KULTUR_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
 /* Text neben Bild */
 .kultur-text-mit-bild {
