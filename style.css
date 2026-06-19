@@ -30,20 +30,34 @@ body {
     padding: 0;
 }
 
-/*Link-Farben */
-a:link {
-    color: rgb(188, 0, 45);
-}
-
-/* Bereits besuchter Link -> Barrierefreiheit?*/
-a:visited {
-    color: rgb(188, 0, 45);
-}
-
-/* Maus über dem Link */
-a:hover {
-    font-weight: bold;
+/* Navigations-Verlinkungen auf andere Seiten */
+.nav-link {
+    display: inline-block;
+    padding: 10px 14px;
     text-decoration: underline;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font: inherit;
+}
+
+.nav-link--background-dark {
+    background: white;
+    color: rgb(188, 0, 45);
+}
+
+.nav-link--background-dark:hover {
+    color: black;
+}
+
+.nav-link--background-light {
+    background: rgb(188, 0, 45);
+    color: white;
+}
+
+.nav-link--background-light:hover {
+    background: black;
+    color: white;
 }
 
 .startbild {
@@ -99,18 +113,6 @@ a:hover {
 
 .split-section a:link {
     color: #ffffff;
-}
-
-.split-section a:visited {
-    color: #dddddd;
-}
-
-.split-section a:hover {
-    font-weight: bold;
-}
-
-.split-section.reverse a {
-    color: rgb(188, 0, 45);
 }
 
 /* KULTUR_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
@@ -286,11 +288,11 @@ a:hover {
 
 }
 
-.button-link:hover {
+/* .button-link:hover {
 
     background-color: black;
 
-}
+}*/
 
 /* NAVIGATION______________________________________________________________________ */
 nav {
@@ -426,7 +428,7 @@ nav {
 
 .sidebar {
 
-    width: 220px;
+    width: clamp(60px, 18vw, 180px);
     flex-shrink: 0;
 
 }
