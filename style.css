@@ -16,9 +16,9 @@ h2 {
     margin-top: 1em;
     margin-bottom: 0.5em;
 
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     text-decoration-color: rgb(188, 0, 45);
-    /*text-underline-offset: 1rem;*/
+    text-underline-offset: 1rem;
 }
 
 * {
@@ -288,11 +288,20 @@ body {
 
 }
 
-/* .button-link:hover {
+/* HIRAGANA_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
-    background-color: black;
+.long-content-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
 
-}*/
+.long-content-section .image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* NAVIGATION______________________________________________________________________ */
 nav {
@@ -428,7 +437,7 @@ nav {
 
 .sidebar {
 
-    width: clamp(60px, 18vw, 180px);
+    width: clamp(20px, 18vw, 100px);
     flex-shrink: 0;
 
 }
