@@ -46,14 +46,19 @@ a:hover {
     text-decoration: underline;
 }
 
-/* STARTSEITE_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
-/* Text neben Bild */
 .startbild {
+
+    width: 50%;
+    height: auto;
     -webkit-mask-image: linear-gradient(to right, transparent, black);
     mask-image: linear-gradient(to right, transparent, black);
-    float: right;
+
 
 }
+
+/* STARTSEITE_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
+/* Text neben Bild */
+
 
 .split-section {
     display: flex;
@@ -129,7 +134,7 @@ a:hover {
     flex: 0 0 40%;
 }
 
-/* Kategorien (5 Boxen) */
+/* Kategorien (4 Boxen) */
 
 /* Gesamter Bereich */
 .kultur-kategorien {
@@ -290,7 +295,6 @@ a:hover {
 /* NAVIGATION______________________________________________________________________ */
 nav {
     background-color: #f5f5f5;
-    ;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -302,7 +306,7 @@ nav {
 .nav-button {
     display: inline-block;
     background-color: white;
-    color: black;
+    color: rgb(188, 0, 45);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 6px;
@@ -314,7 +318,8 @@ nav {
 /* Maus darüber */
 .nav-button:hover {
     background-color: rgb(188, 0, 45);
-    color: white
+    color: white;
+    font-weight: normal;
 }
 
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
@@ -639,6 +644,10 @@ nav {
         color: #636263;
         opacity: 0.9;
 
+    }
+
+    .mobile-menu .dropdown-content .nav-button:hover {
+    color: white;
     }
 
     .mobile-menu .dropdown>summary {
