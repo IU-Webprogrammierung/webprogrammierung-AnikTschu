@@ -296,17 +296,60 @@ body {
 
 /* HIRAGANA_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
-.long-content-section {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+.split-i1-t3 { /* split frame: (image 1/4) (text 3/4) */
+    display: flex;
+    grid-template-columns: 4fr 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
 }
 
-.long-content-section .image img {
+.split-i1-t3 .text {
+    flex: 3;
+}
+
+.split-i1-t3 .image {
+    flex: 1;
+}
+
+.split-i1-t3 .image img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.s-big-image { /* section for big image */
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.s-big-image .big-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.split-i1-t2 {     /* split frame: (image 1/3) (text 2/3) */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.split-p1-t2 .image {
+    flex: 1;      
+}
+
+.split-p1-t2 .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.split-p1-t2 .text {
+    flex: 2;      
 }
 
 /* NAVIGATION______________________________________________________________________ */
@@ -684,7 +727,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     }
 
     /* Startseite */
-.split-section,
+    .split-section,
     .split-section.reverse {
         flex-direction: column;
         align-items: center;
@@ -699,6 +742,22 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     .split-text {
         width: 80%;
+    }
+
+    /* Hiragana */
+    .long-content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .long-content-section .text,
+    .long-content-section .image {
+        width: 100%;
+    }
+
+    .long-content-section .image img {
+        max-width: 300px;
+        margin: 0 auto;
     }
 
 
