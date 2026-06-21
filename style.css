@@ -95,7 +95,7 @@ img {
 }
 
 .split-i1-t3 .image img {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: block;
 }
@@ -108,7 +108,7 @@ img {
 
 .s-big-image .big-image {
     display: block;
-    width: 100%;
+    width: 80%;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
@@ -133,6 +133,24 @@ img {
 
 .split-i1-t2 .text {
     flex: 2;      
+}
+
+.split-i1-t1 {       /* split frame: (image 1/2) (text 1/2) */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.split-i1-t1 .text,
+.split-i1-t1 .image {
+    flex: 1;
+}
+
+/* Bild sauber skalieren */
+.split-i1-t1 .image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* STARTSEITE_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
