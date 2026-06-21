@@ -66,8 +66,9 @@ body {
     height: auto;
     -webkit-mask-image: linear-gradient(to right, transparent, black);
     mask-image: linear-gradient(to right, transparent, black);
-
-
+    display: block;
+    width: 50%;
+    margin: 0 0 0 auto;
 }
 
 /* STARTSEITE_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
