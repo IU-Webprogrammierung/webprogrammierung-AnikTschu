@@ -76,6 +76,7 @@ body {
 
 .split-section {
     display: flex;
+    align-items: center;
     gap: 40px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -553,7 +554,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     }
 
     .kultur-kategorie-karte {
-        
+
         max-width: 340px;
         height: auto;
         min-height: 280px;
@@ -680,5 +681,24 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         align-items: center;
         gap: 15px;
     }
+
+    /* Startseite */
+.split-section,
+    .split-section.reverse {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .split-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .split-text {
+        width: 80%;
+    }
+
 
 }
