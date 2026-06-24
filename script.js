@@ -1,3 +1,4 @@
+// Dropdown-Menü klickbar (ein-/ausblenden)
 
 function initDropdown() {
 
@@ -17,6 +18,7 @@ function initDropdown() {
     }
 }
 
+// Aktuelle Seite im Menü markieren ("aktivieren" -> zur Orientirung)
 function setActiveNav() {
 
     const page = document.body.dataset.page;
@@ -31,7 +33,7 @@ function setActiveNav() {
         link.classList.add("active");
     }
 
-    // 2. Dropdown-Gruppe "Schrift" aktivieren
+    // 2. Dropdown-Gruppe "Schrift": aktuelle Seite markieren ("aktivieren")
     const schriftPages = ["schrift", "hiragana", "katakana", "kanji"];
 
     if (schriftPages.includes(page)) {
@@ -43,19 +45,7 @@ function setActiveNav() {
     }
 }
 
-function setActiveSidebar() {
-
-    const page = document.body.dataset.page;
-    if (!page) return;
-
-    const link = document.querySelector(
-        `.sidebar-link[data-page="${page}"]`
-    );
-
-    if (link) {
-        link.classList.add("active");
-    }
-}
+// Burger-Menü bei mobilen Version für Hauptnavigation (klickbar -> ausblendbar)
 
 function initHamburgerMenu() {
 
@@ -87,11 +77,25 @@ function initHamburgerMenu() {
 
 }
 
+// Kleine Bilder können per Klick vergrößert werden
+
+function openImage(src) {
+    const overlay = document.getElementById("overlay");
+    const largeImage = document.getElementById("largeImage");
+
+    largeImage.src = src;
+    overlay.style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+// init für alle Funktionen
 function initPage() {
     initDropdown();
     initHamburgerMenu();
     setActiveNav();
-    setActiveSidebar();
 }
 
 /* normale Seite */

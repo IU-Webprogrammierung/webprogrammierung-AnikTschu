@@ -91,13 +91,46 @@ img {
 }
 
 .split-i1-t3 .image {
-    flex: 1;
+    position: relative;
+    width: 80%;
+    cursor: pointer;
 }
 
 .split-i1-t3 .image img {
-    width: 80%;
+    width: 100%;
     height: auto;
     display: block;
+}
+
+.base-image {
+    position: relative;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.split-i1-t3 .image:hover .hover-image {
+    opacity: 1;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
 }
 
 .s-big-image { /* section for big image */
