@@ -16,7 +16,7 @@
 
     <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML">
     </header>
-    
+
     <main class="content-layout">
 
         <section class="content">
@@ -61,8 +61,15 @@
                     </p>
                 </div>
 
-                <div class="image">
-                    <img src="images/origin_of_hiragana.png" alt="Tabelle, die den Usprung der Hiragana-Zeichen zeigt">
+                <div class="image" onclick="openImage('images/origin_of_hiragana_big.PNG')">
+
+                    <img src="images/origin_of_hiragana.png" class="base-image" alt="Ursprung von Hiragana">
+
+                    <img src="images/origin_of_hiragana_hint.PNG" class="hover-image" alt="Hier klicken für große Ansicht">
+
+                </div>
+                <div id="overlay" onclick="closeImage()">
+                    <img id="largeImage" src="images/origin_of_hiragana.png" alt="Ursprung von Hiragana">
                 </div>
 
             </section>
