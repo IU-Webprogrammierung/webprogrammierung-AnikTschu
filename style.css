@@ -289,6 +289,7 @@ img {
     width: 70%;
     object-fit: cover;
     border-radius: 0px;
+    margin: 0 auto;
 }
 
 .kultur-kategorie-karte h3 {
