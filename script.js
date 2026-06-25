@@ -91,6 +91,30 @@ function closeImage() {
     document.getElementById("overlay").style.display = "none";
 }
 
+
+// Positionierung der Punkte in der Timeline auf der Mitte der Timeline-Karte auf dem Zeitstrahl
+
+const timeline = document.querySelector(".timeline");
+const center = document.querySelector(".timeline-center");
+
+document.querySelectorAll(".card").forEach(card => {
+
+    const point = document.createElement("div");
+    point.classList.add("point");
+
+    const cardRect = card.getBoundingClientRect();
+    const timelineRect = timeline.getBoundingClientRect();
+
+    const middle =
+        cardRect.top -
+        timelineRect.top +
+        cardRect.height / 2;
+
+    point.style.top = middle + "px";
+
+    center.appendChild(point);
+});
+
 // init für alle Funktionen
 function initPage() {
     initDropdown();
