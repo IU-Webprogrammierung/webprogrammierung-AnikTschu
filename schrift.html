@@ -14,80 +14,97 @@
 
 <body data-page="schrift">
 
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML">
+    </header>
 
     <main>
 
-        <div class="content-layout">
+        <section class="content-layout">
 
-            <div class="hauptinhalt">
+            <section class="hauptinhalt">
 
                 <section class="schrift-text-mit-bild">
-                    <div class="schrift-text">
+
+                    <section class="schrift-text">
                         <h1>Die japanische Schrift</h1>
                         <h2>Vielfalt der Schriftzeichen</h2>
+
                         <p>
                             Die japanische Schrift setzt sich aus drei verschiedenen
-                            Schriftsystemen zusammen: Hiragana, Katakana und Kanji. Jedes
-                            dieser Systeme erfüllt eine eigene Aufgabe und wird je nach
-                            Kontext verwendet.
+                            Schriftsystemen zusammen: Hiragana, Katakana und Kanji.
+                            Jedes dieser Systeme erfüllt eine eigene Aufgabe und wird
+                            je nach Kontext verwendet.
                             <br>
-                            Im alltäglichen Schriftgebrauch werden alle drei Schriftsysteme
-                            miteinander kombiniert und bilden gemeinsam die Grundlage der
-                            japanischen Schriftsprache.
+                            Im alltäglichen Schriftgebrauch werden alle drei
+                            Schriftsysteme miteinander kombiniert und bilden gemeinsam
+                            die Grundlage der japanischen Schriftsprache.
                         </p>
-                    </div>
+                    </section>
+
                     <img src="images/Schrift.png" alt="Das Wort Japanisch in japanischen Schriftzeichen"
                         class="schrift-bild">
+
                 </section>
 
                 <section class="schriftarten">
-                    <div class="schriftarten-grid">
+
+                    <section class="schriftarten-grid">
+
                         <article class="schriftkarte">
                             <span class="japanisch">あ</span>
                             <h3>Hiragana</h3>
                             <p>
-                                Dies ist eine Silbenschrift, die vor allem zur Schreibung
-                                grammatischer Endungen und einheimischer japanischer Wörter
-                                verwendet wird.
+                                Dies ist eine Silbenschrift, die vor allem zur
+                                Schreibung grammatischer Endungen und einheimischer
+                                japanischer Wörter verwendet wird.
                             </p>
+
                             <a href="hiragana.html" class="nav-link nav-link--background-light">
                                 Mehr über Hiragana
                             </a>
                         </article>
+
                         <article class="schriftkarte">
                             <span class="japanisch">ア</span>
                             <h3>Katakana</h3>
                             <p>
-                                Ist ebenfalls eine Silbenschrift, die jedoch hauptsächlich für
-                                Fremdwörter, Lautmalereien und zur Hervorhebung bestimmter Begriffe
-                                genutzt wird.
+                                Ist ebenfalls eine Silbenschrift, die jedoch
+                                hauptsächlich für Fremdwörter, Lautmalereien und zur
+                                Hervorhebung bestimmter Begriffe genutzt wird.
                             </p>
+
                             <a href="katakana.html" class="nav-link nav-link--background-light">
                                 Mehr über Katakana
                             </a>
                         </article>
+
                         <article class="schriftkarte">
                             <span class="japanisch">日</span>
                             <h3>Kanji</h3>
                             <p>
-                                Sie sind aus China übernommene Schriftzeichen, die meist die
-                                Bedeutung eines Wortes tragen. Manche sehen einfach aus, manche kompliziert.
+                                Sie sind aus China übernommene Schriftzeichen, die
+                                meist die Bedeutung eines Wortes tragen. Manche sehen
+                                einfach aus, manche kompliziert.
                             </p>
+
                             <a href="kanji.html" class="nav-link nav-link--background-light">
                                 Mehr über Kanji
                             </a>
                         </article>
-                    </div>
+
+                    </section>
+
                 </section>
-            </div>
-        </div>
+
+            </section>
+
+        </section>
+
     </main>
 
-    <div    hx-get="components/footer.html" 
-            hx-trigger="load" 
-            hx-swap="outerHTML">
-    </div>
+    <footer hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML">
+    </footer>
+
 </body>
 
 </html>

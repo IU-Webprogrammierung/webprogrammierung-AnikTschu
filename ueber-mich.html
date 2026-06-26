@@ -1,108 +1,97 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über mich</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+        integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+        crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
+
 <body data-page="ueber-mich">
 
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>   
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML">
+    </header>
 
     <main>
+        <h1>Über mich</h1>
+        <h2>Meine Verbindung zu Japan</h2>
+    </main>
 
-            <h1>Über mich</h1>
-            <h2>Meine Verbindung zu Japan</h2>
-        
-    </main> 
+    <section class="timeline">
 
-<section class="timeline">
+        <!-- Linke Spalte -->
+        <section class="left-column">
 
-    <!-- Linke Spalte -->
-    <div class="left-column">
+            <article class="card left dark">
+                <img src="images/platzhalter.PNG" alt="2005">
+                <section class="text">
+                    <h4>2005</h4>
+                    <p>Beschreibung für das Jahr 2005.</p>
+                </section>
+            </article>
 
-        <div class="card left dark">
-            <img src="images/platzhalter.PNG" alt="2005">
-            <div class="text">
-                <h4>2005</h4>
-                <p>
-                    Beschreibung für das Jahr 2005.
-                </p>
-            </div>
-        </div>
+            <article class="card left light">
+                <img src="images/platzhalter.PNG" alt="2011">
+                <section class="text">
+                    <h4>2011</h4>
+                    <p>Beschreibung für das Jahr 2011.</p>
+                </section>
+            </article>
 
-        <div class="card left light ">
-            <img src="images/platzhalter.PNG" alt="2011">
-            <div class="text">
-                <h4>2011</h4>
-                <p>
-                    Beschreibung für das Jahr 2011.
-                </p>
-            </div>
-        </div>
+            <article class="card left dark">
+                <img src="images/platzhalter.PNG" alt="2023">
+                <section class="text">
+                    <h4>2023</h4>
+                    <p>Beschreibung für das Jahr 2023.</p>
+                </section>
+            </article>
 
-        <div class="card left dark">
-            <img src="images/platzhalter.PNG" alt="2023">
-            <div class="text">
-                <h4>2023</h4>
-                <p>
-                    Beschreibung für das Jahr 2023.
-                </p>
-            </div>
-        </div>
+        </section>
 
-    </div>
+        <!-- Mittlere Spalte -->
+        <aside class="timeline-center">
+            <section class="line"></section>
+        </aside>
 
-    <!-- Mittlere Spalte -->
-    <div class="timeline-center">
-        <div class="line"></div>
-    </div>
+        <!-- Rechte Spalte -->
+        <section class="right-column">
 
-    <!-- Rechte Spalte -->
-    <div class="right-column">
+            <article class="card right light">
+                <section class="text">
+                    <h4>2006</h4>
+                    <p>Beschreibung für das Jahr 2006.</p>
+                </section>
+                <img src="images/platzhalter.PNG" alt="2006">
+            </article>
 
-        <div class="card right light">
-            <div class="text">
-                <h4>2006</h4>
-                <p>
-                    Beschreibung für das Jahr 2006.
-                </p>
-            </div>
-            <img src="images/platzhalter.PNG" alt="2006">
-        </div>
+            <article class="card right dark">
+                <section class="text">
+                    <h4>2019</h4>
+                    <p>Beschreibung für das Jahr 2019.</p>
+                </section>
+                <img src="images/platzhalter.PNG" alt="2019">
+            </article>
 
-        <div class="card right dark">
-            <div class="text">
-                <h4>2019</h4>
-                <p>
-                    Beschreibung für das Jahr 2008.
-                </p>
-            </div>
-            <img src="images/platzhalter.PNG" alt="2008">
-        </div>
+            <article class="card right light">
+                <section class="text">
+                    <h4>2026</h4>
+                    <p>Beschreibung für das Jahr 2026.</p>
+                </section>
+                <img src="images/platzhalter.PNG" alt="2026">
+            </article>
 
-        <div class="card right light">
-            <div class="text">
-                <h4>2026</h4>
-                <p>
-                    Beschreibung für das Jahr 2010.
-                </p>
-            </div>
-            <img src="images/platzhalter.PNG" alt="2010">
-        </div>
+        </section>
 
-    </div>
+    </section>
 
-</section>
+    <footer hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML">
+    </footer>
 
-    <div    hx-get="components/footer.html" 
-            hx-trigger="load" 
-            hx-swap="outerHTML">
-    </div>
-
-    
 </body>
+
 </html>

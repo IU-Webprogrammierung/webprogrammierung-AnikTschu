@@ -15,16 +15,18 @@
 <body data-page="katakana">
 
     <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML">
-
     </header>
+
     <main class="content-layout">
 
         <section class="content">
+
             <h1>Katakana</h1>
             <h2>片仮名 oder カタカナ</h2>
 
             <section class="split-i1-t3">
-                <div class="text">
+
+                <section class="text">
                     <p>
                         Katakana (片仮名 oder カタカナ) ist eine der drei japanischen
                         Schriftarten und bildet neben Hiragana die zweite japanische
@@ -70,22 +72,25 @@
                         Kursivschrift oder Großbuchstaben. Dadurch ist Katakana ein
                         unverzichtbarer Bestandteil des modernen japanischen Schriftsystems.
                     </p>
-                </div>
+                </section>
 
-                <div class="image" onclick="openImage('images/origin_of_katakana_big.PNG')">
+                <figure class="image" onclick="openImage('images/origin_of_katakana_big.PNG')">
 
                     <img src="images/origin_of_katakana.png" class="base-image" alt="Ursprung von Katakana">
 
-                    <img src="images/origin_of_katakana_hint.PNG" class="hover-image" alt="Ursprung von Hiragana">
+                    <img src="images/origin_of_katakana_hint.PNG" class="hover-image"
+                        alt="Hier klicken für große Ansicht">
 
-                </div>
-                <div id="overlay" onclick="closeImage()">
+                </figure>
+
+                <aside id="overlay" onclick="closeImage()">
                     <img id="largeImage" src="images/origin_of_katakana.png" alt="Ursprung von Katakana">
-                </div>
+                </aside>
 
             </section>
+
             <section class="s-big-image">
-                <img src="images/katakana-tabelle-1.png" alt="Hiragana-Tabelle Teil 1" class="big-image">
+                <img src="images/katakana-tabelle-1.png" alt="Katakana-Tabelle Teil 1" class="big-image">
             </section>
 
             <p>
@@ -113,11 +118,12 @@
 
             <section class="split-i1-t2">
 
-                <div class="image">
-                    <img src="images/katakana-tabelle-2.png" alt="???" title="???" class="image">
-                </div>
+                <figure class="image">
+                    <img src="images/katakana-tabelle-2.png" alt="Dakuten und Handakuten" title="Dakuten und Handakuten"
+                        class="image">
+                </figure>
 
-                <div class="text">
+                <section class="text">
                     <p>
                         Zusätzliche Laute im Katakana werden durch kleine diakritische
                         Zeichen gebildet.
@@ -128,25 +134,27 @@
                         ein b (ハ → バ).
                         <br><br>
                         Der kleine Kreis „゜“ heißt Handakuten (auch Maru). Er wird nur bei der
-                        h-Reihe verwendet und verändert diese zur p-Reihe, also pa, pi, pu, pe,
-                        po (ハ → パ, ヒ → ピ, フ → プ, ヘ → ぺ, ホ → ポ). Dadurch erweitert sich
+                        h-Reihe verwendet und verändert diese zur p-Reihe, also pa, pi, pu,
+                        pe, po (ハ → パ, ヒ → ピ, フ → プ, ヘ → ペ, ホ → ポ). Dadurch erweitert sich
                         das Lautsystem des Katakana um weitere wichtige Silben.
                     </p>
-                </div>
+                </section>
+
             </section>
 
             <section class="split-i1-t2">
 
-                <div class="text">
+                <section class="text">
                     <p>
                         Die Tabelle zeigt die sogenannten Yōon (拗音, wörtlich „gebogene
                         Laute“ oder „verkniffene Laute“) im Katakana. Yōon entstehen,
-                        wenn ein normales Hiragana-Zeichen aus der i-Reihe (um Beispiel キ
+                        wenn ein normales Katakana-Zeichen aus der i-Reihe (zum Beispiel キ
                         ki, シ shi, ニ ni oder ミ mi) mit einem kleinen ャ (ya), ュ (yu)
                         oder ョ (yo) kombiniert wird.
                         <br><br>
-                        Dabei verschmilzt der Laut zu einer neuen Silbe:<br>
+                        Dabei verschmilzt der Laut zu einer neuen Silbe:
                     </p>
+
                     <table>
                         <tr>
                             <td>
@@ -158,12 +166,15 @@
                             </td>
                         </tr>
                     </table>
+
                     <p>
-                        Das kleine ャ, ュ, ョ wird also nicht separat ausgesprochen, sondern
-                        verändert den Laut davor. Aus ki-ya wird nicht „kiya“, sondern kya –
-                        der Laut wird „zusammengezogen“.<br>
+                        Das kleine ャ, ュ, ョ wird also nicht separat ausgesprochen,
+                        sondern verändert den Laut davor. Aus ki-ya wird nicht „kiya“,
+                        sondern kya – der Laut wird „zusammengezogen“.
+                        <br>
                         Weiterhin besonders ist:
                     </p>
+
                     <table>
                         <tr>
                             <td>
@@ -174,28 +185,32 @@
                             </td>
                         </tr>
                     </table>
+
                     <p>
                         Obwohl ジ und ヂ unterschiedlich geschrieben werden, klingen sie
-                        im modernen Japanisch meist gleich.<br>
+                        im modernen Japanisch meist gleich.
+                        <br>
                         Wichtig: Nur die kleinen Zeichen ャ, ュ, ョ bilden Yōon. Würde man die
                         großen Zeichen ヤ, ユ, ヨ verwenden, wären es zwei getrennte Silben:
-                        z. B. キヤ (kiya) statt キャ (kya). <br>
+                        z. B. キヤ (kiya) statt キャ (kya).
+                        <br>
                         Yōon sind sehr häufig im Japanischen und wichtig, um Wörter korrekt
                         lesen und aussprechen zu können.
                     </p>
-                </div>
+                </section>
 
-                <div class="image">
-                    <img src="images/katakana-tabelle-3.png" alt="???">
-                </div>
+                <figure class="image">
+                    <img src="images/katakana-tabelle-3.png" alt="Yōon-Tabelle">
+                </figure>
 
             </section>
 
         </section>
+
     </main>
 
-    <div hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML">
-    </div>
+    <footer hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML">
+    </footer>
 
 </body>
 
