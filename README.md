@@ -42,10 +42,11 @@ Projekt/
 1. Responsive Seitenlayout
     - Desktop-Variante (Breite: 768 px bis 1920 px) 
     - Mobile Variante (Breite: 360 px bis 767 px)
-    - Unterscheidung wird mithilfe einer Media Query in style.css umgesetzt
+    - Unterscheidung wird mithilfe einer Media Query in style.css umgesetzt (@media (max-width: 767px) {...})
 
 2. Interaktionen mithilfe von JavaScript
     - ausgewählte, kleinere Bilder können durch Anklicken vergrößert werden
+    - JavaScript: function openImage(src)
     - bei hiragana.html und katakana.html umgesetzt
     - Struktur
         1. Bild bei Besuch der Seite (kleine Ansicht)
@@ -54,9 +55,17 @@ Projekt/
                 wieder ausgeblendet werden
 
 3. Navigation mit visuellen Hinweisen mithilfe von JavaScript und CSS
+    - aktuelle (="aktive") Seite wird in der Hauptnavigation im Header visuell hervorgehoben
+    - HTML
+        - zu Beginn jeder Seite wird im Body ein data-page="name-der-seite" definiert
+        - z.B. für Hiragana: <body data-page="hiragana">
     - CSS
+        - .nav-button wird mit .nav-button:hover ergänzt, sodass visuell hervorgehoben wird, auf welchem Menü-
+                Punkt sich der Cursor befindet (Desktop-Variante)
+        - .nav-button.active setzt Farbschema für aktuelle ("aktive") Seite
     - JavaScript 
-
+        - function setActiveNav() {} setzt aktuelle Seite auf "active"
+ 
 4. Wiederkehrende Elemente per Components umgesetzt
     - footer und header werden als Components umgesetzt
     - Vermeidung von sich wiederholendem Code 
