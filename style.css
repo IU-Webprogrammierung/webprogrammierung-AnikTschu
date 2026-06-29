@@ -36,6 +36,10 @@ img {
     display: block;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
 /* Navigations-Verlinkungen auf andere Seiten */
 .nav-link {
     display: inline-block;
@@ -712,9 +716,6 @@ nav {
     font-size: 1.3rem;
 }
 
-.text p {
-    margin: 0;
-}
 
 
 /* FOOTER_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
