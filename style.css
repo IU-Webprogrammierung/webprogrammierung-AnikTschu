@@ -1137,3 +1137,31 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     }
 
 }
+
+
+
+@media print {
+
+  /* 1. Hintergrund auf weiß + Standardtext schwarz */
+  * {
+    background: white !important;
+    color: black !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* 2. Header und Footer ausblenden */
+  header,
+  footer {
+    display: none !important;
+  }
+
+  /* Optional: verhindert unnötige Schatten/Rahmen */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
