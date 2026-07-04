@@ -1,25 +1,5 @@
-/* ÜBERSCHRIFTEN_____________________________________________________________________ */
-/* Hauptüberschrift */
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 4rem;
-    color: black;
-    margin-bottom: 0.5em;
-}
-
-/* Unterüberschrift */
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
-    color: rgb(188, 0, 45);
-
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-
-    /*text-decoration: underline;*/
-    text-decoration-color: rgb(188, 0, 45);
-    text-underline-offset: 1rem;
-}
+/* ALLGEMEINES_______________________________________________________________________ */
+/* __________________________________________________________________________________ */
 
 * {
     box-sizing: border-box;
@@ -40,11 +20,28 @@ p {
     margin-bottom: 1rem;
 }
 
-.flag_icon {
-    width: 40px;
-    border: 2px solid black;
+/* Überschriften */
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 0.5em;
 }
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    color: rgb(188, 0, 45);
+
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+    /*text-decoration: underline;*/
+    text-decoration-color: rgb(188, 0, 45);
+    text-underline-offset: 1rem;
+}
+
 /* Quellen */
 
 .sources {
@@ -65,7 +62,8 @@ p {
     text-decoration: underline;
 }
 
-/* Navigations-Verlinkungen auf andere Seiten */
+/* Verlinkungen */
+
 .nav-link {
     display: inline-block;
     padding: 10px 14px;
@@ -76,7 +74,7 @@ p {
     font: inherit;
 }
 
-.nav-link--background-dark {
+.nav-link--background-dark {    /* Verlinkungen - Dunkler Hintergrund + helle Schrift */
     background: white;
     color: rgb(188, 0, 45);
 }
@@ -85,7 +83,7 @@ p {
     color: black;
 }
 
-.nav-link--background-light {
+.nav-link--background-light {   /* Verlinkungen - Heller Hintergrund + dunkle Schrift */
     background: rgb(188, 0, 45);
     color: white;
 }
@@ -95,13 +93,13 @@ p {
     color: white;
 }
 
-.startbild {
+.title_picture {  
     width: 50%;
     margin: 0 0 0 auto;
     display: block;
 }
 
-.startbild img {
+.title_picture img {
     width: 100%;
     height: auto;
     display: block;
@@ -110,27 +108,42 @@ p {
     mask-image: linear-gradient(to right, transparent, black);
 }
 
-/* Allgemeine Regelungen für: Text neben Bild*/
+/* Sektion für großes Bild */
 
-.split-i1-t3 {
-    /* split frame: (image 1/4) (text 3/4) */
+.big-image {     
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.big-image .big-image {
+    display: block;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Aufgeteilte Bereiche mit Text und Bild */
+/* Aufteilung: (Bild 1/5) (Text 4/5) */
+.split-i1-t4 {  
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 2rem;
     align-items: center;
 }
 
-.split-i1-t3 .text {
+.split-i1-t4 .text {
     flex: 3;
 }
 
-.split-i1-t3 .image {
+.split-i1-t4 .image {
     position: relative;
     width: 80%;
     cursor: pointer;
 }
 
-.split-i1-t3 .image img {
+.split-i1-t4 .image img {
     width: 100%;
     height: auto;
     display: block;
@@ -148,7 +161,7 @@ p {
     transition: opacity 0.3s ease;
 }
 
-.split-i1-t3 .image:hover .hover-image {
+.split-i1-t4 .image:hover .hover-image {
     opacity: 1;
 }
 
@@ -167,27 +180,10 @@ p {
     max-height: 90vh;
 }
 
-.s-big-image {
-    /* section for big image */
-    width: 100%;
-    padding: 0 5%;
-    box-sizing: border-box;
-}
-
-.s-big-image .big-image {
-    display: block;
-    width: 60%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.split-i1-t2 {
-    /* split frame: (image 1/3) (text 2/3) */
+.split-i1-t2 {  /* Aufteilung: (Bild 1/3) (Text 2/3) */
     display: flex;
     align-items: center;
     gap: 30px;
-
 }
 
 .split-i1-t2 .image {
@@ -204,8 +200,7 @@ p {
     flex: 2;
 }
 
-.split-i1-t1 {
-    /* split frame: (image 1/2) (text 1/2) */
+.split-i1-t1 {  /* Aufteilung: (Bild 1/2) (Text 1/2) */
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -223,9 +218,14 @@ p {
     display: block;
 }
 
-/* STARTSEITE_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
-/* Text neben Bild */
+.flag_icon {
+    width: 40px;
+    border: 2px solid black;
 
+}
+
+/* STARTSEITE_______________________________________________________________________ */
+/* _________________________________________________________________________________ */
 
 .split-section {
     display: flex;
@@ -277,9 +277,6 @@ p {
     color: black;
 }
 
-.split-section a:link {
-    color: #ffffff;
-}
 
 /* KULTUR_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
 /* Text neben Bild */
@@ -986,16 +983,16 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* Hiragana */
 
     .split-i1-t2,
-    .split-i1-t3 {
+    .split-i1-t4 {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .split-i1-t2 .image,
-    .split-i1-t3 .image,
+    .split-i1-t4 .image,
     .split-i1-t2 .text,
-    .split-i1-t3 .text {
+    .split-i1-t4 .text {
         width: 100%;
     }
 
