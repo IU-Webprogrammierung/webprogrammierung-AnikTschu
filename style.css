@@ -40,6 +40,11 @@ p {
     margin-bottom: 1rem;
 }
 
+.flag_icon {
+    width: 40px;
+    border: 2px solid black;
+
+}
 /* Quellen */
 
 .sources {
