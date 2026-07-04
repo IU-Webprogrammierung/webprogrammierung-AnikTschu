@@ -95,24 +95,35 @@ function closeImage() {
 // Positionierung der Punkte in der Timeline auf der Mitte der Timeline-Karte auf dem Zeitstrahl
 
 const timeline = document.querySelector(".timeline");
-const center = document.querySelector(".timeline-center");
 
-document.querySelectorAll(".card").forEach(card => {
+// alte Punkte löschen
+document.querySelectorAll(".point").forEach(point => point.remove());
+
+document.querySelectorAll(".card").forEach((card, index) => {
 
     const point = document.createElement("div");
     point.classList.add("point");
 
+    // 👉 WICHTIG: links / rechts hinzufügen
+    if (index % 2 === 0) {
+        point.classList.add("left");
+    } else {
+        point.classList.add("right");
+    }
+
     const cardRect = card.getBoundingClientRect();
     const timelineRect = timeline.getBoundingClientRect();
 
-    const middle =
+    let middle =
         cardRect.top -
         timelineRect.top +
         cardRect.height / 2;
 
+    middle += (index % 2 === 0) ? -15 : 15;
+
     point.style.top = middle + "px";
 
-    center.appendChild(point);
+    timeline.appendChild(point);
 });
 
 // init für alle Funktionen
