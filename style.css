@@ -641,40 +641,28 @@ nav {
     --light: #dddddd;
 }
 
+/* =========================
+   TIMELINE
+   ========================= */
+
 .timeline {
     max-width: 1400px;
     margin: 50px auto;
+    padding: 20px;
 
     display: grid;
     grid-template-columns: 1fr 80px 1fr;
-    gap: 30px;
-}
+    row-gap: 40px;
 
-/* LINKE SPALTE */
-
-.left-column {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* RECHTE SPALTE */
-
-.right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 50px; /* Steuert den Versatz von linker und rechter Spalte */
-}
-
-/* LINIE mit PUNKTEN */
-
-.timeline-center {
     position: relative;
 }
 
-.line {
+/* Mittlere Linie */
+
+.timeline::before {
+    content: "";
     position: absolute;
+
     left: 50%;
     top: 0;
     bottom: 0;
@@ -685,74 +673,142 @@ nav {
     transform: translateX(-50%);
 }
 
-.point {
-    position: absolute;
-
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 20px;
-    height: 20px;
-
-    background: white;
-    border: 4px solid var(--red);
-    border-radius: 50%;
-
-    z-index: 2;
-}
-
-/* KARTEN */
+/* =========================
+   KARTEN
+   ========================= */
 
 .card {
-    background: var(--red);
-    color: white;
-
     display: flex;
     align-items: center;
     gap: 20px;
 
-    min-height: 150px;
-    padding: 15px;
+    min-height: 170px;
+
+    padding: 20px;
+    padding-top: 45px;
+
+    border: 3px solid black;
 
     position: relative;
 }
 
+/* Dunkle Karten */
+
 .card.dark {
     background: var(--red);
     color: white;
-
-    border: 3px solid black;
 }
 
-.card.light {
-    background: var(--light);
-    color: black;
+/* =========================
+   POSITIONIERUNG
+   ========================= */
 
-    border: 3px solid black;
+/* Linke Karten */
+
+.card:nth-child(odd) {
+    grid-column: 1;
 }
 
-/* BILDER */
+/* Rechte Karten */
 
-.card img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+.card:nth-child(even) {
+    grid-column: 3;
+
+    flex-direction: row-reverse;
 }
 
-
-
-/* TEXT */
+/* =========================
+   TEXT
+   ========================= */
 
 .text {
-    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
 }
 
-.text h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.3rem;
+.text h3 {
+    position: absolute;
+    top: 15px;
+    margin: 0;
+    font-size: 2rem;
 }
 
+.text p {
+    margin: 0;
+    line-height: 1.5;
+}
 
+/* Jahreszahl linksbündig auf rechten Karten */
+
+.card:nth-child(even) .text {
+    text-align: left;
+}
+
+.card:nth-child(even) .text h3 {
+    left: 20px;
+}
+
+/* Jahreszahl rechtsbündig auf linken Karten */
+
+.card:nth-child(odd) .text {
+    text-align: right;
+}
+
+.card:nth-child(odd) .text h3 {
+    right: 20px;
+}
+
+/* =========================
+   BILDER
+   ========================= */
+
+.card img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border: 2px solid black;
+
+    flex-shrink: 0;
+}
+
+/* =========================
+   PUNKTE AUF DER ZEITACHSE
+   ========================= */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    background: white;
+
+    border: 4px solid var(--red);
+    border-radius: 50%;
+}
+
+/* Punkt bei linken Karten */
+
+.card:nth-child(odd)::before {
+    right: -57px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+/* Punkt bei rechten Karten */
+
+.card:nth-child(even)::before {
+    left: -57px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
 
 /* FOOTER_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
@@ -982,5 +1038,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     .split-i1-t3 .text {
         width: 100%;
     }
+
+
 
 }
