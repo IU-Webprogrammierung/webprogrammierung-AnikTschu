@@ -279,6 +279,10 @@ h2 {
     color: black;
 }
 
+.split-section.reverse .image-source {
+    color: black;
+}
+
 /* Hero - Titelbild und Kreis */
 
 .hero {
@@ -287,7 +291,6 @@ h2 {
     gap: 4rem;
 
     width: 100%;
-    max-width: 1600px;
     margin: 1rem auto;
 }
 
