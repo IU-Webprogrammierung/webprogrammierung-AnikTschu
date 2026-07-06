@@ -376,7 +376,7 @@ h2 {
 /* Kategorien (4 Boxen) */
 
 /* Gesamter Bereich */
-.kultur-kategorien {
+.boxes {
     background-color: rgb(188, 0, 45);
     padding: 40px 0;
     display: grid;
@@ -385,7 +385,7 @@ h2 {
 
 }
 
-.kultur-kategorien-grid {
+.boxes-grid {
     max-width: 1200px;
     width: 85%;
     margin: 0 auto;
@@ -394,7 +394,7 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.kultur-kategorie-karte {
+.boxes-card {
     position: relative;
     background: white;
     border: 2px solid black;
@@ -405,25 +405,28 @@ h2 {
     height: 340px;
 }
 
-.kultur-kategorie-karte img {
+.boxes-card img {
     width: 70%;
     object-fit: cover;
     border-radius: 0px;
-    margin: 0 auto;
 }
 
-.kultur-kategorie-karte h3 {
+.boxes-card h3 {
     margin-top: 15px;
     color: black;
 }
 
 /* Vorderseite */
-.karten-vorderseite {
+.card-front {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertikal zentrieren */
+    align-items: center; 
 }
 
 /* Rückseite */
-.karten-rueckseite {
+.card-back {
     position: absolute;
     inset: 0;
 
@@ -443,11 +446,11 @@ h2 {
 }
 
 /* Hover */
-.kultur-kategorie-karte:hover .karten-vorderseite {
+.boxes-card:hover .card-front {
     visibility: hidden;
 }
 
-.kultur-kategorie-karte:hover .karten-rueckseite {
+.boxes-card:hover .card-back {
     opacity: 1;
     visibility: visible;
 }
@@ -895,13 +898,13 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     }
 
     /* 5 Karten untereinander */
-    .kultur-kategorien-grid {
+    .boxes-grid {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
     }
 
-    .kultur-kategorie-karte {
+    .boxes-card {
 
         max-width: 340px;
         height: auto;
