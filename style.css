@@ -93,16 +93,18 @@ h2 {
     color: white;
 }
 
-.title_picture {  
-    width: 50%;
-    margin: 0 0 0 auto;
-    display: block;
+.title_picture {
+    flex: 1;
+    margin: 0;
+
+    display: flex;
+    align-items: stretch;
 }
 
 .title_picture img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;      /* Bild füllt den gesamten Bereich */
 
     -webkit-mask-image: linear-gradient(to right, transparent, black);
     mask-image: linear-gradient(to right, transparent, black);
@@ -281,19 +283,20 @@ h2 {
 
 .hero {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
     gap: 4rem;
-    margin: 2rem auto;
-    position: relative;
+
+    width: 100%;
+    max-width: 1600px;
+    margin: 1rem auto;
 }
 
 .circle {
     left: 10rem;
     top: 5rem;
 
-    width: 20rem;
-    height: 20rem;
+    width: 22rem;
+    height: 22rem;
     background: rgb(188, 0, 45);
     border-radius: 50%;
 
@@ -318,18 +321,14 @@ h2 {
     font-size: 2rem;
 }
 
-.title_picture img {
-    max-width: 700px;
-    width: 100%;
-    display: block;
-}
-
-
 .hero-left {
+    flex: 1;
     display: flex;
-    flex-direction: column;   /* Kreis über Text */
-    align-items: center;      /* Alles mittig ausrichten */
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;      
     gap: 2rem;                /* Abstand zwischen Kreis und Text */
+    margin-left: 5rem;
 }
 
 .hero-description {
