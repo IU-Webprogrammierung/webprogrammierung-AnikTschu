@@ -592,10 +592,6 @@ nav {
 
 }
 
-/* =========================
-   TIMELINE
-   ========================= */
-
 .timeline {
     max-width: 1400px;
     margin: 50px auto;
@@ -624,9 +620,7 @@ nav {
     transform: translateX(-50%);
 }
 
-/* =========================
-   KARTEN
-   ========================= */
+/* Karten */
 
 .card {
     display: flex;
@@ -643,16 +637,12 @@ nav {
     position: relative;
 }
 
-/* Dunkle Karten */
-
 .card.dark {
     background: var(--red);
     color: white;
 }
 
-/* =========================
-   POSITIONIERUNG
-   ========================= */
+/* Positionierung */
 
 /* Linke Karten */
 
@@ -669,9 +659,7 @@ nav {
 
 }
 
-/* =========================
-   TEXT
-   ========================= */
+/* Text */
 
 .text {
     display: grid;
@@ -687,7 +675,7 @@ nav {
 }
 
 .text p {
-    margin: 0;
+    margin-top: 10px;
     line-height: 1.5;
 }
 
