@@ -66,13 +66,25 @@ Projekt/
     - JavaScript 
         - function setActiveNav() {} setzt aktuelle Seite auf "active"
  
-4. Wiederkehrende Elemente per Components umgesetzt
-    - footer und header werden als Components umgesetzt
-    - Vermeidung von sich wiederholendem Code 
+4. HTML-Komponenten
+    - wiederkehrende Elemente per Components umgesetzt
+    - umgesetzt beim Header (header.html) und dem Footer (footer.html) werden als Components umgesetzt
+    - fehlende DOCTYPE-Definition
+    - Vermeidung von sich wiederholendem Code
+    - alle Seiten beinhalten Header und Footer
+
+5. Mehrfachverwendung von Kategorien/Boxen mit Vor- und Rückseite
+    - bei hkultur.html und kanji.html umgesetzt
+    - Umsetzung mit CSS
+    - Desktopversion: bei "boxes-grid" mit 4 Boxen in einer Reihe definiert (Mobile Variante: alle Boxen untereinander)
+    - Vorderseite ("card-front")
+    - Rückseite ("card-back") definiert, jedoch per "visibility: hidden;" zunächst nicht sichtbar
+    - per :hover wird beim Mouseover die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 1;" und
+        "visibility: visible;" sichtbar gemacht
 
 
 ## Verwendete Quellen
 
-- Bilder: Eigene Erstellung / Quelle angeben
-- Inhalte: Eigene Formulierungen auf Grundlage der angegebenen Literatur
-- Weitere Quellen:
+- Bilder: Quelle bei jedem Bild angegeben (ChatGPT oder Eigene Darstellung, vereinzelt weitere Quellen wie 
+    Wikipedia)
+- Inhalte: Eigene Formulierungen auf Grundlagen von eigenem Wissen und ChatGPT
