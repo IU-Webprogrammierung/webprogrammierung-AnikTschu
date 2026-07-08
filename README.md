@@ -82,6 +82,11 @@ Projekt/
     - per :hover wird beim Mouseover die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 1;" und
         "visibility: visible;" sichtbar gemacht
 
+6. Weboptimierte Medien
+    - mit Ziel einer guten Performance wurden Bilder bei Bedarf mithilfe von https://squoosh.app/ komprimiert
+    - Datei-Typ: .webp
+    - Ziel: Größe aller Bilder <400 KB, Größe der meisten Bilder <100 KB
+
 
 ## Verwendete Quellen
 
