@@ -256,9 +256,8 @@ h2 {
     display: block;
 }
 
-.flag_icon {
+.home_icon {
     width: 40px;
-    border: 2px solid var(--black);
 
 }
 

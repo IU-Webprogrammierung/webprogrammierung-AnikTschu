@@ -107,6 +107,11 @@ Projekt/
     - dreisprachiger Hinweistext (deutsch, englisch, japanisch)
     - Abschließender Link zurück zur Startseite
 
+10. Favicon und Logo
+    - Bild unter images "favicon.ico" 
+    - wird sowohl als Favicon als auch als Logo verwendet
+    - Es zeigt den Anfangsbuchstaben A des Vornamens der Webseiteninhaberin im Stil eines japanisches Toriis
+
 ## Verwendete Quellen
 
 - Bilder: Quelle bei jedem Bild angegeben (ChatGPT oder Eigene Darstellung, vereinzelt weitere Quellen wie 
