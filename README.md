@@ -105,7 +105,7 @@ Projekt/
 
 9. Eigene 404-Seite definiert
     - dreisprachiger Hinweistext (deutsch, englisch, japanisch)
-    - Zusätzlicher Link zurück zur Startseite
+    - Abschließender Link zurück zur Startseite
 
 ## Verwendete Quellen
 
