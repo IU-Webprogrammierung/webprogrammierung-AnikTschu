@@ -449,11 +449,17 @@ h2 {
 
 /* Vorderseite */
 .card-front {
-    height: 100%;
+    position: absolute;
+    inset: 0;
+
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertikal zentrieren */
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    background: white;
 }
 
 /* Rückseite */
@@ -469,20 +475,18 @@ h2 {
     padding: 10px;
 
     opacity: 0;
-    visibility: hidden;
+    transition: opacity 0.8s ease;
 
     background: white;
-    transition: opacity 0.3s ease;
 }
 
 /* Hover */
 .boxes-card:hover .card-front {
-    visibility: hidden;
+    opacity: 0;
 }
 
 .boxes-card:hover .card-back {
     opacity: 1;
-    visibility: visible;
 }
 
 /* SCHRIFT_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_

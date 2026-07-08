@@ -73,8 +73,8 @@ Projekt/
     - Vermeidung von sich wiederholendem Code
     - alle Seiten beinhalten Header und Footer
 
-5. Mehrfachverwendung von Kategorien/Boxen mit Vor- und Rückseite
-    - bei hkultur.html und kanji.html umgesetzt
+5. CSS-Transition: Boxen mit Vor- und Rückseite
+    - bei kultur.html und kanji.html umgesetzt
     - Umsetzung mit CSS
     - Desktopversion: bei "boxes-grid" mit 4 Boxen in einer Reihe definiert (Mobile Variante: alle Boxen untereinander)
     - Vorderseite ("card-front")
