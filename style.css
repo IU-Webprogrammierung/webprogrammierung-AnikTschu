@@ -110,6 +110,27 @@ h2 {
     mask-image: linear-gradient(to right, transparent, black);
 }
 
+/* Back-to-Top */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
 /* Sektion für großes Bild */
 
 .big-image {     

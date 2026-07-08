@@ -1,4 +1,4 @@
-// Dropdown-Menü klickbar (ein-/ausblenden)
+//___ Dropdown-Menü klickbar (ein-/ausblenden)
 
 function initDropdown() {
 
@@ -18,7 +18,7 @@ function initDropdown() {
     }
 }
 
-// Aktuelle Seite im Menü markieren ("aktivieren" -> zur Orientirung)
+//___ Aktuelle Seite im Menü markieren ("aktivieren" -> zur Orientirung)
 function setActiveNav() {
 
     const page = document.body.dataset.page;
@@ -45,7 +45,7 @@ function setActiveNav() {
     }
 }
 
-// Burger-Menü bei mobilen Version für Hauptnavigation (klickbar -> ausblendbar)
+//___ Burger-Menü bei mobilen Version für Hauptnavigation (klickbar -> ausblendbar)
 
 function initHamburgerMenu() {
 
@@ -77,7 +77,7 @@ function initHamburgerMenu() {
 
 }
 
-// Kleine Bilder können per Klick vergrößert werden
+//___ Kleine Bilder können per Klick vergrößert werden
 
 function openImage(src) {
     const overlay = document.getElementById("overlay");
@@ -92,7 +92,7 @@ function closeImage() {
 }
 
 
-// Positionierung der Punkte in der Timeline auf der Mitte der Timeline-Karte auf dem Zeitstrahl
+//___ Positionierung der Punkte in der Timeline auf der Mitte der Timeline-Karte auf dem Zeitstrahl
 
 const timeline = document.querySelector(".timeline");
 
@@ -124,6 +124,27 @@ document.querySelectorAll(".card").forEach((card, index) => {
     point.style.top = middle + "px";
 
     timeline.appendChild(point);
+});
+
+//___ Back-to-Top Funktion
+
+const backToTop = document.getElementById("backToTop");
+
+    // Button anzeigen oder ausblenden
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+    // Sanft nach oben scrollen
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
 
 // init für alle Funktionen
