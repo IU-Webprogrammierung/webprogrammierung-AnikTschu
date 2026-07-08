@@ -87,6 +87,10 @@ Projekt/
     - Datei-Typ: .webp
     - Ziel: Größe aller Bilder <400 KB, Größe der meisten Bilder <100 KB
 
+7. Back-to-Top
+    - in CSS: backToTop {}
+    - in HTML: am Ende vom <body> mit einem button definiert
+    - in JavaScript: sobald etwa 200 px nach unten gescrollt wurden, wird der Button unten rechts eingeblendet 
 
 ## Verwendete Quellen
 
