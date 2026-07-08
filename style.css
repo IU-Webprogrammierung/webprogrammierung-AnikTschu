@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --japanred: rgb(188, 0, 45);
+    --light: #dddddd;
+    --black: black; 
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -32,13 +39,13 @@ h1 {
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
-    color: rgb(188, 0, 45);
+    color: var(--japanred);
 
     margin-top: 1em;
     margin-bottom: 0.5em;
 
     /*text-decoration: underline;*/
-    text-decoration-color: rgb(188, 0, 45);
+    text-decoration-color: var(--japanred);
     text-underline-offset: 1rem;
 }
 
@@ -76,7 +83,7 @@ h2 {
 
 .nav-link--background-dark {    /* Verlinkungen - Dunkler Hintergrund + helle Schrift */
     background: white;
-    color: rgb(188, 0, 45);
+    color: var(--japanred);
 }
 
 .nav-link--background-dark:hover {
@@ -84,7 +91,7 @@ h2 {
 }
 
 .nav-link--background-light {   /* Verlinkungen - Heller Hintergrund + dunkle Schrift */
-    background: rgb(188, 0, 45);
+    background: var(--japanred);
     color: white;
 }
 
@@ -257,7 +264,7 @@ h2 {
     margin: 0 auto;
     padding: 40px 20px;
     align-items: stretch;
-    background-color: rgb(188, 0, 45);
+    background-color: var(--japanred);
     color: white;
 }
 
@@ -321,7 +328,7 @@ h2 {
 
     width: 22rem;
     height: 22rem;
-    background: rgb(188, 0, 45);
+    background: var(--japanred);
     border-radius: 50%;
 
     display: flex;
@@ -398,7 +405,7 @@ h2 {
 
 /* Gesamter Bereich */
 .boxes {
-    background-color: rgb(188, 0, 45);
+    background-color: var(--japanred);
     padding: 40px 0;
     display: grid;
     justify-items: center;
@@ -499,7 +506,7 @@ h2 {
 /* Gesamter Bereich */
 .schriftarten {
 
-    background-color: rgb(188, 0, 45);
+    background-color: var(--japanred);
     padding: 30px;
     margin-top: 10px;
 
@@ -535,7 +542,7 @@ h2 {
 /* Überschrift der Karte */
 .schriftkarte h3 {
 
-    color: rgb(188, 0, 45);
+    color: var(--japanred);
 
 }
 
@@ -545,7 +552,7 @@ h2 {
     display: inline-block;
     margin-top: 5px;
     padding: 10px 10px;
-    background-color: rgb(188, 0, 45);
+    background-color: var(--japanred);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -577,7 +584,7 @@ nav {
 .nav-button {
     display: inline-block;
     background-color: white;
-    color: rgb(188, 0, 45);
+    color: var(--japanred);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 6px;
@@ -588,16 +595,16 @@ nav {
 
 /* Maus darüber */
 .nav-button:hover {
-    background-color: rgb(188, 0, 45);
+    background-color: var(--japanred);
     color: white;
     font-weight: normal;
 }
 
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
 .nav-button.active {
-    color: rgb(188, 0, 45);
+    color: var(--japanred);
     font-weight: bold;
-    border-bottom: 3px solid rgb(188, 0, 45);
+    border-bottom: 3px solid var(--japanred);
     padding-bottom: 9px;
 }
 
@@ -673,7 +680,7 @@ nav {
     content: "›";
     position: absolute;
     left: 10px;
-    color: rgb(188, 0, 45);
+    color: var(--japanred);
 }
 
 .dropdown:not([open]) .dropdown-content {
@@ -688,12 +695,6 @@ nav {
 
 /* UEBER MICH_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
 /* Timeline _____________________________________________________________*/
-
-:root {
-    --red: rgb(188, 0, 45);
-    --light: #dddddd;
-
-}
 
 .timeline {
     max-width: 1400px;
@@ -741,7 +742,7 @@ nav {
 }
 
 .card.dark {
-    background: var(--red);
+    background: var(--japanred);
     color: white;
 }
 
@@ -831,7 +832,7 @@ nav {
     height: 18px;
 
     background: white;
-    border: 4px solid var(--red);
+    border: 4px solid var(--japanred);
     border-radius: 50%;
 
     z-index: 10;
@@ -1024,7 +1025,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         margin-top: 5px;
         background: transparent;
         box-shadow: none;
-        border-left: 2px solid rgb(188, 0, 45);
+        border-left: 2px solid var(--japanred);
         margin-left: 10px;
         padding-left: 12px;
     }
@@ -1144,7 +1145,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     height: 14px;
 
     background: white;
-    border: 3px solid var(--red);
+    border: 3px solid var(--japanred);
     border-radius: 50%;
 
     left: -36px;
