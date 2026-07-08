@@ -103,6 +103,10 @@ Projekt/
         --darkgray: #666666;
         --black: black;
 
+9. Eigene 404-Seite definiert
+    - dreisprachiger Hinweistext (deutsch, englisch, japanisch)
+    - Zusätzlicher Link zurück zur Startseite
+
 ## Verwendete Quellen
 
 - Bilder: Quelle bei jedem Bild angegeben (ChatGPT oder Eigene Darstellung, vereinzelt weitere Quellen wie 

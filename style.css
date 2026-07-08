@@ -10,7 +10,7 @@
 
     --white: white;
     --lightgray: #f0f0f0;
-    --darkgray: #666666; 
+    --darkgray: #666666;
     --black: black;
 }
 
@@ -35,7 +35,7 @@ p {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4rem;
-    color: var(--black); 
+    color: var(--black);
     margin-bottom: 0.5em;
 }
 
@@ -84,7 +84,8 @@ h2 {
     font: inherit;
 }
 
-.nav-link--background-dark {    /* Verlinkungen - Dunkler Hintergrund + helle Schrift */
+.nav-link--background-dark {
+    /* Verlinkungen - Dunkler Hintergrund + helle Schrift */
     background: white;
     color: var(--japanred);
 }
@@ -93,7 +94,8 @@ h2 {
     color: var(--black);
 }
 
-.nav-link--background-light {   /* Verlinkungen - Heller Hintergrund + dunkle Schrift */
+.nav-link--background-light {
+    /* Verlinkungen - Heller Hintergrund + dunkle Schrift */
     background: var(--japanred);
     color: white;
 }
@@ -114,7 +116,8 @@ h2 {
 .title_picture img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* Bild füllt den gesamten Bereich */
+    object-fit: cover;
+    /* Bild füllt den gesamten Bereich */
 
     -webkit-mask-image: linear-gradient(to right, transparent, var(--black));
     mask-image: linear-gradient(to right, transparent, var(--black));
@@ -143,7 +146,7 @@ h2 {
 
 /* Sektion für großes Bild */
 
-.big-image {     
+.big-image {
     width: 100%;
     padding: 0 5%;
     box-sizing: border-box;
@@ -159,7 +162,7 @@ h2 {
 
 /* Aufgeteilte Bereiche mit Text und Bild */
 /* Aufteilung: (Bild 1/5) (Text 4/5) */
-.split-i1-t4 {  
+.split-i1-t4 {
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 2rem;
@@ -213,7 +216,8 @@ h2 {
     max-height: 90vh;
 }
 
-.split-i1-t2 {  /* Aufteilung: (Bild 1/3) (Text 2/3) */
+.split-i1-t2 {
+    /* Aufteilung: (Bild 1/3) (Text 2/3) */
     display: flex;
     align-items: center;
     gap: 30px;
@@ -233,7 +237,8 @@ h2 {
     flex: 2;
 }
 
-.split-i1-t1 {  /* Aufteilung: (Bild 1/2) (Text 1/2) */
+.split-i1-t1 {
+    /* Aufteilung: (Bild 1/2) (Text 1/2) */
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -358,15 +363,17 @@ h2 {
 .hero-left {
     flex: 1;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     justify-content: center;
-    align-items: center;      
-    gap: 2rem;                /* Abstand zwischen Kreis und Text */
+    align-items: center;
+    gap: 2rem;
+    /* Abstand zwischen Kreis und Text */
     margin-left: 5rem;
 }
 
 .hero-description {
-    width: 18rem;             /* ungefähr so breit wie der Kreis */
+    width: 18rem;
+    /* ungefähr so breit wie der Kreis */
 }
 
 .hero-description h2 {
@@ -901,41 +908,41 @@ nav {
 
 }
 
-.error-container h1{
+.error-container h1 {
 
     color: var(--japanred);
     font-size: 3rem;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 }
 
-.language-grid{
+.language-grid {
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-
-}
-
-.language-box{
-
-    border:3px solid var(--japanred);
-    border-radius:10px;
-    padding:25px;
-    background:var(--white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 
 }
 
-.language-box h2{
+.language-box {
 
-    color:var(--japanred);
-    margin-bottom:20px;
+    border: 3px solid var(--japanred);
+    border-radius: 10px;
+    padding: 25px;
+    background: var(--white);
 
 }
 
-.language-box p{
+.language-box h2 {
 
-    line-height:1.7;
+    color: var(--japanred);
+    margin-bottom: 20px;
+
+}
+
+.language-box p {
+
+    line-height: 1.7;
 
 }
 
@@ -962,9 +969,9 @@ nav {
 
 }
 
-.home-button:hover{
+.home-button:hover {
 
-    background:var(--black);
+    background: var(--black);
 
 }
 
@@ -1139,6 +1146,41 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         gap: 15px;
     }
 
+    /* 404-Seite */
+
+    .error-container {
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    .error-container h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .language-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .language-box {
+        padding: 20px;
+    }
+
+    .home-button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .home-button img {
+        width: 20px;
+    }
+
     /* Startseite */
     .split-section,
     .split-section.reverse {
@@ -1176,8 +1218,10 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* Über mich */
 
     .point {
-        display: none !important;     /* Versteckt Punkte und Linien der Desktop-Variante*/
+        display: none !important;
+        /* Versteckt Punkte und Linien der Desktop-Variante*/
     }
+
     .timeline {
         grid-template-columns: 40px 1fr;
         row-gap: 25px;
@@ -1221,44 +1265,46 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* =========================
        PUNKTE
        ========================= */
-.card::before {
-    content: "";
+    .card::before {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    width: 14px;
-    height: 14px;
+        width: 14px;
+        height: 14px;
 
-    background: white;
-    border: 3px solid var(--japanred);
-    border-radius: 50%;
+        background: white;
+        border: 3px solid var(--japanred);
+        border-radius: 50%;
 
-    left: -36px;
+        left: -36px;
 
-    top: 50%; 
+        top: 50%;
 
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
-        /* =========================
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+
+    /* =========================
        VERBINDUNGSLINIE
        ========================= */
 
-.card::after {
-    content: "";
+    .card::after {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    left: -27px;
-    top: 50%; /* 🔥 gleiche Referenz wie Punkt */
+        left: -27px;
+        top: 50%;
+        /* 🔥 gleiche Referenz wie Punkt */
 
-    width: 25px;
-    height: 4px;
+        width: 25px;
+        height: 4px;
 
-    background: var(--black);
+        background: var(--black);
 
-    transform: translateY(-50%);
-}
+        transform: translateY(-50%);
+    }
 
     /* =========================
        BILDER
@@ -1316,26 +1362,26 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
 @media print {
 
-  /* 1. Hintergrund auf weiß + Standardtext schwarz */
-  * {
-    background: var(--white) !important;
-    color: var(--black) !important;
-  }
+    /* 1. Hintergrund auf weiß + Standardtext schwarz */
+    * {
+        background: var(--white) !important;
+        color: var(--black) !important;
+    }
 
-  body {
-    background: var(--white) !important;
-    color: var(--black) !important;
-  }
+    body {
+        background: var(--white) !important;
+        color: var(--black) !important;
+    }
 
-  /* 2. Header und Footer ausblenden */
-  header,
-  footer {
-    display: none !important;
-  }
+    /* 2. Header und Footer ausblenden */
+    header,
+    footer {
+        display: none !important;
+    }
 
-  /* Optional: verhindert unnötige Schatten/Rahmen */
-  * {
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    /* Optional: verhindert unnötige Schatten/Rahmen */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 }
