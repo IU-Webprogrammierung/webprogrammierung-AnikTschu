@@ -90,7 +90,18 @@ Projekt/
 7. Back-to-Top
     - in CSS: backToTop {}
     - in HTML: am Ende vom <body> mit einem button definiert
-    - in JavaScript: sobald etwa 200 px nach unten gescrollt wurden, wird der Button unten rechts eingeblendet 
+    - in JavaScript: sobald etwa 200 px nach unten gescrollt wurden, wird der Button unten rechts eingeblendet
+
+8. Einheitliches Farbkonzept mit CSS-Variablen
+    - Über :root wurden alle in der Webseiten verwendeten Farbe festgelegt
+    - Alle Farben von Elemente innerhalb der CSS-Datei sind über var(--xyz) definiert
+    - verwendete Farben:  
+        --japanred: rgb(188, 0, 45); (angelehnt an das Rot der Japanischen Flagge, wobei es für die
+            Webseite etwas dunkler gewählt wurde, um einen ausreichenden Kontrast zu Weiß zu erzeugen)
+        --white: white;
+        --lightgray: #f0f0f0;
+        --darkgray: #666666;
+        --black: black;
 
 ## Verwendete Quellen
 
