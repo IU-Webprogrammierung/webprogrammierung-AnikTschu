@@ -7,8 +7,11 @@
 
 :root {
     --japanred: rgb(188, 0, 45);
-    --light: #dddddd;
-    --black: black; 
+
+    --white: white;
+    --lightgray: #f0f0f0;
+    --darkgray: #666666; 
+    --black: black;
 }
 
 
@@ -32,7 +35,7 @@ p {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4rem;
-    color: black;
+    color: var(--black); 
     margin-bottom: 0.5em;
 }
 
@@ -60,7 +63,7 @@ h2 {
 .image-source {
     margin-top: 0.4rem;
     font-size: 0.85rem;
-    color: black;
+    color: var(--black);
     text-align: center;
 }
 
@@ -87,7 +90,7 @@ h2 {
 }
 
 .nav-link--background-dark:hover {
-    color: black;
+    color: var(--black);
 }
 
 .nav-link--background-light {   /* Verlinkungen - Heller Hintergrund + dunkle Schrift */
@@ -96,8 +99,8 @@ h2 {
 }
 
 .nav-link--background-light:hover {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
 }
 
 .title_picture {
@@ -113,8 +116,8 @@ h2 {
     height: 100%;
     object-fit: cover;      /* Bild füllt den gesamten Bereich */
 
-    -webkit-mask-image: linear-gradient(to right, transparent, black);
-    mask-image: linear-gradient(to right, transparent, black);
+    -webkit-mask-image: linear-gradient(to right, transparent, var(--black));
+    mask-image: linear-gradient(to right, transparent, var(--black));
 }
 
 /* Back-to-Top */
@@ -128,14 +131,14 @@ h2 {
     font-size: 20px;
     border: none;
     border-radius: 50%;
-    background-color: #737272;
-    color: white;
+    background-color: var(--darkgray);
+    color: var(--white);
     cursor: pointer;
     transition: opacity 0.3s;
 }
 
 #backToTop:hover {
-    background-color: #333;
+    background-color: var(--black);
 }
 
 /* Sektion für großes Bild */
@@ -250,7 +253,7 @@ h2 {
 
 .flag_icon {
     width: 40px;
-    border: 2px solid black;
+    border: 2px solid var(--black);
 
 }
 
@@ -265,7 +268,7 @@ h2 {
     padding: 40px 20px;
     align-items: stretch;
     background-color: var(--japanred);
-    color: white;
+    color: var(--white);
 }
 
 .split-image {
@@ -298,17 +301,17 @@ h2 {
 }
 
 .split-image .image-source {
-    color: white;
+    color: var(--white);
 }
 
 .split-section.reverse {
     flex-direction: row-reverse;
     background-color: transparent;
-    color: black;
+    color: var(--black);
 }
 
 .split-section.reverse .image-source {
-    color: black;
+    color: var(--black);
 }
 
 /* Hero - Titelbild und Kreis */
@@ -336,7 +339,7 @@ h2 {
     justify-content: center;
     align-items: center;
 
-    color: white;
+    color: var(--white);
     z-index: 2;
 }
 
@@ -425,7 +428,7 @@ h2 {
 .boxes-card {
     position: relative;
     background: white;
-    border: 2px solid black;
+    border: 2px solid var(--black);
     border-radius: 10px;
     padding: 15px;
     text-align: center;
@@ -441,7 +444,7 @@ h2 {
 
 .boxes-card h3 {
     margin-top: 15px;
-    color: black;
+    color: var(--black);
 }
 
 /* Vorderseite */
@@ -535,7 +538,7 @@ h2 {
 .japanisch {
     font-family: "Yu Gothic";
     font-size: 6rem;
-    color: black;
+    color: var(--black);
     line-height: 1;
 }
 
@@ -553,7 +556,7 @@ h2 {
     margin-top: 5px;
     padding: 10px 10px;
     background-color: var(--japanred);
-    color: white;
+    color: var(--white);
     text-decoration: none;
     border-radius: 4px;
     transition: 0.3s;
@@ -572,7 +575,7 @@ h2 {
 
 /* NAVIGATION______________________________________________________________________ */
 nav {
-    background-color: #f5f5f5;
+    background-color: var(--lightgray);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -583,7 +586,7 @@ nav {
 /* Buttons */
 .nav-button {
     display: inline-block;
-    background-color: white;
+    background-color: var(--white);
     color: var(--japanred);
     text-decoration: none;
     padding: 12px 20px;
@@ -596,7 +599,7 @@ nav {
 /* Maus darüber */
 .nav-button:hover {
     background-color: var(--japanred);
-    color: white;
+    color: var(--white);
     font-weight: normal;
 }
 
@@ -626,7 +629,7 @@ nav {
 
 /* Hovern bei aktiver Seite anders */
 .nav-button.active:hover {
-    color: white;
+    color: var(--white);
 }
 
 /* Dropdown-Menü bei "Schrift" */
@@ -670,7 +673,7 @@ nav {
 .dropdown-title {
     font-size: 0.75rem;
     font-weight: bold;
-    color: #666;
+    color: var(--darkgray);
     padding: 6px 10px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -719,7 +722,7 @@ nav {
     bottom: 0;
 
     width: 4px;
-    background: black;
+    background: var(--black);
 
     transform: translateX(-50%);
 }
@@ -736,14 +739,14 @@ nav {
     padding: 20px;
     padding-top: 45px;
 
-    border: 3px solid black;
+    border: 3px solid var(--black);
 
     position: relative;
 }
 
 .card.dark {
     background: var(--japanred);
-    color: white;
+    color: var(--white);
 }
 
 /* Positionierung */
@@ -813,7 +816,7 @@ nav {
 
     object-fit: cover;
 
-    border: 2px solid black;
+    border: 2px solid var(--black);
 
     flex-shrink: 0;
 }
@@ -846,7 +849,7 @@ nav {
     width: 35px;
     height: 4px;
 
-    background: black;
+    background: var(--black);
 
     transform: translateY(-50%);
 }
@@ -862,7 +865,7 @@ nav {
 /* FOOTER_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
 .footer {
-    background-color: #f5f5f5;
+    background-color: var(--lightgray);
     padding: 20px 0;
 }
 
@@ -878,7 +881,7 @@ nav {
 }
 
 .footer-inhalt a {
-    color: black;
+    color: var(--black);
     text-decoration: none;
     font-weight: bold;
 }
@@ -1033,13 +1036,13 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     .mobile-menu .dropdown-content .nav-button {
         padding-left: 28px;
         font-size: 0.95rem;
-        color: #636263;
+        color: var(--darkgray);
         opacity: 0.9;
 
     }
 
     .mobile-menu .dropdown-content .nav-button:hover {
-        color: white;
+        color: var(--white);
     }
 
     .mobile-menu .dropdown>summary {
@@ -1170,7 +1173,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     width: 25px;
     height: 4px;
 
-    background: black;
+    background: var(--black);
 
     transform: translateY(-50%);
 }
@@ -1233,13 +1236,13 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
   /* 1. Hintergrund auf weiß + Standardtext schwarz */
   * {
-    background: white !important;
-    color: black !important;
+    background: var(--white) !important;
+    color: var(--black) !important;
   }
 
   body {
-    background: white !important;
-    color: black !important;
+    background: var(--white) !important;
+    color: var(--black) !important;
   }
 
   /* 2. Header und Footer ausblenden */
