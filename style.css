@@ -877,9 +877,6 @@ nav {
 .footer {
     background-color: var(--lightgray);
     padding: 20px 0;
-}
-
-.footer-inhalt {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
@@ -887,10 +884,9 @@ nav {
     display: flex;
     justify-content: center;
     gap: 40px;
-
 }
 
-.footer-inhalt a {
+.footer a {
     color: var(--black);
     text-decoration: none;
     font-weight: bold;
