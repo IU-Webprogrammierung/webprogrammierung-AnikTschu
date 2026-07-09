@@ -584,13 +584,18 @@ h2 {
 }
 
 /* NAVIGATION______________________________________________________________________ */
-nav {
-    background-color: var(--lightgray);
-    padding: 10px;
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    width: 100%;
 }
 
 /* Buttons */
@@ -623,10 +628,6 @@ nav {
 
 /* DESKTOP-NAVIGATION ______________________________________________ */
 
-/* Desktop sichtbar */
-.desktop-nav {
-    display: flex;
-}
 
 /* Mobile Navigation ausblenden */
 .mobile-nav {
@@ -635,6 +636,12 @@ nav {
     background: #f5f5f5;
     padding: 10px 15px;
 
+}
+
+.mobile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hovern bei aktiver Seite anders */
@@ -663,6 +670,10 @@ nav {
 }
 
 .dropdown-content {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+
     display: flex;
     flex-direction: column;
 
@@ -673,27 +684,9 @@ nav {
 
     background: white;
     min-width: 110px;
-
-    padding: 8px;
     border-radius: 6px;
 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-title {
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: var(--darkgray);
-    padding: 6px 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.sub-item::before {
-    content: "›";
-    position: absolute;
-    left: 10px;
-    color: var(--japanred);
 }
 
 .dropdown:not([open]) .dropdown-content {
@@ -704,6 +697,19 @@ nav {
     display: block;
     margin: 4px 0;
     text-align: center;
+}
+
+.nav-list li,
+.mobile-menu li,
+.dropdown-content li {
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav,
+.mobile-nav {
+    background-color: var(--lightgray);
+    padding: 10px;
 }
 
 /* UEBER MICH_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_

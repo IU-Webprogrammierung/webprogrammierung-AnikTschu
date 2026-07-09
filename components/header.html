@@ -2,31 +2,56 @@
 
 <nav class="desktop-nav" aria-label="Hauptnavigation desktop">
 
-    <a href="index.html">
-        <img class="home_icon"
-             src="../images/favicon.ico"
-             alt="Zurück zur Startseite"
-             title="Zurück zur Startseite">
-    </a>
+    <ul class="nav-list">
 
-    <a href="../ueber-mich.html" class="nav-button">Über mich</a>
+        <li>
+            <a href="../index.html">
+                <img class="home_icon"
+                     src="../images/favicon.ico"
+                     alt="Zurück zur Startseite"
+                     title="Zurück zur Startseite">
+            </a>
+        </li>
 
-    <details class="dropdown" id="schriftDropdown">
+        <li>
+            <a href="../ueber-mich.html" class="nav-button">Über mich</a>
+        </li>
 
-        <summary class="nav-button" id="schriftButton">
-            Schrift ▼
-        </summary>
+        <li>
+            <details class="dropdown" id="schriftDropdown">
 
-        <div class="dropdown-content">
-            <a href="../schrift.html" class="nav-button">Übersicht</a>
-            <a href="../hiragana.html" class="nav-button">Hiragana</a>
-            <a href="../katakana.html" class="nav-button">Katakana</a>
-            <a href="../kanji.html" class="nav-button">Kanji</a>
-        </div>
+                <summary class="nav-button" id="schriftButton">
+                    Schrift ▼
+                </summary>
 
-    </details>
+                <ul class="dropdown-content">
 
-    <a href="../kultur.html" class="nav-button">Kultur</a>
+                    <li>
+                        <a href="../schrift.html" class="nav-button">Übersicht</a>
+                    </li>
+
+                    <li>
+                        <a href="../hiragana.html" class="nav-button">Hiragana</a>
+                    </li>
+
+                    <li>
+                        <a href="../katakana.html" class="nav-button">Katakana</a>
+                    </li>
+
+                    <li>
+                        <a href="../kanji.html" class="nav-button">Kanji</a>
+                    </li>
+
+                </ul>
+
+            </details>
+        </li>
+
+        <li>
+            <a href="../kultur.html" class="nav-button">Kultur</a>
+        </li>
+
+    </ul>
 
 </nav>
 
@@ -36,68 +61,59 @@
 
     <header class="mobile-nav-header">
 
-        <!-- Logo -->
         <a href="../index.html">
             <img class="home_icon"
                  src="../images/favicon.ico"
                  alt="Startseite">
         </a>
 
-        <!-- Button zum Öffnen -->
         <button id="menuButton"
                 class="hamburger-button"
                 aria-label="Menü öffnen">
             ☰
         </button>
 
-        <!-- Das eigentliche Menü -->
-        <div id="mobileMenu"
-             class="mobile-menu">
+        <ul id="mobileMenu" class="mobile-menu">
 
-            <a href="../ueber-mich.html"
-               class="nav-button">
-                Über mich
-            </a>
+            <li>
+                <a href="../ueber-mich.html" class="nav-button">Über mich</a>
+            </li>
 
-            <!-- Untermenü -->
-            <details class="dropdown">
+            <li>
+                <details class="dropdown">
 
-                <summary class="nav-button">
-                    Schrift
-                </summary>
+                    <summary class="nav-button">
+                        Schrift
+                    </summary>
 
-                <div class="dropdown-content">
+                    <ul class="dropdown-content">
 
-                    <a href="../schrift.html"
-                       class="nav-button">
-                        Übersicht
-                    </a>
+                        <li>
+                            <a href="../schrift.html" class="nav-button">Übersicht</a>
+                        </li>
 
-                    <a href="../hiragana.html"
-                       class="nav-button">
-                        Hiragana
-                    </a>
+                        <li>
+                            <a href="../hiragana.html" class="nav-button">Hiragana</a>
+                        </li>
 
-                    <a href="../katakana.html"
-                       class="nav-button">
-                        Katakana
-                    </a>
+                        <li>
+                            <a href="../katakana.html" class="nav-button">Katakana</a>
+                        </li>
 
-                    <a href="../kanji.html"
-                       class="nav-button">
-                        Kanji
-                    </a>
+                        <li>
+                            <a href="../kanji.html" class="nav-button">Kanji</a>
+                        </li>
 
-                </div>
+                    </ul>
 
-            </details>
+                </details>
+            </li>
 
-            <a href="../kultur.html"
-               class="nav-button">
-                Kultur
-            </a>
+            <li>
+                <a href="../kultur.html" class="nav-button">Kultur</a>
+            </li>
 
-        </div>
+        </ul>
 
     </header>
 
