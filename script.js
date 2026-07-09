@@ -161,11 +161,42 @@ backToTop.addEventListener("click", () => {
     });
 });
 
+    // Bei der mobilen Version wird die Schriftkarte, die in der Mitte des Bildschirms ist, hervorgehoben
+
+function initSchriftkartenHighlight() {
+
+    if (window.innerWidth > 767) return;
+
+    const cards = document.querySelectorAll(".schriftkarte");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                entry.target.classList.toggle(
+                    "active",
+                    entry.isIntersecting
+                );
+
+            });
+
+        },
+        {
+            threshold: 0.95
+        }
+    );
+
+    cards.forEach(card => observer.observe(card));
+
+}
+
 // init für alle Funktionen
 function initPage() {
     initDropdown();
     initHamburgerMenu();
     setActiveNav();
+    initSchriftkartenHighlight();
 }
 
 /* normale Seite */

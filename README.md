@@ -80,14 +80,32 @@ Projekt/
     - Vermeidung von sich wiederholendem Code
     - alle Seiten beinhalten Header und Footer
 
-5. CSS-Transition: Boxen mit Vor- und Rückseite
-    - bei kultur.html und kanji.html umgesetzt
-    - Umsetzung mit CSS
-    - Desktopversion: bei "boxes-grid" mit 4 Boxen in einer Reihe definiert (Mobile Variante: alle Boxen untereinander)
-    - Vorderseite ("card-front")
-    - Rückseite ("card-back") definiert, jedoch per "visibility: hidden;" zunächst nicht sichtbar
-    - per :hover wird beim Mouseover die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 1;" und
-        "visibility: visible;" sichtbar gemacht
+5. CSS-Animationen zur optischen Hervorhebung von Inhalten   
+    - kleine Animationen, ohne vom Inhalt abzulenken
+
+    5.1. bei "schrift.html"
+        - Desktop-Variante: die Schriftkarte wird beim Hovern optisch hervorgehoben
+            - CSS: 
+                -beim Hovern werden die Karten 
+                    1. leicht nach oben versetzttransform: translateY(-12px);
+                    2. mit einem Schatten versehen: box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+                    3. mir einer schwarzen Umrandung versehen: border-color: black;
+                - mit Hilfe von "transition" werden die Änderungen weich animiert
+        - mobile Variante: die Schriftkarte, die zu 95% zu sehen ist, wird optisch hervorgehoben
+            - CSS: 
+                - der hover-Effekt der Desktop-Variante wird überschrieben/"deaktiviert"
+                - .schriftkarte.active -> Schatten + schwarze Umrandung
+            - JavaScript: initSchriftkartenHighlight setzt Schriftkarte auf aktiv, sobald sie zu 95% zu
+                sehen ist
+
+    5.2. bei "kultur.html" und "kanji.html"
+        - Desktop-Variante und mobile Variante einheitlich
+        - Info-Boxen mit Vor- und Rückseite
+            - Vorderseite ("card-front"): direkt sichtbar
+            - Rückseite ("card-back"):
+                - zunächst nicht sichbar: "visibility: hidden;"
+                - per :hover wird die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 
+                    1;" und "visibility: visible;" sichtbar gemacht
 
 6. Weboptimierte Medien
     - mit Ziel einer guten Performance wurden Bilder bei Bedarf mithilfe von https://squoosh.app/ komprimiert
@@ -119,10 +137,7 @@ Projekt/
     - wird sowohl als Favicon als auch als Logo verwendet
     - Es zeigt den Anfangsbuchstaben A des Vornamens der Webseiteninhaberin im Stil eines japanisches Toriis
 
-11. CSS-Animationen
-    - kleine Animationen, die den Inhalt hervorheben aber nicht davon ablenken
-    - angewendet bei Schrift: dir drei Schriftkarten werden beim hovern etwas nach oben verschoben 
-        (Desktop-Variante)
+
 
 ## Verwendete Quellen
 

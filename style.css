@@ -547,9 +547,9 @@ h2 {
     border: 2px solid transparent;
 
 
-    transition: transform 0.3s ease, 
-                box-shadow 0.3s ease, 
-                border-color 0.3s ease;
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 
 }
 
@@ -1383,6 +1383,29 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
+    .schriftkarte {
+
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease,
+            box-shadow 0.3s ease;
+
+    }
+
+    .schriftkarte:hover {
+
+        transform: none;
+        box-shadow: none;
+        border-color: transparent;
+
+    }
+
+    .schriftkarte.active {
+        border-color: black;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+
 
 }
 
