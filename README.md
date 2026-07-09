@@ -119,6 +119,11 @@ Projekt/
     - wird sowohl als Favicon als auch als Logo verwendet
     - Es zeigt den Anfangsbuchstaben A des Vornamens der Webseiteninhaberin im Stil eines japanisches Toriis
 
+11. CSS-Animationen
+    - kleine Animationen, die den Inhalt hervorheben aber nicht davon ablenken
+    - angewendet bei Schrift: dir drei Schriftkarten werden beim hovern etwas nach oben verschoben 
+        (Desktop-Variante)
+
 ## Verwendete Quellen
 
 - Bilder: Quelle bei jedem Bild angegeben (ChatGPT oder Eigene Darstellung, vereinzelt weitere Quellen wie 
