@@ -665,8 +665,11 @@ h2 {
 .dropdown summary.nav-button {
     display: block;
     font: inherit;
-    font-weight: normal;
     cursor: pointer;
+}
+
+.dropdown summary.nav-button.active {
+    font-weight: bold;
 }
 
 .dropdown-content {

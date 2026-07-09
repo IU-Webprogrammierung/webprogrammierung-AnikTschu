@@ -22,21 +22,28 @@ function initDropdown() {
 function setActiveNav() {
 
     const page = document.body.dataset.page;
+
     if (!page) return;
 
-    // 1. direkte Links aktivieren
+    // Direkten Navigationslink aktivieren
     const link = document.querySelector(
-        `.nav-button[href="${page}.html"]`
+        `.nav-button[href$="${page}.html"]`
     );
 
     if (link) {
         link.classList.add("active");
     }
 
-    // 2. Dropdown-Gruppe "Schrift": aktuelle Seite markieren ("aktivieren")
-    const schriftPages = ["schrift", "hiragana", "katakana", "kanji"];
+    // Dropdown "Schrift" aktivieren
+    const schriftPages = [
+        "schrift",
+        "hiragana",
+        "katakana",
+        "kanji"
+    ];
 
     if (schriftPages.includes(page)) {
+
         const schriftButton = document.getElementById("schriftButton");
 
         if (schriftButton) {
