@@ -15,7 +15,7 @@
 
 <body>
 
-    <header hx-get="components/header.html" hx-trigger="load" hx-swap="innerHTML"></header>
+    <header hx-get="components/header.html" hx-trigger="load" hx-swap="outerHTML"></header>
 
     <main>
 
@@ -163,6 +163,8 @@
     </main>
     <footer hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML">
     </footer>
+
+
     <button id="backToTop" title="Zürück nach oben">↑</button>
 </body>
 
