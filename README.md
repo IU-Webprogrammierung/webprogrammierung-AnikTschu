@@ -54,17 +54,24 @@ Projekt/
         3. Bild wird durch Klicken über gesamten Bildschirm dargestellt (große Ansicht), kann per Klick 
                 wieder ausgeblendet werden
 
-3. Navigation mit visuellen Hinweisen mithilfe von JavaScript und CSS
+3. Hauptnavigation mit visuellen Hinweisen mithilfe von JavaScript und CSS
     - aktuelle (="aktive") Seite wird in der Hauptnavigation im Header visuell hervorgehoben
     - HTML
-        - zu Beginn jeder Seite wird im Body ein data-page="name-der-seite" definiert
+        - zu Beginn jeder Seite wird im <body> das Attribut data-page mit dem Namen der jeweiligen Seite 
+            definiert
         - z.B. für Hiragana: <body data-page="hiragana">
+        - semantisch ist die Hauptnavigation mit <nav>, <ul> und <li> aufgebaut
     - CSS
         - .nav-button wird mit .nav-button:hover ergänzt, sodass visuell hervorgehoben wird, auf welchem Menü-
-                Punkt sich der Cursor befindet (Desktop-Variante)
-        - .nav-button.active setzt Farbschema für aktuelle ("aktive") Seite
+            Punkt sich der Mauszeiger befindet (Desktop-Variante)
+        - .nav-button.active kennzeichnet die aktuell geöffnete Seite durch eine andere Schriftstärke und eine 
+            Unterstreichung.
     - JavaScript 
-        - function setActiveNav() {} setzt aktuelle Seite auf "active"
+        - Die Funktion setActiveNav() liest den Wert des Attributs data-page aus.
+        - Anschließend wird der entsprechende Navigationslink anhand seines href-Attributs ermittelt und mit 
+            der CSS-Klasse active versehen.
+        - Für die Seiten Schrift, Hiragana, Katakana und Kanji wird immer noch zusätzlich der 
+            Dropdown-Menüpunkt „Schrift“ als aktiv markiert, damit auch die übergeordnete Kategorie hervorgehoben wird.
  
 4. HTML-Komponenten
     - wiederkehrende Elemente per Components umgesetzt
