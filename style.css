@@ -258,6 +258,7 @@ h2 {
 
 .home_icon {
     width: 40px;
+    border: 2px solid black;
 
 }
 
@@ -613,16 +614,16 @@ h2 {
 
 /* Maus darüber */
 .nav-button:hover {
-    background-color: var(--japanred);
+    background-color: var(--black);
     color: var(--white);
     font-weight: normal;
 }
 
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
 .nav-button.active {
-    color: var(--japanred);
+    background-color: var(--japanred);
+    color: var(--white);
     font-weight: bold;
-    border-bottom: 3px solid var(--japanred);
     padding-bottom: 9px;
 }
 
@@ -646,7 +647,7 @@ h2 {
 
 /* Hovern bei aktiver Seite anders */
 .nav-button.active:hover {
-    color: var(--white);
+    background-color: var(--black);
 }
 
 /* Dropdown-Menü bei "Schrift" */
@@ -1129,7 +1130,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     .mobile-menu .dropdown-content .nav-button {
         padding-left: 28px;
         font-size: 0.95rem;
-        color: var(--darkgray);
+        color: var(--black);
         opacity: 0.9;
 
     }
@@ -1179,6 +1180,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         width: 100%;
         box-sizing: border-box;
         padding: 15px;
+
     }
 
     .home-button img {

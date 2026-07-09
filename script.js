@@ -25,16 +25,18 @@ function setActiveNav() {
 
     if (!page) return;
 
-    // Direkten Navigationslink aktivieren
-    const link = document.querySelector(
+
+    // Direkte Navigationslinks aktivieren (Desktop + Mobile)
+    const links = document.querySelectorAll(
         `.nav-button[href$="${page}.html"]`
     );
 
-    if (link) {
+    links.forEach(link => {
         link.classList.add("active");
-    }
+    });
 
-    // Dropdown "Schrift" aktivieren
+
+    // Seiten, bei denen "Schrift" aktiv bleiben soll
     const schriftPages = [
         "schrift",
         "hiragana",
@@ -42,14 +44,19 @@ function setActiveNav() {
         "kanji"
     ];
 
+
     if (schriftPages.includes(page)) {
 
-        const schriftButton = document.getElementById("schriftButton");
+        const schriftButtons = document.querySelectorAll(
+            "#schriftButton, #schriftButtonMobile"
+        );
 
-        if (schriftButton) {
-            schriftButton.classList.add("active");
-        }
+        schriftButtons.forEach(button => {
+            button.classList.add("active");
+        });
+
     }
+
 }
 
 //___ Burger-Menü bei mobilen Version für Hauptnavigation (klickbar -> ausblendbar)
