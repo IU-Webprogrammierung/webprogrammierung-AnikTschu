@@ -1014,18 +1014,18 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         margin: 20px auto;
     }
 
-    /* 5 Karten untereinander */
+    /* Kategorien/Boxen: alle untereinander */
     .boxes-grid {
-        display: grid;
+        width: 50%;
         grid-template-columns: 1fr;
-        justify-items: center;
+        justify-items: stretch;
     }
 
     .boxes-card {
-
-        max-width: 340px;
+        width: 100%;
+        max-width: none;
+        min-height: 320px;
         height: auto;
-        min-height: 280px;
     }
 
     /* Desktop-Menü ausblenden */
