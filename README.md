@@ -101,6 +101,7 @@ Projekt/
     5.2. bei "kultur.html" und "kanji.html"
         - Desktop-Variante und mobile Variante einheitlich
         - Info-Boxen mit Vor- und Rückseite
+            - mit Hilfe von "transition" wird der Wechsel zwischen Vorder- und Rückseite weich animiert
             - Vorderseite ("card-front"): direkt sichtbar
             - Rückseite ("card-back"):
                 - zunächst nicht sichbar: "visibility: hidden;"
