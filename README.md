@@ -108,6 +108,10 @@ Projekt/
                 - per :hover wird die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 
                     1;" und "visibility: visible;" sichtbar gemacht
 
+    5.2. bei "hiragana.html" und "katakana.html"   
+        - nur Desktop-Variante
+        - Tabellen der Silbenschriften werden beim hovern größer (scale: 1.5) 
+
 6. Weboptimierte Medien
     - mit Ziel einer guten Performance wurden Bilder bei Bedarf mithilfe von https://squoosh.app/ komprimiert
     - Datei-Typ: .webp
