@@ -191,6 +191,23 @@ function initSchriftkartenHighlight() {
 
 }
 
+    // Bei der mobilen Version werden die Boxen per Klick gedreht (kultur.html und Kanji.html)
+
+const cards = document.querySelectorAll(".boxes-card");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        // Nur auf Geräten ohne Hover
+        if (window.matchMedia("(hover: none)").matches) {
+            card.classList.toggle("flipped");
+        }
+
+    });
+
+});
+
 // init für alle Funktionen
 function initPage() {
     initDropdown();

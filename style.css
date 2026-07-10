@@ -1062,6 +1062,14 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         height: auto;
     }
 
+    .boxes-card.flipped .card-front {
+        opacity: 0;
+    }
+
+    .boxes-card.flipped .card-back {
+        opacity: 1;
+    }
+
     /* Desktop-Menü ausblenden */
     .desktop-nav {
         display: none;
