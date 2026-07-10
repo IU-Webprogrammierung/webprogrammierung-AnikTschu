@@ -487,15 +487,6 @@ h2 {
     background: white;
 }
 
-/* Hover */
-.boxes-card:hover .card-front {
-    opacity: 0;
-}
-
-.boxes-card:hover .card-back {
-    opacity: 1;
-}
-
 /* SCHRIFT_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_
 /*FLEXBOXEN TEXT NEBEN BILD _____________________________________________________________
 /* Text neben Bild*/
@@ -546,18 +537,10 @@ h2 {
 
     border: 2px solid transparent;
 
-
-    transition: transform 0.3s ease,
+    transition:
+        transform 0.3s ease,
         box-shadow 0.3s ease,
         border-color 0.3s ease;
-
-}
-
-.schriftkarte:hover {
-
-    transform: translateY(-12px);
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
-    border-color: black;
 
 }
 
@@ -627,13 +610,6 @@ h2 {
     transition: background-color 0.3s;
 }
 
-/* Maus darüber */
-.nav-button:hover {
-    background-color: var(--black);
-    color: var(--white);
-    font-weight: normal;
-}
-
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
 .nav-button.active {
     background-color: var(--japanred);
@@ -658,11 +634,6 @@ h2 {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-/* Hovern bei aktiver Seite anders */
-.nav-button.active:hover {
-    background-color: var(--black);
 }
 
 /* Dropdown-Menü bei "Schrift" */
@@ -989,12 +960,6 @@ h2 {
 
 }
 
-.home-button:hover {
-
-    background: var(--black);
-
-}
-
 /* Media Queries: Devices mit Hover-Funktion _|_|_|_|_|_|_|_|_
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
@@ -1004,9 +969,22 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 */
-
 @media (hover: hover) and (pointer: fine) {
 
+    /* Desktop-Hauptnavigation
+    /* Maus hover */
+    .nav-button:hover {
+        background-color: var(--black);
+        color: var(--white);
+        font-weight: normal;
+    }
+
+    /*Hovern bei aktiver Seite anders */
+    .nav-button.active:hover {
+        background-color: var(--black);
+    }
+
+    /* Hiragana/Katakana */
     .big-image:hover .big-image {
         transform: scale(1.5);
     }
@@ -1015,8 +993,26 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         transform: scale(1.5);
     }
 
-}
+    /* Schrift */
+    .schriftkarte:hover {
 
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        border-color: rgb(188, 0, 45);
+        border: 2px solid black;
+
+    }
+
+    /* Boxen Vorder- und Rückseite drehen beim Hovern (kultur.html und Kanji.html) */
+    .boxes-card:hover .card-front {
+        opacity: 0;
+    }
+
+    .boxes-card:hover .card-back {
+        opacity: 1;
+    }
+
+}
 /* Media Queries: Smartphone (bis 767 px) _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 /* _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
@@ -1406,13 +1402,21 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         gap: 20px;
     }
 
-    .schriftkarte {
+.schriftkarte {
 
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease,
-            box-shadow 0.3s ease;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 7px;
+    text-align: center;
 
-    }
+    border: 2px solid transparent;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
 
     .schriftkarte:hover {
 
