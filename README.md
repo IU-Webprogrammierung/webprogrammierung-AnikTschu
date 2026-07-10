@@ -99,16 +99,18 @@ Projekt/
                 sehen ist
 
     5.2. bei "kultur.html" und "kanji.html"
-        - Desktop-Variante und mobile Variante einheitlich
         - Info-Boxen mit Vor- und Rückseite
+        - Vorderseite ("card-front"): direkt sichtbar
+        - Rückseite ("card-back"):
+            - zunächst nicht sichbar: "visibility: hidden;"
+                - per Aktion wird die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 1;" und "visibility: visible;" sichtbar gemacht
+        - Desktop-Variante
+            - beim Hovern wird die Karte umgedreht
             - mit Hilfe von "transition" wird der Wechsel zwischen Vorder- und Rückseite weich animiert
-            - Vorderseite ("card-front"): direkt sichtbar
-            - Rückseite ("card-back"):
-                - zunächst nicht sichbar: "visibility: hidden;"
-                - per :hover wird die Vordereite auf "visibility: hidden;" gesetzt und die Rückseite mit "opacity: 
-                    1;" und "visibility: visible;" sichtbar gemacht
+        - mobile Variante: per Klick
+            - umgesetzt mit JavaScript "document.querySelectorAll(".boxes-card")"
 
-    5.2. bei "hiragana.html" und "katakana.html"   
+    5.3. bei "hiragana.html" und "katakana.html"   
         - nur Desktop-Variante
         - Tabellen der Silbenschriften werden beim hovern größer (scale: 1.5) 
 
