@@ -873,10 +873,9 @@ h2 {
 .footer {
     background-color: var(--lightgray);
     padding: 20px 0;
-    max-width: 1200px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -1186,7 +1185,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     }
 
     /* Footer */
-    .footer-inhalt {
+    .footer {
         flex-direction: column;
         align-items: center;
         gap: 15px;
