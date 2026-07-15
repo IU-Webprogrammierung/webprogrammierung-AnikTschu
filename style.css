@@ -1012,7 +1012,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* Maus hover */
     .nav-button:hover {
         background-color: var(--background-third);
-        color: var(--text-secondary);
+        color: var(--japanred);
         font-weight: normal;
     }
 

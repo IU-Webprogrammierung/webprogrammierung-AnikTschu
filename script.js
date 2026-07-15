@@ -258,9 +258,9 @@ function initDarkMode() {
 function updateDarkModeIcon(button) {
 
     if (document.body.classList.contains("darkmode")) {
-        button.textContent = "☀️";
+        button.textContent = "日 (light mode)";
     } else {
-        button.textContent = "🌙";
+        button.textContent = "月 (dark mode)";
     }
 
 }
