@@ -8,10 +8,11 @@
 :root {
     --japanred: rgb(188, 0, 45);
 
-    --white: white;
-    --lightgray: #f0f0f0;
-    --darkgray: #666666;
-    --black: black;
+    --background: white;
+    --background-secondary: #f0f0f0;
+    --text: black;
+    --text-on-red: white;
+
 }
 
 main {
@@ -35,7 +36,7 @@ p {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4rem;
-    color: var(--black);
+    color: var(--text);
     margin-bottom: 0.5em;
 }
 
@@ -63,7 +64,7 @@ h2 {
 .image-source {
     margin-top: 0.4rem;
     font-size: 0.85rem;
-    color: var(--black);
+    color: var(--text);
     text-align: center;
 }
 
@@ -91,7 +92,7 @@ h2 {
 }
 
 .nav-link--background-dark:hover {
-    color: var(--black);
+    color: var(--text);
 }
 
 .nav-link--background-light {
@@ -101,8 +102,8 @@ h2 {
 }
 
 .nav-link--background-light:hover {
-    background: var(--black);
-    color: var(--white);
+    background: var(--text);
+    color: var(--text-on-red);
 }
 
 .title_picture {
@@ -119,8 +120,8 @@ h2 {
     object-fit: cover;
     /* Bild füllt den gesamten Bereich */
 
-    -webkit-mask-image: linear-gradient(to right, transparent, var(--black));
-    mask-image: linear-gradient(to right, transparent, var(--black));
+    -webkit-mask-image: linear-gradient(to right, transparent, var(--text));
+    mask-image: linear-gradient(to right, transparent, var(--text));
 }
 
 /* Back-to-Top */
@@ -134,14 +135,14 @@ h2 {
     font-size: 20px;
     border: none;
     border-radius: 50%;
-    background-color: var(--darkgray);
-    color: var(--white);
+    background-color: var(--japanred);
+    color: var(--text-on-red);
     cursor: pointer;
     transition: opacity 0.3s;
 }
 
 #backToTop:hover {
-    background-color: var(--black);
+    background-color: var(--text);
 }
 
 /* Sektion für großes Bild */
@@ -273,7 +274,7 @@ h2 {
     padding: 40px 20px;
     align-items: stretch;
     background-color: var(--japanred);
-    color: var(--white);
+    color: var(--text-on-red);
 }
 
 .split-image {
@@ -306,17 +307,17 @@ h2 {
 }
 
 .split-image .image-source {
-    color: var(--white);
+    color: var(--text-on-red);
 }
 
 .split-section.reverse {
     flex-direction: row-reverse;
     background-color: transparent;
-    color: var(--black);
+    color: var(--text);
 }
 
 .split-section.reverse .image-source {
-    color: var(--black);
+    color: var(--text);
 }
 
 /* Hero - Titelbild und Kreis */
@@ -344,7 +345,7 @@ h2 {
     justify-content: center;
     align-items: center;
 
-    color: var(--white);
+    color: var(--text-on-red);
     z-index: 2;
 }
 
@@ -435,7 +436,7 @@ h2 {
 .boxes-card {
     position: relative;
     background: white;
-    border: 2px solid var(--black);
+    border: 2px solid var(--text);
     border-radius: 10px;
     padding: 15px;
     text-align: center;
@@ -451,7 +452,7 @@ h2 {
 
 .boxes-card h3 {
     margin-top: 15px;
-    color: var(--black);
+    color: var(--text);
 }
 
 /* Vorderseite */
@@ -530,7 +531,7 @@ h2 {
 /* Weiße Karten */
 .schriftkarte {
 
-    background: var(--white);
+    background: var(--background);
     padding: 25px;
     border-radius: 7px;
     text-align: center;
@@ -547,7 +548,7 @@ h2 {
 .japanisch {
     font-family: "Yu Gothic";
     font-size: 6rem;
-    color: var(--black);
+    color: var(--text);
     line-height: 1;
 }
 
@@ -565,7 +566,7 @@ h2 {
     margin-top: 5px;
     padding: 10px 10px;
     background-color: var(--japanred);
-    color: var(--white);
+    color: var(--text-on-red);
     text-decoration: none;
     border-radius: 4px;
     transition: 0.3s;
@@ -600,7 +601,7 @@ h2 {
 /* Buttons */
 .nav-button {
     display: inline-block;
-    background-color: var(--white);
+    background-color: var(--background);
     color: var(--japanred);
     text-decoration: none;
     padding: 12px 20px;
@@ -613,7 +614,7 @@ h2 {
 /* Aktive Seite wird in der Navigation optisch hervorgehoben */
 .nav-button.active {
     background-color: var(--japanred);
-    color: var(--white);
+    color: var(--text-on-red);
     font-weight: bold;
     padding-bottom: 9px;
 }
@@ -698,7 +699,7 @@ h2 {
 
 .desktop-nav,
 .mobile-nav {
-    background-color: var(--lightgray);
+    background-color: var(--background-secondary);
     padding: 10px;
 }
 
@@ -728,7 +729,7 @@ h2 {
     bottom: 0;
 
     width: 4px;
-    background: var(--black);
+    background: var(--text);
 
     transform: translateX(-50%);
 }
@@ -745,14 +746,14 @@ h2 {
     padding: 20px;
     padding-top: 45px;
 
-    border: 3px solid var(--black);
+    border: 3px solid var(--text);
 
     position: relative;
 }
 
 .card.dark {
     background: var(--japanred);
-    color: var(--white);
+    color: var(--text-on-red);
 }
 
 /* Positionierung */
@@ -822,7 +823,7 @@ h2 {
 
     object-fit: cover;
 
-    border: 2px solid var(--black);
+    border: 2px solid var(--text);
 
     flex-shrink: 0;
 }
@@ -855,7 +856,7 @@ h2 {
     width: 35px;
     height: 4px;
 
-    background: var(--black);
+    background: var(--text);
 
     transform: translateY(-50%);
 }
@@ -871,7 +872,7 @@ h2 {
 /* FOOTER_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
 .footer {
-    background-color: var(--lightgray);
+    background-color: var(--background-secondary);
     padding: 20px 0;
     width: 100%;
     margin: 0 auto;
@@ -882,7 +883,7 @@ h2 {
 }
 
 .footer a {
-    color: var(--black);
+    color: var(--text);
     text-decoration: none;
     font-weight: bold;
 }
@@ -919,7 +920,7 @@ h2 {
     border: 3px solid var(--japanred);
     border-radius: 10px;
     padding: 25px;
-    background: var(--white);
+    background: var(--background);
 
 }
 
@@ -945,7 +946,7 @@ h2 {
     margin-top: 50px;
     padding: 15px 35px;
     background: var(--japanred);
-    color: var(--white);
+    color: var(--text-on-red);
     text-decoration: none;
     border-radius: 10px;
     transition: 0.3s;
@@ -973,14 +974,14 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* Desktop-Hauptnavigation
     /* Maus hover */
     .nav-button:hover {
-        background-color: var(--black);
-        color: var(--white);
+        background-color: var(--text);
+        color: var(--text-on-red);
         font-weight: normal;
     }
 
     /*Hovern bei aktiver Seite anders */
     .nav-button.active:hover {
-        background-color: var(--black);
+        background-color: var(--text);
     }
 
     /* Hiragana/Katakana */
@@ -1170,13 +1171,13 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     .mobile-menu .dropdown-content .nav-button {
         padding-left: 28px;
         font-size: 0.95rem;
-        color: var(--black);
+        color: var(--text);
         opacity: 0.9;
 
     }
 
     .mobile-menu .dropdown-content .nav-button:hover {
-        color: var(--white);
+        color: var(--text-on-red);
     }
 
     .mobile-menu .dropdown>summary {
@@ -1347,7 +1348,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         width: 25px;
         height: 4px;
 
-        background: var(--black);
+        background: var(--text);
 
         transform: translateY(-50%);
     }
@@ -1411,7 +1412,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
 .schriftkarte {
 
-    background: var(--white);
+    background: var(--background);
     padding: 25px;
     border-radius: 7px;
     text-align: center;
@@ -1447,13 +1448,13 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     /* 1. Hintergrund auf weiß + Standardtext schwarz */
     * {
-        background: var(--white) !important;
-        color: var(--black) !important;
+        background: var(--background) !important;
+        color: var(--text) !important;
     }
 
     body {
-        background: var(--white) !important;
-        color: var(--black) !important;
+        background: var(--background) !important;
+        color: var(--text) !important;
     }
 
     /* 2. Header und Footer ausblenden */
