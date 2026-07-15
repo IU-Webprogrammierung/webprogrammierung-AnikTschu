@@ -208,12 +208,73 @@ cards.forEach(card => {
 
 });
 
+    // Dark Mode
+
+//___ Dark Modus
+
+function initDarkMode() {
+
+    const button = document.getElementById("darkmode-toggle");
+
+    // gespeicherte Einstellung direkt anwenden
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("darkmode");
+    }
+
+
+    if (!button) return;
+
+    // verhindert doppelte Listener
+    if (button.dataset.initialized) return;
+    button.dataset.initialized = "true";
+
+
+    updateDarkModeIcon(button);
+
+
+    button.addEventListener("click", function () {
+
+        document.body.classList.toggle("darkmode");
+
+
+        if (document.body.classList.contains("darkmode")) {
+
+            localStorage.setItem("theme", "dark");
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+
+        }
+
+
+        updateDarkModeIcon(button);
+
+    });
+
+}
+
+
+function updateDarkModeIcon(button) {
+
+    if (document.body.classList.contains("darkmode")) {
+        button.textContent = "☀️";
+    } else {
+        button.textContent = "🌙";
+    }
+
+}
+
+
 // init für alle Funktionen
 function initPage() {
+
     initDropdown();
     initHamburgerMenu();
     setActiveNav();
     initSchriftkartenHighlight();
+    initDarkMode();
+
 }
 
 /* normale Seite */
