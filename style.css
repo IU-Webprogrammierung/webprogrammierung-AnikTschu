@@ -919,12 +919,6 @@ h2 {
     gap: 40px;
 }
 
-.footer a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: bold;
-}
-
 /* 404-Seite_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
 .error-container {
