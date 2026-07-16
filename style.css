@@ -23,8 +23,8 @@ body.darkmode {
     --background-secondary: #555555;
     --background-third: white;
 
-    --text: white;
-    --text-secondary: white;
+    --text: rgb(188, 188, 188);
+    --text-secondary: rgb(188, 188, 188);
 
 }
 
