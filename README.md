@@ -6,7 +6,7 @@
 - Matrikelnummer: IU14091234
 - Studiengang: Medieninformatik
 - Modul: Projekt: Medieninformatik
-- Semester: 04.05.- 27.07.2026
+- Zeitraum: 04.05.-27.07.2026
 
 ## Projektbeschreibung
 
@@ -32,10 +32,9 @@ Projekt/
 ├── style.css               Stylesheet
 ├── script.js               JavaScript-Funktionen
 ├── images/                 Bilder der Webseite
-├── components/                 
-│   └── footer.html
-│   └── header.html
-└── README.md
+├── components/             Components für wiederkehrende Bausteine    
+│   └── header.html         Header (für alle Seiten einheitlich)
+└── README.md               Beschreibung der Struktur und Funktionen der Webseite
 
 ## Funktionen
 
