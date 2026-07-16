@@ -257,10 +257,14 @@ function initDarkMode() {
 
 function updateDarkModeIcon(button) {
 
+    const icon = button.querySelector("img");
+
     if (document.body.classList.contains("darkmode")) {
-        button.textContent = "日 (light mode)";
+        icon.src = "images/mode-light.webp";
+        icon.alt = "Light Mode";
     } else {
-        button.textContent = "月 (dark mode)";
+        icon.src = "images/mode-dark.webp";
+        icon.alt = "Dark Mode";
     }
 
 }

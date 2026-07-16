@@ -17,14 +17,16 @@
 
 }
 
+/* Dark Modus______________________________________________________________________ */
+
 body.darkmode {
 
     --background: black;
     --background-secondary: #555555;
-    --background-third: white;
+    --background-third: rgb(225, 225, 225);
 
-    --text: rgb(188, 188, 188);
-    --text-secondary: rgb(188, 188, 188);
+    --text: rgb(225, 225, 225);
+    --text-secondary: rgb(225, 225, 225);
 
 }
 
@@ -42,6 +44,12 @@ body.darkmode {
 
 .darkmode-button:hover {
     transform: scale(1.1);
+}
+
+.darkmode-button img {
+    width: 36px;
+    height: 36px;
+    display: block;
 }
 
 main {
@@ -652,7 +660,6 @@ h2 {
 .nav-button.active {
     background-color: var(--japanred);
     color: var(--text-secondary);
-    font-weight: bold;
     padding-bottom: 9px;
 }
 
