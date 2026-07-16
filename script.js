@@ -210,45 +210,41 @@ cards.forEach(card => {
 
     // Dark Mode
 
-//___ Dark Modus
-
 function initDarkMode() {
 
-    const button = document.getElementById("darkmode-toggle");
+    const buttons = document.querySelectorAll(".darkmode-button");
 
-    // gespeicherte Einstellung direkt anwenden
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("darkmode");
     }
 
 
-    if (!button) return;
+    buttons.forEach(button => {
 
-    // verhindert doppelte Listener
-    if (button.dataset.initialized) return;
-    button.dataset.initialized = "true";
+        if (button.dataset.initialized) return;
 
-
-    updateDarkModeIcon(button);
-
-
-    button.addEventListener("click", function () {
-
-        document.body.classList.toggle("darkmode");
-
-
-        if (document.body.classList.contains("darkmode")) {
-
-            localStorage.setItem("theme", "dark");
-
-        } else {
-
-            localStorage.setItem("theme", "light");
-
-        }
-
+        button.dataset.initialized = "true";
 
         updateDarkModeIcon(button);
+
+
+        button.addEventListener("click", function () {
+
+            document.body.classList.toggle("darkmode");
+
+
+            if (document.body.classList.contains("darkmode")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+
+
+            buttons.forEach(btn => {
+                updateDarkModeIcon(btn);
+            });
+
+        });
 
     });
 
@@ -257,14 +253,18 @@ function initDarkMode() {
 
 function updateDarkModeIcon(button) {
 
-    const icon = button.querySelector("img");
+    const icon = button.querySelector(".darkmode-icon");
 
     if (document.body.classList.contains("darkmode")) {
+
         icon.src = "images/mode-light.webp";
         icon.alt = "Light Mode";
+
     } else {
+
         icon.src = "images/mode-dark.webp";
         icon.alt = "Dark Mode";
+
     }
 
 }
