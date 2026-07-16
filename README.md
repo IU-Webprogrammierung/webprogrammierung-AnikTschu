@@ -39,12 +39,12 @@ Projekt/
 
 ## Funktionen
 
-1. Responsive Seitenlayout
+1. **Responsive Seitenlayout**
     - Desktop-Variante (Breite: 768 px bis 1920 px) 
     - Mobile Variante (Breite: 360 px bis 767 px)
     - Unterscheidung wird mithilfe einer Media Query in style.css umgesetzt (@media (max-width: 767px) {...})
 
-2. Interaktionen mithilfe von JavaScript
+2. **Interaktionen mithilfe von JavaScript**
     - ausgewählte, kleinere Bilder können durch Anklicken vergrößert werden
     - JavaScript: function openImage(src)
     - bei hiragana.html und katakana.html umgesetzt
@@ -54,7 +54,7 @@ Projekt/
         3. Bild wird durch Klicken über gesamten Bildschirm dargestellt (große Ansicht), kann per Klick 
                 wieder ausgeblendet werden
 
-3. Hauptnavigation mit visuellen Hinweisen mithilfe von JavaScript und CSS
+3. **Hauptnavigation mit visuellen Hervorhebungen**
     - aktuelle (="aktive") Seite wird in der Hauptnavigation im Header visuell hervorgehoben
     - HTML
         - zu Beginn jeder Seite wird im <body> das Attribut data-page mit dem Namen der jeweiligen Seite 
@@ -73,17 +73,17 @@ Projekt/
         - Für die Seiten Schrift, Hiragana, Katakana und Kanji wird immer noch zusätzlich der 
             Dropdown-Menüpunkt „Schrift“ als aktiv markiert, damit auch die übergeordnete Kategorie hervorgehoben wird.
  
-4. HTML-Komponenten
+4. **HTML-Komponenten**
     - wiederkehrende Elemente per Components umgesetzt
     - umgesetzt beim Header (header.html) und dem Footer (footer.html) werden als Components umgesetzt
     - fehlende DOCTYPE-Definition
     - Vermeidung von sich wiederholendem Code
     - alle Seiten beinhalten Header und Footer
 
-5. CSS-Animationen zur optischen Hervorhebung von Inhalten   
+5. **CSS-Animationen zur optischen Hervorhebung von Inhalten** 
     - kleine Animationen, ohne vom Inhalt abzulenken
 
-    5.1. bei "schrift.html"
+    **5.1.** bei "schrift.html"
         - Desktop-Variante: die Schriftkarte wird beim Hovern optisch hervorgehoben
             - CSS: 
                 -beim Hovern werden die Karten 
@@ -98,7 +98,7 @@ Projekt/
             - JavaScript: initSchriftkartenHighlight setzt Schriftkarte auf aktiv, sobald sie zu 95% zu
                 sehen ist
 
-    5.2. bei "kultur.html" und "kanji.html"
+    **5.2.** bei "kultur.html" und "kanji.html"
         - Info-Boxen mit Vor- und Rückseite
         - Vorderseite ("card-front"): direkt sichtbar
         - Rückseite ("card-back"):
@@ -110,41 +110,42 @@ Projekt/
         - mobile Variante: per Klick
             - umgesetzt mit JavaScript "document.querySelectorAll(".boxes-card")"
 
-    5.3. bei "hiragana.html" und "katakana.html"   
+    **5.3.** bei "hiragana.html" und "katakana.html"   
         - nur Desktop-Variante
         - Tabellen der Silbenschriften werden beim hovern größer (scale: 1.5) 
 
-6. Weboptimierte Medien
+6. **Weboptimierte Medien**
     - mit Ziel einer guten Performance wurden Bilder bei Bedarf mithilfe von https://squoosh.app/ komprimiert
     - Datei-Typ: .webp
     - Ziel: Größe aller Bilder <400 KB, Größe der meisten Bilder <100 KB
 
-7. Back-to-Top
+7. **Back-to-Top**
     - in CSS: backToTop {}
     - in HTML: am Ende vom <body> mit einem button definiert
     - in JavaScript: sobald etwa 200 px nach unten gescrollt wurden, wird der Button unten rechts eingeblendet
 
-8. Einheitliches Farbkonzept mit CSS-Variablen
+8. **Einheitliches Farbkonzept mit CSS-Variablen**
     - Über :root wurden alle in der Webseiten verwendeten Farbe festgelegt
     - Alle Farben von Elemente innerhalb der CSS-Datei sind über var(--xyz) definiert
-    - verwendete Farben:  
-        --japanred: rgb(188, 0, 45); (angelehnt an das Rot der Japanischen Flagge, wobei es für die
-            Webseite etwas dunkler gewählt wurde, um einen ausreichenden Kontrast zu Weiß zu erzeugen)
-        --white: white;
-        --lightgray: #f0f0f0;
-        --darkgray: #666666;
-        --black: black;
-
-9. Eigene 404-Seite definiert
+  
+9. **Eigene 404-Seite definiert**
     - dreisprachiger Hinweistext (deutsch, englisch, japanisch)
     - Abschließender Link zurück zur Startseite
 
-10. Favicon und Logo
+10. **Favicon und Logo**
     - Bild unter images "favicon.ico" 
     - wird sowohl als Favicon als auch als Logo verwendet
     - Es zeigt den Anfangsbuchstaben A des Vornamens der Webseiteninhaberin im Stil eines japanisches Toriis
 
-
+11. **Dark Mode und Light Mode**
+    - Wechsel zwischen den Modi ermöglicht
+    - statt der Standardsymbole wie 🌙 und ☀️ wurden die japanischen Zeichen für Mond 月 und Sonne 日 mit
+        passendem Design eingebaut worden
+    - CSS: über body.darkmode werden die Variablen aus "root" für den Dark Mode neu definiert
+    - JavaScript: 
+        - initDarkMode(): Steuert den Dark-/Light-Mode, speichert die Auswahl im localStorage und verwaltet 
+            die Button-Interaktionen.
+        - updateDarkModeIcon(button): Aktualisiert das angezeigte Symbol abhängig vom aktiven Theme.
 
 ## Verwendete Quellen
 
