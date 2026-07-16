@@ -140,7 +140,7 @@ Projekt/
 11. **Dark Mode und Light Mode**
     - Wechsel zwischen den Modi ermöglicht
     - statt der Standardsymbole wie 🌙 und ☀️ wurden die japanischen Zeichen für Mond 月 und Sonne 日 mit
-        passendem Design eingebaut worden
+        passendem Design eingebaut
     - CSS: über body.darkmode werden die Variablen aus "root" für den Dark Mode neu definiert
     - JavaScript: 
         - initDarkMode(): Steuert den Dark-/Light-Mode, speichert die Auswahl im localStorage und verwaltet 
