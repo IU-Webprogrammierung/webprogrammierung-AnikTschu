@@ -1095,7 +1095,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     .boxes-card {
         width: 100%;
-        max-width: none;
+        max-width: 300px;
         min-height: 320px;
         height: auto;
     }
@@ -1116,7 +1116,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* Mobile-Menü anzeigen */
     .mobile-nav {
         display: block;
-        background: #f5f5f5;
+        background: var(--background-secondary);
         padding: 10px 15px;
         justify-content: space-between;
         align-items: center;
