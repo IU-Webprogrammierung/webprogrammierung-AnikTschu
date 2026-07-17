@@ -145,7 +145,11 @@ Projekt/
         - initDarkMode(): Steuert den Dark-/Light-Mode, speichert die Auswahl im localStorage und verwaltet 
             die Button-Interaktionen.
         - updateDarkModeIcon(button): Aktualisiert das angezeigte Symbol abhängig vom aktiven Theme.
-
+    - Für eine bessere Barrierefreiheit:
+        - alt-Attribut der Icons wird auf "" gesetzt, da die Bilder ausschließlich dekorativ sind und keine 
+            eigenständige Information vermitteln
+        - der Button erhält ein dynamisch angepasstes aria-label („Zum Dark Mode wechseln“ bzw. „Zum Light 
+            Mode wechseln“). Dadurch liest ein Screenreader nur die eigentliche Funktion des Buttons vor und nicht zusätzlich den Bildinhalt, wodurch redundante Ausgaben wie „Dark Mode. Zum Dark Mode wechseln“ vermieden werden.
 ## Verwendete Quellen
 
 - Bilder: Quelle bei jedem Bild angegeben (ChatGPT oder Eigene Darstellung, vereinzelt weitere Quellen wie 

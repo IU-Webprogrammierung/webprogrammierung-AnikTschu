@@ -255,15 +255,23 @@ function updateDarkModeIcon(button) {
 
     const icon = button.querySelector(".darkmode-icon");
 
+    if (!icon) return;
+
     if (document.body.classList.contains("darkmode")) {
 
+        // Dark Mode aktiv → Sonne anzeigen
         icon.src = "images/mode-light.webp";
-        icon.alt = "Light Mode";
+        icon.alt = "";
+        icon.title = "Zum Light Mode wechseln";
+        button.setAttribute("aria-label", "Zum Light Mode wechseln");
 
     } else {
 
+        // Light Mode aktiv → Mond anzeigen
         icon.src = "images/mode-dark.webp";
-        icon.alt = "Dark Mode";
+        icon.alt = "";
+        icon.title = "Zum Dark Mode wechseln";
+        button.setAttribute("aria-label", "Zum Dark Mode wechseln");
 
     }
 
