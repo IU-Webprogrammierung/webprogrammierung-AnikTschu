@@ -1255,6 +1255,8 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     .hamburger-button span {
         display: block;
         transform: translateY(-2px);
+        color: var(--text);
+        
     }
 
     .hamburger summary {
