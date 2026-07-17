@@ -153,6 +153,19 @@ Projekt/
     - mit einer CSS-Transition für alle Elemente (body, header, main, footer, nav, section, article, aside,
         button, a, div, span, p, h1, h2, h3, h4, h5, h6, li) wird der Übergang zwischen den Modi
         (Ligth <-> Dark) flüssigerer und visuell angenehmerer gestaltet
+    - Beim Wechsel der Modi Dark <-> Light werden Symbole angezeigt, die sich langsam von oben nach unten
+        verlagern und währenddessen langsam ausblenden
+        - JavaScript
+            - mit Hilfe der Funktion "createThemeEffect(symbol)" werden durch eine For-Schleife 8 
+                Symbole erzeugt ("for (let i = 0; i < 8; i++)")
+            - diese werden durch "particle.style.left = Math.random() * 100 + "%";" und
+                "particle.style.top = Math.random() * 80 + "%";" zufällig platziert
+                - zufällige horizontale Position
+                -  "* 80" → begrenzt die vertikale Position auf die oberen 80 % des Bildschirms.
+        - im CSS-Code "theme-particle" wird dafür gesorgt, dass die Symbole nur 0,8 Sekunden eingeblendet   
+            werden, damit diese nicht zu lange vom Inhalt ablenken
+        - Beim Wechsel zum Dark Mode → Sterne anzeigen mit "createThemeEffect("✦");"
+        - Beim Wechsel zum Light Mode → Kirschblüten anzeigen mit "createThemeEffect("🌸");
 
 ## Verwendete Quellen
 

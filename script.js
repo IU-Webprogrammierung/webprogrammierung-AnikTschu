@@ -144,7 +144,7 @@ document.querySelectorAll(".card").forEach((card, index) => {
 
 const backToTop = document.getElementById("backToTop");
 
-    // Button anzeigen oder ausblenden
+// Button anzeigen oder ausblenden
 window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         backToTop.style.display = "block";
@@ -153,7 +153,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-    // Sanft nach oben scrollen
+// Sanft nach oben scrollen
 backToTop.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
@@ -161,7 +161,7 @@ backToTop.addEventListener("click", () => {
     });
 });
 
-    // Bei der mobilen Version wird die Schriftkarte, die in der Mitte des Bildschirms ist, hervorgehoben
+// Bei der mobilen Version wird die Schriftkarte, die in der Mitte des Bildschirms ist, hervorgehoben
 
 function initSchriftkartenHighlight() {
 
@@ -191,7 +191,7 @@ function initSchriftkartenHighlight() {
 
 }
 
-    // Bei der mobilen Version werden die Boxen per Klick gedreht (kultur.html und Kanji.html)
+// Bei der mobilen Version werden die Boxen per Klick gedreht (kultur.html und Kanji.html)
 
 const cards = document.querySelectorAll(".boxes-card");
 
@@ -208,7 +208,7 @@ cards.forEach(card => {
 
 });
 
-    // Dark Mode
+// Wechsel zwischen den Modi Dark <->Light
 
 function initDarkMode() {
 
@@ -227,16 +227,25 @@ function initDarkMode() {
 
         updateDarkModeIcon(button);
 
-
         button.addEventListener("click", function () {
 
             document.body.classList.toggle("darkmode");
 
 
             if (document.body.classList.contains("darkmode")) {
+
                 localStorage.setItem("theme", "dark");
+
+                // Wechsel zu Dark Mode → Sterne anzeigen
+                createThemeEffect("✦");
+
             } else {
+
                 localStorage.setItem("theme", "light");
+
+                // Wechsel zu Light Mode → Kirschblüten anzeigen
+                createThemeEffect("🌸");
+
             }
 
 
@@ -272,6 +281,38 @@ function updateDarkModeIcon(button) {
         icon.alt = "";
         icon.title = "Zum Dark Mode wechseln";
         button.setAttribute("aria-label", "Zum Dark Mode wechseln");
+
+    }
+
+}
+
+// Effekte beim Wechsel zwischen den Modi Dark <-> Light
+
+function createThemeEffect(symbol) {
+
+    const container = document.getElementById("theme-effects");
+
+    if (!container) return;
+
+    for (let i = 0; i < 8; i++) {
+
+        const particle = document.createElement("span");
+
+        particle.classList.add("theme-particle");
+
+        particle.textContent = symbol;
+
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.top = Math.random() * 80 + "%";
+
+        particle.style.animationDelay = Math.random() * 0.3 + "s";
+
+        container.appendChild(particle);
+
+
+        particle.addEventListener("animationend", () => {
+            particle.remove();
+        });
 
     }
 

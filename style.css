@@ -73,7 +73,7 @@ body.darkmode {
     display: block;
 }
 
- /* Weicher Überganz beim Wechsel zwischen den Mode Dark <-> Light */
+ /* Weicher Überganz beim Wechsel zwischen den Modi Dark <-> Light */
 body,
 header,
 main,
@@ -109,6 +109,46 @@ li {
     transition:
         opacity 0.25s ease,
         transform 0.25s ease;
+}
+
+
+ /* Effekte beim Wechsel zwischen den Modi Dark <-> Light */
+ 
+#theme-effects {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 9999;
+}
+
+.theme-particle {
+    position: absolute;
+
+    font-size: 24px;
+
+    animation: particle 0.8s ease-out forwards;
+}
+
+
+@keyframes particle {
+
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(80px) rotate(180deg) scale(1.2);
+    }
+
 }
 
 /* Überschriften */
