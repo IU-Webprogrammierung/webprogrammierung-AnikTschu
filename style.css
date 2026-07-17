@@ -17,6 +17,31 @@
 
 }
 
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: var(--background);
+    color: var(--text);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
 /* Dark Modus______________________________________________________________________ */
 
 body.darkmode {
@@ -48,28 +73,42 @@ body.darkmode {
     display: block;
 }
 
-main {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background: var(--background);
-    color: var(--text);
+ /* Weicher Überganz beim Wechsel zwischen den Mode Dark <-> Light */
+body,
+header,
+main,
+footer,
+nav,
+section,
+article,
+aside,
+button,
+a,
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-body {
-    background-color: var(--background);
-    color: var(--text);
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+.darkmode-icon {
+    width: 36px;
+    height: 36px;
     display: block;
-}
 
-p {
-    margin-bottom: 1rem;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
 }
 
 /* Überschriften */

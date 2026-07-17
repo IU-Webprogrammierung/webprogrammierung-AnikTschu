@@ -150,6 +150,10 @@ Projekt/
             eigenständige Information vermitteln
         - der Button erhält ein dynamisch angepasstes aria-label („Zum Dark Mode wechseln“ bzw. „Zum Light 
             Mode wechseln“). Dadurch liest ein Screenreader nur die eigentliche Funktion des Buttons vor und nicht zusätzlich den Bildinhalt, wodurch redundante Ausgaben wie „Dark Mode. Zum Dark Mode wechseln“ vermieden werden.
+    - mit einer CSS-Transition für alle Elemente (body, header, main, footer, nav, section, article, aside,
+        button, a, div, span, p, h1, h2, h3, h4, h5, h6, li) wird der Übergang zwischen den Modi
+        (Ligth <-> Dark) flüssigerer und visuell angenehmerer gestaltet
+
 ## Verwendete Quellen
 
 - Bilder: Quelle bei jedem Bild angegeben (ChatGPT oder Eigene Darstellung, vereinzelt weitere Quellen wie 
