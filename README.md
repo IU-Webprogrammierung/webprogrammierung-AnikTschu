@@ -84,19 +84,29 @@ Projekt/
     - kleine Animationen ohne vom Inhalt abzulenken
 
   **5.1. bei "schrift.html"**
-        - Desktop-Variante: die Schriftkarte wird beim Hovern optisch hervorgehoben
+        - aufgewählte Schriftkarte wird optisch hervorgehoben
+        - Geräte MIT Hover-Funktion: 
             - CSS: 
-                - beim Hovern werden die Karten 
+                - festgehalten in `@media (hover: hover) and (pointer: fine) {[...]}` unter
+                    `.schriftkarte:hover` -> beim Hovern wird die Schriftkarte 
                     1. leicht nach oben versetzt `transform: translateY(-12px);`
                     2. mit einem Schatten versehen
-                    3. mir einer schwarzen Umrandung versehen: `border-color: black;`
+                    3. mir einer schwarzen Umrandung versehen
                 - mit Hilfe von "transition" werden die Änderungen weich animiert
-        - mobile Variante: die Schriftkarte, die zu 95% zu sehen ist, wird optisch hervorgehoben
+        - Geräte OHNE Hover-Möglichkeit (und mobile Variante):
             - CSS: 
-                - der hover-Effekt der Desktop-Variante wird überschrieben/deaktiviert
-                - `.schriftkarte.active` -> Schatten + schwarze Umrandung
-            - JavaScript: `initSchriftkartenHighlight` setzt Schriftkarte auf aktiv, sobald sie zu 95% zu
-                sehen ist
+                - festgehalten in `@media (max-width: 767px) {[...]}` unter `.schriftkarte.active`
+                -> die Schriftkarte wird 
+                1. mit einem Schatten versehen
+                2. mir einer schwarzen Umrandung versehen
+            - JavaScript: `initSchriftkartenHighlight` setzt Schriftkarte auf aktiv, sobald sie zu 95% 
+                (`threshold: 0.95`) zu sehen ist 
+        - Problem: bei Geräten mit schmalem Bildschirm (unter 768 px) UND Hover-Funktion sind beide
+            Arten der Hervorhebung gleichzeitig aufgetreten. Dies wurde durch folgende Abfrage im JavaScript 
+            unterbunden: 
+            `if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {return;}`
+                - die Abfrage prüft, ob das aktuelle Gerät eine Hover-Funktion unterstützt. Ist dies der Fall,
+                    beendet return die Funktion sofort, sodass der IntersectionObserver nur auf Geräten OHNE Hover-Funktion aktiviert wird. Dadurch werden Hover-Effekte und Touch-Effekte nicht gleichzeitig ausgeführt.
 
     **5.2.** bei "kultur.html" und "kanji.html"
         - Info-Boxen mit Vor- und Rückseite

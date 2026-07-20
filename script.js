@@ -161,11 +161,15 @@ backToTop.addEventListener("click", () => {
     });
 });
 
-// Bei der mobilen Version wird die Schriftkarte, die in der Mitte des Bildschirms ist, hervorgehoben
+// Bei Geräten OHNE Hover-Funktion und schmalem Bildschirm (mobile Version) wird die Schriftkarte, die in 
+// der Mitte des Bildschirms ist (zu 95 % sichtbar), hervorgehoben
 
 function initSchriftkartenHighlight() {
 
-    if (window.innerWidth > 767) return;
+    // Nur auf Geräten ohne Hover (z. B. Smartphones)
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        return;
+    }
 
     const cards = document.querySelectorAll(".schriftkarte");
 

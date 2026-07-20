@@ -1571,14 +1571,6 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     }
 
-    .schriftkarte:hover {
-
-        transform: none;
-        box-shadow: none;
-        border-color: transparent;
-
-    }
-
     .schriftkarte.active {
         border-color: var(--background-third);
         box-shadow: 0 8px 20px var(--background-third);
