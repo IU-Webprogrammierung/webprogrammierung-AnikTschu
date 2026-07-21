@@ -176,14 +176,15 @@ Projekt/
             werden, damit diese nicht zu lange vom Inhalt ablenken
         - beim Wechsel zum Dark Mode → Sterne anzeigen mit `createThemeEffect("✦");`
         - beim Wechsel zum Light Mode → Kirschblüten anzeigen mit `createThemeEffect("🌸");`
-    - um den Flash of Incorrect Theme (FOIT) zu fixen, wurde eine JavaScript-Datei `theme-init.js`
-        eingeführt. Diese wird direkt bei jeder Webseite im Head noch VOR der CSS-Datei eingelesen:
-        `<head>`
-            `[...]`
-            `<script src="theme-init.js"></script>`
-            `<link rel="stylesheet" href="style.css">`
-            `[...]`
-        `</head>`
+    - Problem: Kurzes Einblenden des Light Modes beim Laden einer neuen Webseite
+        - Lösung: um den Flash of Incorrect Theme (FOIT) zu fixen, wurde eine JavaScript-Datei `theme-init.js`
+            eingeführt. Diese wird direkt bei jeder Webseite im Head noch VOR der CSS-Datei eingelesen:
+            `<head>`
+                `[...]`
+                `<script src="theme-init.js"></script>`
+                `<link rel="stylesheet" href="style.css">`
+                `[...]`
+            `</head>`
         - Damit prüft die `theme-init.js`-Datei, ob im localStorage der Dark Mode gespeichert wurde. Falls der 
             gespeicherte Wert "dark" ist, wird die Klasse darkmode direkt zum HTML-Element hinzugefügt.
 
