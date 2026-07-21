@@ -142,24 +142,37 @@ document.querySelectorAll(".card").forEach((card, index) => {
 
 //___ Back-to-Top Funktion
 
-const backToTop = document.getElementById("backToTop");
+function initBackToTop() {
 
-// Button anzeigen oder ausblenden
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
+    const backToTop = document.getElementById("backToTop");
+
+    if (!backToTop || backToTop.dataset.initialized) return;
+
+    backToTop.dataset.initialized = "true";
+
+    function toggleButton() {
+        if (window.scrollY > 200) {
+            backToTop.style.display = "flex";
+        } else {
+            backToTop.style.display = "none";
+        }
     }
-});
 
-// Sanft nach oben scrollen
-backToTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    // Direkt beim Initialisieren den richtigen Zustand setzen
+    toggleButton();
+
+    // Beim Scrollen aktualisieren
+    window.addEventListener("scroll", toggleButton);
+
+    // Nach oben scrollen
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
-});
+
+}
 
 // Bei Geräten OHNE Hover-Funktion und schmalem Bildschirm (mobile Version) wird die Schriftkarte, die in 
 // der Mitte des Bildschirms ist (zu 95 % sichtbar), hervorgehoben
@@ -331,6 +344,7 @@ function initPage() {
     setActiveNav();
     initSchriftkartenHighlight();
     initDarkMode();
+    initBackToTop();
 
 }
 
