@@ -231,11 +231,6 @@ function initDarkMode() {
 
     const buttons = document.querySelectorAll(".darkmode-button");
 
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("darkmode");
-    }
-
-
     buttons.forEach(button => {
 
         if (button.dataset.initialized) return;
@@ -246,10 +241,10 @@ function initDarkMode() {
 
         button.addEventListener("click", function () {
 
-            document.body.classList.toggle("darkmode");
+            document.documentElement.classList.toggle("darkmode");
 
 
-            if (document.body.classList.contains("darkmode")) {
+            if (document.documentElement.classList.contains("darkmode")) {
 
                 localStorage.setItem("theme", "dark");
 
@@ -283,7 +278,8 @@ function updateDarkModeIcon(button) {
 
     if (!icon) return;
 
-    if (document.body.classList.contains("darkmode")) {
+
+    if (document.documentElement.classList.contains("darkmode")) {
 
         // Dark Mode aktiv → Sonne anzeigen
         icon.src = "images/mode-light.webp";
