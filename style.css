@@ -1176,7 +1176,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         outline: 1px solid red;
     }
     */
-    
+
     /* Überschriften */
     h1 {
         font-size: 3rem;
@@ -1473,6 +1473,15 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     .split-i1-t2 .text,
     .split-i1-t4 .text {
         width: 100%;
+    }
+
+    .big-image:hover .big-image {
+        transform: none;  /* scale(1.5) bei schmalen Bildschirm mit Hover-Funktion deaktivieren, da Bilder 
+                                sonst zu groß */
+    }
+
+    .split-i1-t2 .image:hover img {
+        transform: none;
     }
 
     /* Über mich */
