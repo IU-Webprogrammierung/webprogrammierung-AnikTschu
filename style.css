@@ -1021,8 +1021,26 @@ li {
     display: flex;
     justify-content: center;
     gap: 40px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
+.footer a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--japanred);
+    text-decoration: underline;
+}
+
+.footer nav {
+    display: flex;
+    gap: 30px;
+}
 /* 404-Seite_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
 .error-container {
@@ -1368,12 +1386,19 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     }
 
     /* Footer */
+
     .footer {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
 
+    .footer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
     /* Startseite Hero */
 
