@@ -1170,12 +1170,13 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         font-size: 16px;
     }
 
-    /* Für Tests der Positionierungen und Ausmaße */
-    
+    /* Für Tests der Positionierungen und Ausmaße 
+
     * {
         outline: 1px solid red;
     }
-
+    */
+    
     /* Überschriften */
     h1 {
         font-size: 3rem;

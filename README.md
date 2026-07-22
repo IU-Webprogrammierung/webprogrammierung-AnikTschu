@@ -99,8 +99,8 @@ Projekt/
                 -> die Schriftkarte wird 
                 1. mit einem Schatten versehen
                 2. mir einer schwarzen Umrandung versehen
-            - JavaScript: `initSchriftkartenHighlight` setzt Schriftkarte auf aktiv, sobald sie zu 95% 
-                (`threshold: 0.95`) zu sehen ist 
+            - JavaScript: `initSchriftkartenHighlight` setzt Schriftkarte auf aktiv, sobald sie zu 85% 
+                (`threshold: 0.85`) zu sehen ist 
         - Problem: bei Geräten mit schmalem Bildschirm (unter 768 px) UND Hover-Funktion sind beide
             Arten der Hervorhebung gleichzeitig aufgetreten. Dies wurde durch folgende Abfrage im JavaScript 
             unterbunden: 

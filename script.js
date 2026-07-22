@@ -206,7 +206,7 @@ function initBackToTop() {
 }
 
 // Bei Geräten OHNE Hover-Funktion und schmalem Bildschirm (mobile Version) wird die Schriftkarte, die in 
-// der Mitte des Bildschirms ist (zu 95 % sichtbar), hervorgehoben
+// der Mitte des Bildschirms ist (zu 85 % sichtbar), hervorgehoben
 
 function initSchriftkartenHighlight() {
 
@@ -231,7 +231,7 @@ function initSchriftkartenHighlight() {
 
         },
         {
-            threshold: 0.95
+            threshold: 0.85
         }
     );
 
