@@ -267,7 +267,7 @@ li {
     border: 2px solid var(--background-third);
     border-radius: 50%;
     background-color: var(--japanred);
-    color: var(--text-secondary);
+    color: var(--text);
 
     font-size: 28px;
     font-weight: 90;
@@ -282,7 +282,7 @@ li {
 }
 
 #backToTop:hover {
-    background-color: var(--background-third);
+    background-color: var(--background);
 }
 
 /* Sektion für großes Bild */
