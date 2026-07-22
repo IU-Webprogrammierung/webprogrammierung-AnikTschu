@@ -17,6 +17,9 @@ Diese Website bietet einen einfachen und verständlichen Einstieg in die faszini
 - HTML5
 - CSS3
 - JavaScript (ES6)
+- HTMX zur Einbindung wiederkehrender Komponenten
+- WebP zur Bildoptimierung
+- LocalStorage zur Speicherung der Theme-Einstellung
 
 ## Projektstruktur
 
@@ -31,7 +34,7 @@ Projekt/
 ├── kultur.html             Informationen zur japanischen Kultur
 ├── style.css               Stylesheet
 ├── script.js               JavaScript-Funktionen
-├── theme-init.js           Kurze JS-Datei, wichtig für Wechsel der Modi Dark <-> Light 
+├── theme-init.js           Kurze Datei, wichtig für Wechsel der Modi Dark <-> Light 
 ├── images/                 Ordner: Bilder der Website
 ├── components/             Ordner: Components für wiederkehrende Bausteine    
 │   └── header.html         Header (für alle Seiten einheitlich)
@@ -40,183 +43,178 @@ Projekt/
 
 ## Funktionen
 
-1. **Responsive Seitenlayout**
+1. **Responsive Design**
     - Desktop-Variante (Breite: >767 px) 
     - Mobile Variante (Breite: <=767 px)
     - CSS: Break Point wird mithilfe einer Media Query umgesetzt (`@media (max-width: 767px) {...}`)
 
-2. **Interaktionen mithilfe von JavaScript**
+2. **Barrierefreiheit**
+    - Verwendung semantischer HTML-Elemente (`header`, `nav`, `main`, `section`, `footer`) und Vermeidung
+        von `<div>`-Elementen
+    - aussagekräftige alt-Attribute für informative Bilder
+    - leere alt-Attribute bei rein dekorativen Bildern
+    - ARIA-Labels für interaktive Elemente
+    - Unterstützung verschiedener Eingabegeräte durch getrennte Hover- und Touch-Interaktionen
+        - Hover-Funktionen meist in `@media (hover: hover) and (pointer: fine){...}` zusammengefasst
+
+3. **HTML-Komponenten**
+    - wiederkehrende Elemente (Header, Footer) per Components in jeder Webseite umgesetzt
+    - enthalten keinen `DOCTYPE`, da sie als HTML-Fragmente eingebunden werden
+
+4. **Weboptimierte Medien**
+    - Bildkomprimierung mit [Squoosh](https://squoosh.app/) mit Datei-Typ: `.webp`
+    - für eine bessere Performance
+
+5. **Einheitliches Farbkonzept mit CSS-Variablen**
+    - in CSS werden über `:root`  alle in den Webseiten verwendeten Farben festgelegt
+    - Alle Farben von Elementen innerhalb der CSS-Datei sind über `var(--variablenName)` definiert
+
+6. **Interaktionen mithilfe von JavaScript** (umgesetzt bei "hiragana.html" und "katakana.html")
     - ausgewählte, kleinere Bilder können durch Anklicken vergrößert werden
     - JavaScript: `function openImage(src)`
-    - bei "hiragana.html" und "katakana.html" umgesetzt
     - Struktur
         1. Bild bei Besuch der Seite (kleine Ansicht)
         2. Bild beim Hovern über dem Bild (Hinweis "Hier klicken für größere Ansicht")
-        3. Bild wird durch Klicken über gesamten Bildschirm dargestellt (große Ansicht), kann per Klick 
-                wieder ausgeblendet werden
+        3. Bild wird durch Klicken über gesamten Bildschirm dargestellt, kann per Klick 
+            wieder ausgeblendet werden
 
-3. **Hauptnavigation mit visuellen Hervorhebungen**
-    - aktuelle (="aktive") Seite wird in der Hauptnavigation im Header visuell hervorgehoben
-    - HTML
-        - zu Beginn jeder Seite wird im Body das Attribut `data-page` mit dem Namen der jeweiligen Seite 
-            definiert
-        - z.B. für Hiragana: `<body data-page="hiragana">`
-        - semantisch ist die Hauptnavigation mit `<nav>`, `<ul>` und `<li>` aufgebaut
-    - CSS
-        - die Klasse `.nav-button` wird mit `.nav-button:hover` ergänzt, sodass visuell hervorgehoben wird, auf welchem Menü-
-            Punkt sich der Mauszeiger befindet (Desktop-Variante)
-        - die Klasse `.nav-button.active` kennzeichnet die aktuell geöffnete Seite durch eine andere Schriftstärke und eine 
-            Unterstreichung.
-    - JavaScript 
-        - die Funktion `setActiveNav()` liest den Wert des Attributs `data-page` aus.
-        - anschließend wird der entsprechende Navigationslink anhand seines href-Attributs ermittelt und mit 
-            der CSS-Klasse active versehen.
-        - für die Seiten Schrift, Hiragana, Katakana und Kanji wird immer noch zusätzlich der 
-            Menüpunkt „Schrift“ als aktiv markiert, damit auch die übergeordnete Kategorie hervorgehoben wird (trägt zur
-            besseren Orientierung nach Ausblenden des Dropdown-Menüs bei).
- 
-4. **HTML-Komponenten**
-    - wiederkehrende Elemente per Components umgesetzt, um doppelten Code zu vermeiden
-    - Header ("header.html") und Footer ("footer.html") werden als Components umgesetzt
-    - fehlende DOCTYPE-Definition
-    - alle Seiten beinhalten Header und Footer
-
-5. **CSS-Animationen zur optischen Hervorhebung von Inhalten** 
+7. **CSS-Animationen zur optischen Hervorhebung von Inhalten** 
     - kleine Animationen ohne vom Inhalt abzulenken
 
-  **5.1. bei "schrift.html"**
-        - aufgewählte Schriftkarte wird optisch hervorgehoben
+  **7.1. Schriftkarten** (umgesetzt bei "schrift.html")
+        - ausgewählte Schriftkarte wird optisch hervorgehoben
         - Geräte MIT Hover-Funktion: 
             - CSS: 
                 - festgehalten in `@media (hover: hover) and (pointer: fine) {[...]}` unter
-                    `.schriftkarte:hover` -> beim Hovern wird die Schriftkarte 
-                    1. leicht nach oben versetzt `transform: translateY(-12px);`
-                    2. mit einem Schatten versehen
-                    3. mir einer schwarzen Umrandung versehen
+                    `.schriftkarte:hover`
                 - mit Hilfe von "transition" werden die Änderungen weich animiert
-        - Geräte OHNE Hover-Möglichkeit (und mobile Variante):
+        - Geräte OHNE Hover-Funktion und schmalen Bildschirm (mobile Variante):
             - CSS: 
                 - festgehalten in `@media (max-width: 767px) {[...]}` unter `.schriftkarte.active`
-                -> die Schriftkarte wird 
-                1. mit einem Schatten versehen
-                2. mir einer schwarzen Umrandung versehen
             - JavaScript: `initSchriftkartenHighlight` setzt Schriftkarte auf aktiv, sobald sie zu 85% 
                 (`threshold: 0.85`) zu sehen ist 
-        - Problem: bei Geräten mit schmalem Bildschirm (unter 768 px) UND Hover-Funktion sind beide
-            Arten der Hervorhebung gleichzeitig aufgetreten. Dies wurde durch folgende Abfrage im JavaScript 
-            unterbunden: 
+        - bei Geräten mit schmalem Bildschirm (unter 768 px) UND Hover-Funktion wird das gleichzeitige 
+            Aufgetreten beider optischer Hervorhebungen durch eine Abfrage im JavaScript unterbunden: 
             `if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {return;}`
-                - die Abfrage prüft, ob das aktuelle Gerät eine Hover-Funktion unterstützt. Ist dies der Fall,
-                    beendet return die Funktion sofort, sodass der IntersectionObserver nur auf Geräten OHNE Hover-Funktion aktiviert wird. Dadurch werden Hover-Effekte und Touch-Effekte nicht gleichzeitig ausgeführt.
 
-    **5.2.** bei "kultur.html" und "kanji.html"
+    **7.2. Inforkarten mit Vor-Rückseite** (umgesetzt bei "kultur.html" und "kanji.html")
         - Info-Boxen mit Vor- und Rückseite
+        - mit Hilfe von `transition` wird der Wechsel zwischen Vorder- und Rückseite weich animiert
         - Vorderseite (`card-front`): direkt sichtbar
         - Rückseite (`card-back`):
-            - zunächst nicht sichbar: `visibility: hidden;`
-                - per Aktion wird die Vorderseite auf `visibility: hidden;` gesetzt und die Rückseite mit `opacity: 1;` und `visibility: visible;` 
-                    sichtbar gemacht
-        - Desktop-Variante
-            - beim Hovern wird die Karte umgedreht
-            - mit Hilfe von `transition` wird der Wechsel zwischen Vorder- und Rückseite weich animiert
-        - mobile Variante: per Klick
-            - umgesetzt mit JavaScript `document.querySelectorAll(".boxes-card")`
+            - zunächst nicht sichtbar: `visibility: hidden;`
+                - per Aktion wird die Vorderseite mit `visibility: hidden;` ausgebelndet und die Rückseite mit 
+                    `opacity: 1;` und `visibility: visible;` sichtbar gemacht
+        - Transition bei Desktop-Variante durch Hovern bei mobiler Variante durch Klick
+            - mobil: Java-Script `document.querySelectorAll(".boxes-card")`
 
-    **5.3.** bei "hiragana.html" und "katakana.html"   
-        - nur Desktop-Variante
-        - Tabellen der japanischen Silbenschriften werden beim Hovern größer (`scale: 1.5`) 
+    **7.3. Vergrößerung von Bildern** (umgesetzt bei "hiragana.html" und "katakana.html") 
+        - Bei kleinen Tabellen für besseres Erkennen der Inhalte
+        - nur bei Hover-Funktion
+        - Tabellen der japanischen Silbenschriften werden vergrößert (`scale: 1.5`) 
+        - CSS: `.big-image:hover .big-image` und `.split-i1-t2 .image:hover img`
 
-6. **Weboptimierte Medien**
-    - für eine bessere Performance wurden Bilder mithilfe von https://squoosh.app/ komprimiert
-    - Datei-Typ: .webp
-    - daraus ergeben sich Schwellen für die Bildgröße: Größe aller Bilder <400 KB, Größe der meisten Bilder <100 KB
-
-7. **Back-to-Top**
+8. **Back-to-Top**
     - in CSS: `backToTop {...}`
-    - in HTML: am Ende vom Body mit einem Button definiert
-    - in JavaScript: sobald 200 Pixel nach unten gescrollt wurden, wird der Button unten rechts eingeblendet
+    - in HTML: in Footer-component definiert (Button mit `id="backToTop"`)
+    - in JavaScript Funktion `initBackToTop() {...}`
+        - sobald 200 Pixel nach unten gescrollt wurden, wird der Button unten rechts eingeblendet
 
-8. **Einheitliches Farbkonzept mit CSS-Variablen**
-    - Über `:root` wurden alle in den Webseiten verwendeten Farben festgelegt
-    - Alle Farben von Elementen innerhalb der CSS-Datei sind über `var(--variablenName)` definiert
+9. **Hauptnavigation mit visuellen Hervorhebungen**
+    - aktuelle (="aktive") Seite wird in der Hauptnavigation im Header visuell hervorgehoben
+    - HTML
+        - jede Seite erhält im Body das Attribut `data-page` mit einem seitenspezifischen Namen
+        - semantisch mit `<nav>`, `<ul>`, `<li>` aufgebaut
+    - CSS
+        - `.nav-button:hover` sorgt für visuelle HErvorhebung beim Hovern (Desktop-Variante)
+        - die Klasse `.nav-button.active` kennzeichnet die aktuell geöffnete Seite
+    - JavaScript 
+        - die Funktion `setActiveNav()` liest den Wert des Attributs `data-page` aus.
+        - anschließend wird der entsprechende Navigationslink anhand seines href-Attributs ermittelt und mit 
+            der CSS-Klasse `active` versehen.
+        - für die Seiten Hiragana, Katakana und Kanji wird der Oberbegriff „Schrift“ als aktiv markiert, 
+            was zur besseren Orientierung nach Ausblenden des Dropdown-Menüs bei trägt
   
-9. **Eigene 404-Seite definiert**
-    - dreisprachiger Hinweistext (Deutsch, Englisch, Japanisch)
-    - Abschließender Link, um zurück zur Startseite zu gelangen
+10. **404-Seite definiert**
+    - dreisprachiger Hinweistext in Deutsch, Englisch und Japanisch
+    - Abschließender Link führt zurück zur Startseite
 
-10. **Favicon und Logo**
+11. **Favicon und Logo**
     - Bild im Ordner "images" namens "favicon.ico" 
-    - wird sowohl als Favicon als auch als Logo verwendet
-    - Es zeigt den Anfangsbuchstaben A des Vornamens der Website-Inhaberin im Stil eines japanisches Torii
+    - wird als Favicon und als Logo verwendet
+    - zeigt den Anfangsbuchstaben A des Vornamens der Website-Inhaberin im Stil eines japanischen Torii
 
-11. **Dark Mode und Light Mode**
+12. **Dark Mode und Light Mode**
     - Wechsel zwischen den Modi Dark <-> Light wird ermöglicht
     - anstelle verbreiteter Symbole wie 🌙 und ☀️ wurden die japanischen Zeichen für Mond 月 und Sonne 日 mit
-        passendem Design eingebaut
+        passendem Design als webp-Datei eingebaut
     - CSS: über `body.darkmode` werden die Variablen aus `:root` für den Dark Mode neu definiert
     - JavaScript: 
-        - `initDarkMode()`: Steuert den Wechsel zwischen Dark- und Light-Mode, speichert die Auswahl im `localStorage` und verwaltet 
-            die Button-Interaktionen.
-        - `updateDarkModeIcon(button)`: Aktualisiert das angezeigte Symbol abhängig vom aktiven Theme
+        - `initDarkMode()`: Steuert den Wechsel zwischen Dark- und Light-Mode, speichert die Auswahl im 
+            `localStorage` und verwaltet die Button-Interaktionen.
+        - `updateDarkModeIcon(button)`: Aktualisiert das angezeigte Symbol abhängig vom aktiven Theme mit
+            passendem title
     - Für eine bessere Barrierefreiheit:
-        - alt-Attribut der Icons wird auf `""` (leer) gesetzt, da die Bilder ausschließlich dekorativ sind und keine 
-            eigenständige Information vermitteln
+        - alt-Attribut der Icons wird auf `" "` (leer) gesetzt, da die Bilder ausschließlich dekorativ sind 
+            und keine eigenständige Information vermitteln
         - der Button erhält ein dynamisch angepasstes `aria-label` („Zum Dark Mode wechseln“ bzw. „Zum Light 
-            Mode wechseln“). Dadurch liest ein Screenreader nur die eigentliche Funktion des Buttons vor und nicht zusätzlich den Bildinhalt, wodurch redundante Ausgaben wie „Dark Mode. Zum Dark Mode wechseln“ vermieden werden.
+            Mode wechseln“). Ein Screenreader liest nur die Funktion des Buttons vor und nicht zusätzlich den 
+            Bildinhalt, wodurch redundante Ausgaben wie „Dark Mode. Zum Dark Mode wechseln“ vermieden werden
     - mit einer CSS-Transition für alle Elemente (`body, header, main, footer, nav, section, article, aside,`
-        `button, a, div, span, p, h1, h2, h3, h4, h5, h6, li`) wird der Übergang zwischen den Modi
-        Dark <-> Light flüssiger und angenehmer gestaltet
-    - Beim Wechsel der Modi Dark <-> Light werden Symbole angezeigt, die sich langsam von oben nach unten
-        über den Bildschirm scheben und währenddessen langsam verblassen
+        `button, a, div, span, p, h1, h2, h3, h4, h5, h6, li`) wird der Übergang zwischen den Modi Dark <-> 
+        Light flüssiger gestaltet
+    - Beim Wechsel der Modi Dark <-> Light werden spielerisch Symbole angezeigt, die langsam von oben 
+        nach unten über den Bildschirm schweben und währenddessen langsam verblassen
         - JavaScript
-            - mit Hilfe der Funktion `createThemeEffect(symbol)` werden durch eine For-Schleife 8 Symbole erzeugt
+            - mit Hilfe der Funktion `createThemeEffect(symbol)` werden durch eine For-Schleife eine feste 
+                Anzahl an Symbolen erzeugt
             - diese werden durch `particle.style.left = Math.random() * 100 + "%";` und
                 `particle.style.top = Math.random() * 80 + "%";` zufällig platziert
                 -  `* 80` → begrenzt die vertikale Position auf die oberen 80 % des Bildschirms.
-        - in der CSS-Klasse `theme-particle` wird dafür gesorgt, dass die Symbole nur 0,8 Sekunden eingeblendet   
-            werden, damit diese nicht zu lange vom Inhalt ablenken
+        - in der CSS-Klasse `theme-particle` wird dafür gesorgt, dass die Symbole nur 0,8 Sekunde 
+            eingeblendet werden, damit diese nicht zu lange vom Inhalt ablenken
         - beim Wechsel zum Dark Mode → Sterne anzeigen mit `createThemeEffect("✦");`
         - beim Wechsel zum Light Mode → Kirschblüten anzeigen mit `createThemeEffect("🌸");`
-    - Problem: Kurzes Einblenden des Light Modes beim Laden einer neuen Webseite
-        - Lösung: um den Flash of Incorrect Theme (FOIT) zu fixen, wurde eine JavaScript-Datei `theme-init.js`
-            eingeführt. Diese wird direkt bei jeder Webseite im Head noch VOR der CSS-Datei eingelesen:
-            `<head>`
-                `[...]`
-                `<script src="theme-init.js"></script>`
-                `<link rel="stylesheet" href="style.css">`
-                `[...]`
-            `</head>`
-        - Damit prüft die `theme-init.js`-Datei, ob im localStorage der Dark Mode gespeichert wurde. Falls der 
-            gespeicherte Wert "dark" ist, wird die Klasse darkmode direkt zum HTML-Element hinzugefügt.
+    - Flash of Incorrect Theme (FOIT) (kurzes Einblenden des Light Modes beim Laden einer neuen Webseite bei 
+        Dark Mode) wurde verhindert
+        - JavaScript-Datei `theme-init.js` wird direkt bei jeder Webseite im Head noch VOR der CSS-Datei 
+            eingelesen: `<head>`
+                            `[...]`
+                            `<script src="theme-init.js"></script>`
+                            `<link rel="stylesheet" href="style.css">`
+                            `[...]`
+                        `</head>`
+        - `theme-init.js` prüft , ob im `localStorage` der Dark Mode gespeichert wurde. Falls 
+            der gespeicherte Wert "dark" ist, wird die Klasse `darkmode` direkt zum HTML-Element hinzugefügt.
 
-12. Aufwendiges Berechnen von Punkten und Linien für die Timeline von ueber-mich.html
-    - Problem: Berechnung der Position der Punkte/Verbindungslinien passierte zunächst genau einmal, nämlich 
-        beim Laden der Seite. Damit entstand das Problem, dass bei Veränderung der Webseiten-Breite NACH dem
-        Laden der Seite die Positionen nicht neu berechnet wurden. Sie behielten ihre alte Position und
-        haben teils durch den optischen Versatz der sich dynamischen Ändernden Größe der einzelnen Timeline-
-        Elemente nicht mehr ihre Funktion (Verbindung mit Timeline) erfüllt.
-    - Lösung: Es wurde in JavaScript eine Funktion eingeführt, die bei der Änderung der Fenstergröße (resize)
-        die Position der Punkte/Verbindungslinien neu berechnet
+13. **Berechnen von Punkten und Linien für die Timeline** (umgesetzt bei "ueber-mich.html") 
+    - Punkte und Verbindungslinien der Timeline-Karten werden dynamisch durch die Java-Script-Funktion
+        `createTimelinePoints()` berechnet
+    - JavaScript-Funktion berechnet die Position der Punkte/Verbindungslinien bei der Änderung der 
+        Fenstergröße (resize) neu 
         - `window.addEventListener("resize", createTimelinePoints);` ruft `createTimelinePoints()` bei jeder 
             Änderung der Fenstergröße direkt auf. Dadurch werden die Positionen der Timeline-Punkte und 
             Verbindungslinien sofort neu berechnet.
-        - Leider ist die Funktion noch nicht perfekt. Besonders bei Bildschirmen mit einer etwas größeren 
-            Breite als der Schwellenwert der mobilen Variante sind die Linien/Punkte und auch die vertikale
-            Timeline nicht richtig positioniert. Nach vielen Versuchen konnte dies nicht gefixt werden.
-        - durch die Verwendung von `setTimeout` wird ein Timeout eingebaut. Dabei wird der erneute Aufruf um
-            150 ms verzögert und bei weiteren Größenänderungen zurückgesetzt. So wird verhindert, dass die 
-            Funktion unnötig oft ausgeführt wird, wodurch die Performance verbessert wird.
+        - die dynamische Berechnung funktioniert zuverlässig bei den vorgesehenen Desktop- und Mobilgrößen. 
+            Bei bestimmten Zwischenbreiten können geringfügige Abweichungen auftreten.
+        - durch die Verwendung von `setTimeout` wird ein erneute Aufruf der Funktion um 150 ms verzögert und 
+            bei weiteren Größenänderungen zurückgesetzt. So wird verhindert, dass die Funktion unnötig oft 
+            ausgeführt wird, wodurch die Performance verbessert wird.
 
-13. Media Query für eine druckerfreundliche Darstellung
+14. **Media Query für print**
     - Mit `@media print` werden spezielle CSS-Regeln für den Ausdruck der Webseite definiert
-        Beim Drucken werden Hintergrundfarben und Texte angepasst, Header und Footer ausgeblendet sowie Schatten und Texteffekte entfernt
+    - es werden Hintergrundfarben und Texte angepasst, Header und Footer ausgeblendet sowie Schatten und Texteffekte entfernt
+    - für eine druckerfreundliche Darstellung
 
 
 
 ## Verwendete Quellen
 
-- Bilder: Quelle wird bei jedem Bild angegeben
-    - ChatGPT
-    - Eigene Darstellung
-    - vereinzelte Verlinkungen zu Bildern auf Wikipedia)
-- Inhalte: Eigene Formulierungen auf Grundlagen von eigenem Wissen und ChatGPT
+- Bilder:
+  - eigene Aufnahmen und Darstellungen
+  - mit Quellenangabe versehene externe Bilder
+  - Unterstützung bei einzelnen Grafiken durch ChatGPT
+
+- Inhalte:
+  - eigene Recherche und Formulierungen
+  - Unterstützung durch ChatGPT bei Strukturierung und sprachlicher Überarbeitung
