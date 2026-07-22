@@ -1041,6 +1041,18 @@ li {
     display: flex;
     gap: 30px;
 }
+
+.footer .copyright {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
 /* 404-Seite_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_*/
 
 .error-container {
