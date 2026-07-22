@@ -207,6 +207,10 @@ Projekt/
             150 ms verzögert und bei weiteren Größenänderungen zurückgesetzt. So wird verhindert, dass die 
             Funktion unnötig oft ausgeführt wird, wodurch die Performance verbessert wird.
 
+13. Media Query für eine druckerfreundliche Darstellung
+    - Mit `@media print` werden spezielle CSS-Regeln für den Ausdruck der Webseite definiert
+        Beim Drucken werden Hintergrundfarben und Texte angepasst, Header und Footer ausgeblendet sowie Schatten und Texteffekte entfernt
+
 
 
 ## Verwendete Quellen
