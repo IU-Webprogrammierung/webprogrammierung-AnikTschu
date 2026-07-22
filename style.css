@@ -980,8 +980,8 @@ li {
     width: 18px;
     height: 18px;
 
-    background: var(--background);
-    border: 4px solid var(--japanred);
+    background: var(--japanred);
+    border: none;
     border-radius: 50%;
 
     z-index: 10;

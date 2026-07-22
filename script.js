@@ -108,38 +108,69 @@ function closeImage() {
 
 //___ Positionierung der Punkte in der Timeline auf der Mitte der Timeline-Karte auf dem Zeitstrahl
 
-const timeline = document.querySelector(".timeline");
+function createTimelinePoints() {
 
-// alte Punkte löschen
-document.querySelectorAll(".point").forEach(point => point.remove());
+    const timeline = document.querySelector(".timeline");
 
-document.querySelectorAll(".card").forEach((card, index) => {
+    if (!timeline) return;
 
-    const point = document.createElement("div");
-    point.classList.add("point");
+    // alte Punkte löschen
+    document.querySelectorAll(".point").forEach(point => point.remove());
 
-    // 👉 WICHTIG: links / rechts hinzufügen
-    if (index % 2 === 0) {
-        point.classList.add("left");
-    } else {
-        point.classList.add("right");
-    }
+    const cards = document.querySelectorAll(".card");
 
-    const cardRect = card.getBoundingClientRect();
-    const timelineRect = timeline.getBoundingClientRect();
+    cards.forEach((card, index) => {
 
-    let middle =
-        cardRect.top -
-        timelineRect.top +
-        cardRect.height / 2;
+        const point = document.createElement("div");
+        point.classList.add("point");
 
-    middle += (index % 2 === 0) ? -15 : 15;
+        // links / rechts hinzufügen
+        if (index % 2 === 0) {
+            point.classList.add("left");
+        } else {
+            point.classList.add("right");
+        }
 
-    point.style.top = middle + "px";
+        const cardRect = card.getBoundingClientRect();
+        const timelineRect = timeline.getBoundingClientRect();
 
-    timeline.appendChild(point);
+        let middle =
+            cardRect.top -
+            timelineRect.top +
+            cardRect.height / 2;
+
+        // kleine Korrektur für linke/rechte Karten
+        middle += (index % 2 === 0) ? -15 : 15;
+
+        point.style.top = middle + "px";
+
+        timeline.appendChild(point);
+    });
+}
+
+
+// Timeline beim Laden erstellen
+window.addEventListener("load", createTimelinePoints);
+
+
+// Timeline bei Größenänderung neu berechnen
+let resizeTimer;
+
+window.addEventListener("resize", () => {
+
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+        createTimelinePoints();
+    }, 150);
+
 });
 
+// Start
+window.addEventListener("load", createTimelinePoints);
+
+// Neu berechnen bei Größenänderung
+window.addEventListener("resize", createTimelinePoints);
 //___ Back-to-Top Funktion
 
 function initBackToTop() {
