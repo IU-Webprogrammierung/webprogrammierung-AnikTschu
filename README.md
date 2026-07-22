@@ -31,6 +31,7 @@ Projekt/
 ├── kultur.html             Informationen zur japanischen Kultur
 ├── style.css               Stylesheet
 ├── script.js               JavaScript-Funktionen
+├── theme-init.js           Kurze JS-Datei, wichtig für Wechsel der Modi Dark <-> Light 
 ├── images/                 Ordner: Bilder der Website
 ├── components/             Ordner: Components für wiederkehrende Bausteine    
 │   └── header.html         Header (für alle Seiten einheitlich)
@@ -187,6 +188,26 @@ Projekt/
             `</head>`
         - Damit prüft die `theme-init.js`-Datei, ob im localStorage der Dark Mode gespeichert wurde. Falls der 
             gespeicherte Wert "dark" ist, wird die Klasse darkmode direkt zum HTML-Element hinzugefügt.
+
+12. Aufwendiges Berechnen von Punkten und Linien für die Timeline von ueber-mich.html
+    - Problem: Berechnung der Position der Punkte/Verbindungslinien passierte zunächst genau einmal, nämlich 
+        beim Laden der Seite. Damit entstand das Problem, dass bei Veränderung der Webseiten-Breite NACH dem
+        Laden der Seite die Positionen nicht neu berechnet wurden. Sie behielten ihre alte Position und
+        haben teils durch den optischen Versatz der sich dynamischen Ändernden Größe der einzelnen Timeline-
+        Elemente nicht mehr ihre Funktion (Verbindung mit Timeline) erfüllt.
+    - Lösung: Es wurde in JavaScript eine Funktion eingeführt, die bei der Änderung der Fenstergröße (resize)
+        die Position der Punkte/Verbindungslinien neu berechnet
+        - `window.addEventListener("resize", createTimelinePoints);` ruft `createTimelinePoints()` bei jeder 
+            Änderung der Fenstergröße direkt auf. Dadurch werden die Positionen der Timeline-Punkte und 
+            Verbindungslinien sofort neu berechnet.
+        - Leider ist die Funktion noch nicht perfekt. Besonders bei Bildschirmen mit einer etwas größeren 
+            Breite als der Schwellenwert der mobilen Variante sind die Linien/Punkte und auch die vertikale
+            Timeline nicht richtig positioniert. Nach vielen Versuchen konnte dies nicht gefixt werden.
+        - durch die Verwendung von `setTimeout` wird ein Timeout eingebaut. Dabei wird der erneute Aufruf um
+            150 ms verzögert und bei weiteren Größenänderungen zurückgesetzt. So wird verhindert, dass die 
+            Funktion unnötig oft ausgeführt wird, wodurch die Performance verbessert wird.
+
+
 
 ## Verwendete Quellen
 
