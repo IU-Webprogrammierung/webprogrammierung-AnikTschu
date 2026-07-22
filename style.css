@@ -49,14 +49,14 @@ p {
 /* Überschriften */
 
 h1 {
-    font-size: 4rem; 
+    font-size: 4rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 0.5em;
 }
 
 h2 {
-    font-size: 1.8rem;  
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--japanred);
 
@@ -68,7 +68,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3rem;  
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text);
 }
@@ -1170,15 +1170,15 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     /* Überschriften */
     h1 {
-        font-size: 3rem;   
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
     }
 
     h3 {
-        font-size: 1.25rem; 
+        font-size: 1.25rem;
     }
 
     /* Bild unter den Text */
@@ -1284,7 +1284,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         display: block;
         transform: translateY(-2px);
         color: var(--text);
-        
+
     }
 
     .hamburger summary {
@@ -1437,11 +1437,6 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     /* Über mich */
 
-    .point {
-        display: none !important;
-        /* Versteckt Punkte und Linien der Desktop-Variante*/
-    }
-
     .timeline {
         grid-template-columns: 40px 1fr;
         row-gap: 25px;
@@ -1485,45 +1480,26 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     /* =========================
        PUNKTE
        ========================= */
-    .card::before {
-        content: "";
 
-        position: absolute;
-
-        width: 14px;
-        height: 14px;
-
-        background: (var(--background));
-        border: 3px solid var(--japanred);
-        border-radius: 50%;
-
-        left: -36px;
-
-        top: 50%;
-
+    .point {
+        left: 20px;
         transform: translate(-50%, -50%);
-        z-index: 5;
     }
 
     /* =========================
        VERBINDUNGSLINIE
        ========================= */
 
-    .card::after {
-        content: "";
-
-        position: absolute;
-
-        left: -27px;
-        top: 50%;
-        /* 🔥 gleiche Referenz wie Punkt */
-
+    .point::before {
         width: 25px;
-        height: 4px;
-
+  
         background: var(--background-third);
+    }
 
-        transform: translateY(-50%);
+    .point.left::before,
+    .point.right::before {
+        left: 18px;
+        right: auto;
     }
 
     /* =========================
@@ -1620,7 +1596,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
     body {
         background: var(--background) !important;
         color: var(--text) !important;
-        font-size:16px;
+        font-size: 16px;
     }
 
     /* 2. Header und Footer ausblenden */
