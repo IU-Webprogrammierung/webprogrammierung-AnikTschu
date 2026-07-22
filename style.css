@@ -1170,6 +1170,12 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         font-size: 16px;
     }
 
+    /* Für Tests der Positionierungen und Ausmaße */
+    
+    * {
+        outline: 1px solid red;
+    }
+
     /* Überschriften */
     h1 {
         font-size: 3rem;
@@ -1367,6 +1373,37 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
         gap: 15px;
     }
 
+
+    /* Startseite Hero */
+
+    .hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .hero-left {
+        width: 100%;
+        margin-left: 0; /* wichtig */
+        align-items: center;
+    }
+
+
+    .circle {
+        width: 18rem;   /* optional: kleiner für Handy */
+        height: 18rem;
+        margin: 0 auto;
+    }
+
+
+    .hero-description {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center; /* optional */
+    }
+
     /* 404-Seite */
 
     .error-container {
@@ -1494,7 +1531,7 @@ _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
     .point::before {
         width: 25px;
-  
+
         background: var(--background-third);
     }
 
